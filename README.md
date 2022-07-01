@@ -1,3 +1,7 @@
-# 探索者小舒
+# Explorer Xiaoshu
 
-强大快捷的侧栏搜索切换工具
+Powerful and fast sidebar search toggle tool
+
+# Contribution
+
+How to contribute: <https://github.com/antfu/vitesse-webext#usage>
