@@ -403,9 +403,9 @@ let onError = (e: { srcElement: any }) => {
 
 let enable = computed(() => {
 	if(setting.value.function.enableOnly) {
-		return active.value && keyword.value !== "";
+		return active.value && keyword.value;
 	} else {
-		return keyword.value !== "";
+		return keyword.value;
 	}
 	
 });
