@@ -42,6 +42,11 @@
 						>Twitter</a
 					>
 				</li>
+				<li>
+					<a href="https://github.com/xiaoshuapp/explorer-xiaoshu/issues" target="_blank"
+						>反馈 / Issue</a
+					>
+				</li>
 			</ul>
 		</nav>
 		<h2>UI / 界面设置</h2>
@@ -90,13 +95,6 @@
 			<textarea style="width: 100%; height: 10em">{{
 				listData
 			}}</textarea>
-		</p>
-
-		<p style="margin-top: 4rem">
-			遇到问题？请来这里反馈：
-			<a href="https://github.com/xiaoshuapp/explorer-xiaoshu/issues" target="_blank"
-				>https://github.com/xiaoshuapp/explorer-xiaoshu/issues</a
-			>
 		</p>
 		<article>
 			<details>

@@ -10,7 +10,6 @@ import { r, port, isDev, log } from './utils'
 async function stubIndexHtml() {
   const views = [
     'options',
-    'popup',
     'background',
   ]
 

@@ -1,19 +1,16 @@
 <template>
-	<dialog v-if="!ignoreV" ref="dialog" :class="{ right: right }">
+	<dialog id="xiaoshu-dialog" ref="dialog">
 		<form onsubmit="return false">
 			<fieldset>
 				<legend>检测到当前页面有可用的引擎</legend>
-				<div
-					style="
-						display: flex;
-
-						gap: 16px;
-						flex-direction: column;
-					"
-				>
-                    <p>是否添加？</p>
+				<div style="display: flex; gap: 16px; flex-direction: column">
+					<p>是否添加？</p>
 					<input type="text" placeholder="名称" v-model="name" />
-					<input type="text" placeholder="URL（比如：https://bing.com/search?q=%s，需要带%s）" v-model="engine" />
+					<input
+						type="text"
+						placeholder="URL（比如：https://bing.com/search?q=%s，需要带%s）"
+						v-model="engine"
+					/>
 				</div>
 			</fieldset>
 			<menu>
@@ -31,43 +28,38 @@ const name = ref(window.location.hostname);
 const engine = ref("");
 const props = defineProps({
 	keyword: String,
-	active: String,
-	right: Boolean,
 });
-const emit = defineEmits(['addToList']);
+const emit = defineEmits(["addToList"]);
 
-let ignoreV = localStorage.getItem('storage-ingore') || false;
+let ignoreV = localStorage.getItem("storage-ingore") || false;
 
 onMounted(() => {
 	if (props.keyword) {
-		engine.value = decodeURIComponent(window.location.href).replace(/\+/g," ").replace(props.keyword, "%s");
-	}
-
-	if (!props.active) {
-		dialog.value.show();
+		engine.value = decodeURIComponent(window.location.href)
+			.replace(/\+/g, " ")
+			.replace(props.keyword, "%s");
+		dialog.value.showModal();
 	}
 });
 
 const ignore = () => {
-    ignoreV = "true";
-    localStorage.setItem('storage-ingore', ignoreV);
-    dialog.value.close();
-}
+	ignoreV = "true";
+	localStorage.setItem("storage-ingore", ignoreV);
+	dialog.value.close();
+};
 
 const addEngine = () => {
 	if (name.value && engine.value) {
-        emit('addToList', {
-            name: name.value,
-            engine: engine.value,
-        });
+		emit("addToList", {
+			name: name.value,
+			engine: engine.value,
+		});
 		dialog.value.close();
 	} else {
-        alert("请填写");
-    }
+		alert("请填写");
+	}
 };
 </script>
-
-<style src="nexmoe.css/nexmoe.css" scoped></style>
 
 <style scoped>
 dialog {
@@ -96,17 +88,6 @@ dialog {
 }
 dialog {
 	zoom: 0.8;
-	position: fixed;
-	bottom: 32px;
-	margin: 0;
-	left: 100%;
-	transform: translateX(-100%);
-	margin-left: -32px;
-}
-dialog.right {
-	left: 32px;
-	transform: unset;
-	margin-left: unset;
 }
 button,
 input,
@@ -120,7 +101,9 @@ input {
 }
 dialog fieldset legend {
 	font-size: 24px;
-    font-weight: bold;
+	font-weight: bold;
 }
-p { margin: 0;}
+p {
+	margin: 0;
+}
 </style>

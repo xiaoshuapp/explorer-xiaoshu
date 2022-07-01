@@ -21,6 +21,19 @@
 			</div>
 		</div>
 
+		<div class="group" v-if="searchKeyword && !active">
+			<div class="list-item" @click="detectOpen = true">
+				<div class="item-icon">🆕</div>
+				<div class="item-title">检测到新的搜索引擎</div>
+			</div>
+		</div>
+
+		<DetectDialog
+			v-if="detectOpen"
+			:keyword="keyword"
+			@addToList="addToList"
+		/>
+
 		<draggable
 			class="list-group"
 			item-key="name"
@@ -35,8 +48,8 @@
 			@start="drag = true"
 			@end="drag = false"
 		>
-			<template #item="{ element, index }"
-				><div class="group">
+			<template #item="{ element, index }">
+				<div class="group">
 					<div class="xiaoshu-h4" @contextmenu="menuX($event, index)">
 						<div class="list-item">
 							<div class="item-icon">
@@ -111,13 +124,6 @@
 				</div>
 			</div>
 		</div>
-		<DetectDialog
-			v-if="searchKeyword !== ''"
-			:keyword="keyword"
-			:active="active"
-			:right="setting.right"
-			@addToList="addToList"
-		/>
 	</div>
 </template>
 
@@ -140,6 +146,8 @@ let dragGroups = {
 	group: "group",
 	animation: 200,
 };
+
+let detectOpen = ref(false);
 
 let dragOptions = {
 	group: "item",
@@ -402,12 +410,11 @@ let onError = (e: { srcElement: any }) => {
 };
 
 let enable = computed(() => {
-	if(setting.value.function.enableOnly) {
+	if (setting.value.function.enableOnly) {
 		return active.value && keyword.value;
 	} else {
 		return keyword.value;
 	}
-	
 });
 </script>
 <style scoped>
