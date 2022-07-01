@@ -22,7 +22,7 @@ indent_size = 4
 [Makefile]
 indent_style = tab
 
-[*.{js,ts}]
+[*.{js,ts,.vue}]
 indent_style = space
 indent_size = 4
 
