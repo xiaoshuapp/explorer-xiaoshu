@@ -1,0 +1,7 @@
+{
+	"name": { "message": "探索者小舒 - 强大快捷的侧栏搜索切换工具" },
+	"description": { "message": "强大快捷的侧栏搜索切换工具" },
+
+	"addGroup": { "message": "添加分组" },
+	"deleteGroup": { "message": "删除该分组" }
+}
