@@ -9,6 +9,13 @@
 					<ul>
 						<li>
 							<a
+								href="https://github.com/xiaoshuapp/explorer-xiaoshu"
+								target="_blank"
+								>Github</a
+							>
+						</li>
+						<li>
+							<a
 								href="https://microsoftedge.microsoft.com/addons/detail/coneollgjonabefaacemccaknmicmncj"
 								target="_blank"
 								>Edge</a
@@ -87,8 +94,8 @@
 
 		<p style="margin-top: 4rem">
 			遇到问题？请来这里反馈：
-			<a href="https://support.qq.com/products/375703" target="_blank"
-				>https://support.qq.com/products/375703</a
+			<a href="https://github.com/xiaoshuapp/explorer-xiaoshu/issues" target="_blank"
+				>https://github.com/xiaoshuapp/explorer-xiaoshu/issues</a
 			>
 		</p>
 		<article>
