@@ -1,8 +1,8 @@
 {
-  "name": "vitesse-webext",
-  "displayName": "Vitesse WebExt",
+  "name": "explorer-xiaoshu",
+  "displayName": "Explorer Xiaoshu",
   "version": "0.9.9",
-  "description": "[description]",
+  "description": "Powerful and fast sidebar search toggle tool",
   "private": true,
   "scripts": {
     "dev": "npm run clear && cross-env NODE_ENV=development run-p dev:*",
