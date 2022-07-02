@@ -17,9 +17,9 @@ const init = () => {
     const root = document.createElement('div')
     container.id = 'exploerer-xiaoshu'
     const styleEl = document.createElement('link')
-    const shadowDOM
-    = container.attachShadow?.({ mode: __DEV__ ? 'open' : 'closed' })
-    || container
+    const shadowDOM =
+        container.attachShadow?.({ mode: __DEV__ ? 'open' : 'closed' }) ||
+        container
     styleEl.setAttribute('rel', 'stylesheet')
     styleEl.setAttribute(
         'href',

@@ -6,7 +6,7 @@ import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
-import windiConfig from './windi.config'
+// import windiConfig from './windi.config'
 import { isDev, port, r } from './scripts/utils'
 
 export const sharedConfig: UserConfig = {
@@ -26,9 +26,7 @@ export const sharedConfig: UserConfig = {
             imports: [
                 'vue',
                 {
-                    'webextension-polyfill': [
-                        ['default', 'browser'],
-                    ],
+                    'webextension-polyfill': [['*', 'browser']],
                 },
             ],
             dts: r('src/auto-imports.d.ts'),
@@ -56,19 +54,16 @@ export const sharedConfig: UserConfig = {
             enforce: 'post',
             apply: 'build',
             transformIndexHtml(html, { path }) {
-                return html.replace(/"\/assets\//g, `"${relative(dirname(path), '/assets')}/`)
+                return html.replace(
+                    /"\/assets\//g,
+                    `"${relative(dirname(path), '/assets')}/`,
+                )
             },
         },
     ],
     optimizeDeps: {
-        include: [
-            'vue',
-            '@vueuse/core',
-            'webextension-polyfill',
-        ],
-        exclude: [
-            'vue-demi',
-        ],
+        include: ['vue', '@vueuse/core', 'webextension-polyfill'],
+        exclude: ['vue-demi'],
     },
 }
 
@@ -96,8 +91,5 @@ export default defineConfig(({ command }) => ({
             },
         },
     },
-    plugins: [
-        ...sharedConfig.plugins!,
-
-    ],
+    plugins: [...sharedConfig.plugins!],
 }))

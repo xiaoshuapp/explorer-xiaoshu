@@ -10,7 +10,7 @@ if (import.meta.hot) {
 }
 
 browser.runtime.onInstalled.addListener((detail) => {
-    if (detail.reason == browser.runtime.OnInstalledReason.INSTALL) {
+    if (detail.reason === 'install') {
         browser.tabs.create({
             url: 'https://www.baidu.com/s?wd=%E6%8E%A2%E7%B4%A2%E8%80%85%E5%B0%8F%E8%88%92%20ex.xiaoshu.app',
         })
@@ -51,8 +51,7 @@ browser.tabs.onActivated.addListener(async ({ tabId }) => {
     try {
         tab = await browser.tabs.get(previousTabId)
         previousTabId = tabId
-    }
-    catch {
+    } catch {
         return
     }
 
@@ -71,8 +70,7 @@ onMessage('get-current-tab', async () => {
         return {
             title: tab?.title,
         }
-    }
-    catch {
+    } catch {
         return {
             title: undefined,
         }
