@@ -1,0 +1,4 @@
+project_id: 524760
+files:
+  - source: /extension/_locales/zh_CN/messages.json
+    translation: /extension/_locales/%osx_locale%/messages.json
