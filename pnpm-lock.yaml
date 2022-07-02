@@ -7,7 +7,7 @@ specifiers:
   '@types/download': 8.0.1
   '@types/fs-extra': 9.0.13
   '@types/node': 16.11.42
-  '@types/webextension-polyfill': 0.8.3
+  '@types/webextension-polyfill': 0.9.0
   '@typescript-eslint/eslint-plugin': 5.30.0
   '@typescript-eslint/parser': 5.30.0
   '@vitejs/plugin-vue': 1.10.2
@@ -41,7 +41,7 @@ specifiers:
   vuedraggable: 4.1.0
   web-ext: 6.8.0
   webext-bridge: 5.0.4
-  webextension-polyfill: 0.8.0
+  webextension-polyfill: 0.9.0
 
 dependencies:
   nexmoe.css: 0.5.3
@@ -55,7 +55,7 @@ devDependencies:
   '@types/download': 8.0.1
   '@types/fs-extra': 9.0.13
   '@types/node': 16.11.42
-  '@types/webextension-polyfill': 0.8.3
+  '@types/webextension-polyfill': 0.9.0
   '@typescript-eslint/eslint-plugin': 5.30.0_5mtqsiui4sk53pmkx7i7ue45wm
   '@typescript-eslint/parser': 5.30.0_b5e7v2qnwxfo6hmiq56u52mz3e
   '@vitejs/plugin-vue': 1.10.2_vite@2.9.13
@@ -86,7 +86,7 @@ devDependencies:
   vue-demi: 0.11.4_vue@3.2.37
   web-ext: 6.8.0_eixhi2udx54yx37fd342swkgcy
   webext-bridge: 5.0.4
-  webextension-polyfill: 0.8.0
+  webextension-polyfill: 0.9.0
 
 packages:
 
@@ -463,6 +463,10 @@ packages:
 
   /@types/webextension-polyfill/0.8.3:
     resolution: {integrity: sha512-GN+Hjzy9mXjWoXKmaicTegv3FJ0WFZ3aYz77Wk8TMp1IY3vEzvzj1vnsa0ggV7vMI1i+PUxe4qqnIJKCzf9aTg==}
+    dev: true
+
+  /@types/webextension-polyfill/0.9.0:
+    resolution: {integrity: sha512-HG1y1o2hK8ag6Y7dfkrAbfKmMIP+B0E6SwAzUfmQ1dDxEIdLTtMyrStY26suHBPrAL7Xw/chlDW02ugc3uXWtQ==}
     dev: true
 
   /@types/yauzl/2.9.2:
@@ -1221,7 +1225,7 @@ packages:
       normalize-path: 3.0.0
       readdirp: 3.6.0
     optionalDependencies:
-      fsevents: mirrors.tencent.com/fsevents/2.3.2
+      fsevents: 2.3.2
     dev: true
 
   /chrome-launcher/0.15.0:
@@ -1835,6 +1839,23 @@ packages:
     dev: true
     optional: true
 
+  /esbuild-android-arm64/0.13.3:
+    resolution: {integrity: sha512-jc9E8vGTHkzb0Vwl74H8liANV9BWsqtzLHaKvcsRgf1M+aVCBSF0gUheduAKfDsbDMT0judeMLhwBP34EUesTA==}
+    cpu: [arm64]
+    os: [android]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-android-arm64/0.14.48:
+    resolution: {integrity: sha512-vptI3K0wGALiDq+EvRuZotZrJqkYkN5282iAfcffjI5lmGG9G1ta/CIVauhY42MBXwEgDJkweiDcDMRLzBZC4g==}
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [android]
+    requiresBuild: true
+    dev: true
+    optional: true
+
   /esbuild-darwin-64/0.13.3:
     resolution: {integrity: sha512-8bG3Zq+ZNuLlIJebOO2+weI7P2LVf33sOzaUfHj8MuJ+1Ixe4KtQxfYp7qhFnP6xP2ToJaYHxGUfLeiUCEz9hw==}
     cpu: [x64]
@@ -1881,6 +1902,23 @@ packages:
     resolution: {integrity: sha512-1NOlwRxmOsnPcWOGTB10JKAkYSb2nue0oM1AfHWunW/mv3wERfJmnYlGzL3UAOIUXZqW8GeA2mv+QGwq7DToqA==}
     engines: {node: '>=12'}
     cpu: [x64]
+    os: [freebsd]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-freebsd-arm64/0.13.3:
+    resolution: {integrity: sha512-F1zV7nySjHswJuvIgjkiG5liZ63MeazDGXGKViTCeegjZ71sAhOChcaGhKcu6vq9+vqZxlfEi1fmXlx6Pc3coQ==}
+    cpu: [arm64]
+    os: [freebsd]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-freebsd-arm64/0.14.48:
+    resolution: {integrity: sha512-gXqKdO8wabVcYtluAbikDH2jhXp+Klq5oCD5qbVyUG6tFiGhrC9oczKq3vIrrtwcxDQqK6+HDYK8Zrd4bCA9Gw==}
+    engines: {node: '>=12'}
+    cpu: [arm64]
     os: [freebsd]
     requiresBuild: true
     dev: true
@@ -1971,6 +2009,23 @@ packages:
     dev: true
     optional: true
 
+  /esbuild-linux-ppc64le/0.13.3:
+    resolution: {integrity: sha512-GU6CqqKtJEoyxC2QWHiJtmuOz9wc/jMv8ZloK2WwiGY5yMvAmM3PI103Dj7xcjebNTHBqITTUw/aigY1wx5A3w==}
+    cpu: [ppc64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-linux-ppc64le/0.14.48:
+    resolution: {integrity: sha512-+2F0vJMkuI0Wie/wcSPDCqXvSFEELH7Jubxb7mpWrA/4NpT+/byjxDz0gG6R1WJoeDefcrMfpBx4GFNN1JQorQ==}
+    engines: {node: '>=12'}
+    cpu: [ppc64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
   /esbuild-linux-riscv64/0.14.48:
     resolution: {integrity: sha512-BmaK/GfEE+5F2/QDrIXteFGKnVHGxlnK9MjdVKMTfvtmudjY3k2t8NtlY4qemKSizc+QwyombGWTBDc76rxePA==}
     engines: {node: '>=12'}
@@ -2047,6 +2102,23 @@ packages:
     dev: true
     optional: true
 
+  /esbuild-windows-32/0.13.3:
+    resolution: {integrity: sha512-ZlgDz7d1nk8wQACi+z8IDzNZVUlN9iprAme+1YSTsfFDlkyI8jeaGWPk9EQFNY7rJzsLVYm6eZ2mhPioc7uT5A==}
+    cpu: [ia32]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-windows-32/0.14.48:
+    resolution: {integrity: sha512-EPgRuTPP8vK9maxpTGDe5lSoIBHGKO/AuxDncg5O3NkrPeLNdvvK8oywB0zGaAZXxYWfNNSHskvvDgmfVTguhg==}
+    engines: {node: '>=12'}
+    cpu: [ia32]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
   /esbuild-windows-64/0.13.3:
     resolution: {integrity: sha512-YX7KvRez3TR+GudlQm9tND/ssj2FsF9vb8ZWzAoZOLxpPzE3y+3SFJNrfDzzQKPzJ0Pnh9KBP4gsaMwJjKHDhw==}
     cpu: [x64]
@@ -2086,20 +2158,20 @@ packages:
     hasBin: true
     requiresBuild: true
     optionalDependencies:
-      esbuild-android-arm64: mirrors.tencent.com/esbuild-android-arm64/0.13.3
+      esbuild-android-arm64: 0.13.3
       esbuild-darwin-64: 0.13.3
       esbuild-darwin-arm64: 0.13.3
       esbuild-freebsd-64: 0.13.3
-      esbuild-freebsd-arm64: mirrors.tencent.com/esbuild-freebsd-arm64/0.13.3
+      esbuild-freebsd-arm64: 0.13.3
       esbuild-linux-32: 0.13.3
       esbuild-linux-64: 0.13.3
       esbuild-linux-arm: 0.13.3
       esbuild-linux-arm64: 0.13.3
       esbuild-linux-mips64le: 0.13.3
-      esbuild-linux-ppc64le: mirrors.tencent.com/esbuild-linux-ppc64le/0.13.3
+      esbuild-linux-ppc64le: 0.13.3
       esbuild-openbsd-64: 0.13.3
       esbuild-sunos-64: 0.13.3
-      esbuild-windows-32: mirrors.tencent.com/esbuild-windows-32/0.13.3
+      esbuild-windows-32: 0.13.3
       esbuild-windows-64: 0.13.3
       esbuild-windows-arm64: 0.13.3
     dev: true
@@ -2111,23 +2183,23 @@ packages:
     requiresBuild: true
     optionalDependencies:
       esbuild-android-64: 0.14.48
-      esbuild-android-arm64: mirrors.tencent.com/esbuild-android-arm64/0.14.48
+      esbuild-android-arm64: 0.14.48
       esbuild-darwin-64: 0.14.48
       esbuild-darwin-arm64: 0.14.48
       esbuild-freebsd-64: 0.14.48
-      esbuild-freebsd-arm64: mirrors.tencent.com/esbuild-freebsd-arm64/0.14.48
+      esbuild-freebsd-arm64: 0.14.48
       esbuild-linux-32: 0.14.48
       esbuild-linux-64: 0.14.48
       esbuild-linux-arm: 0.14.48
       esbuild-linux-arm64: 0.14.48
       esbuild-linux-mips64le: 0.14.48
-      esbuild-linux-ppc64le: mirrors.tencent.com/esbuild-linux-ppc64le/0.14.48
+      esbuild-linux-ppc64le: 0.14.48
       esbuild-linux-riscv64: 0.14.48
       esbuild-linux-s390x: 0.14.48
       esbuild-netbsd-64: 0.14.48
       esbuild-openbsd-64: 0.14.48
       esbuild-sunos-64: 0.14.48
-      esbuild-windows-32: mirrors.tencent.com/esbuild-windows-32/0.14.48
+      esbuild-windows-32: 0.14.48
       esbuild-windows-64: 0.14.48
       esbuild-windows-arm64: 0.14.48
     dev: true
@@ -2677,6 +2749,14 @@ packages:
   /fs.realpath/1.0.0:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
     dev: true
+
+  /fsevents/2.3.2:
+    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
+    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
 
   /function-bind/1.1.1:
     resolution: {integrity: sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==}
@@ -3868,7 +3948,7 @@ packages:
     dev: true
 
   /mv/2.1.1:
-    resolution: {integrity: sha1-rmzg1vbV4KT32JN5jQPB6pVZtqI=}
+    resolution: {integrity: sha512-at/ZndSy3xEGJ8i0ygALh8ru9qy7gWW1cmkaqBN29JmMlIvM//MEO9y1sk/avxuwnPcfhkejkLsuPxH81BrkSg==}
     engines: {node: '>=0.8.0'}
     requiresBuild: true
     dependencies:
@@ -4681,7 +4761,7 @@ packages:
     engines: {node: '>=10.0.0'}
     hasBin: true
     optionalDependencies:
-      fsevents: mirrors.tencent.com/fsevents/2.3.2
+      fsevents: 2.3.2
     dev: true
 
   /run-parallel/1.2.0:
@@ -5594,7 +5674,7 @@ packages:
       resolve: 1.22.1
       rollup: 2.75.7
     optionalDependencies:
-      fsevents: mirrors.tencent.com/fsevents/2.3.2
+      fsevents: 2.3.2
     dev: true
 
   /vue-demi/0.11.4_vue@3.2.37:
@@ -5720,6 +5800,10 @@ packages:
 
   /webextension-polyfill/0.8.0:
     resolution: {integrity: sha512-a19+DzlT6Kp9/UI+mF9XQopeZ+n2ussjhxHJ4/pmIGge9ijCDz7Gn93mNnjpZAk95T4Tae8iHZ6sSf869txqiQ==}
+    dev: true
+
+  /webextension-polyfill/0.9.0:
+    resolution: {integrity: sha512-LTtHb0yR49xa9irkstDxba4GATDAcDw3ncnFH9RImoFwDlW47U95ME5sn5IiQX2ghfaECaf6xyXM8yvClIBkkw==}
     dev: true
 
   /webpack-sources/3.2.3:
@@ -6139,90 +6223,6 @@ packages:
       has: 1.0.3
     dev: true
 
-  mirrors.tencent.com/esbuild-android-arm64/0.13.3:
-    resolution: {integrity: sha512-jc9E8vGTHkzb0Vwl74H8liANV9BWsqtzLHaKvcsRgf1M+aVCBSF0gUheduAKfDsbDMT0judeMLhwBP34EUesTA==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-android-arm64/-/esbuild-android-arm64-0.13.3.tgz}
-    name: esbuild-android-arm64
-    version: 0.13.3
-    cpu: [arm64]
-    os: [android]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  mirrors.tencent.com/esbuild-android-arm64/0.14.48:
-    resolution: {integrity: sha512-vptI3K0wGALiDq+EvRuZotZrJqkYkN5282iAfcffjI5lmGG9G1ta/CIVauhY42MBXwEgDJkweiDcDMRLzBZC4g==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-android-arm64/-/esbuild-android-arm64-0.14.48.tgz}
-    name: esbuild-android-arm64
-    version: 0.14.48
-    engines: {node: '>=12'}
-    cpu: [arm64]
-    os: [android]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  mirrors.tencent.com/esbuild-freebsd-arm64/0.13.3:
-    resolution: {integrity: sha512-F1zV7nySjHswJuvIgjkiG5liZ63MeazDGXGKViTCeegjZ71sAhOChcaGhKcu6vq9+vqZxlfEi1fmXlx6Pc3coQ==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-freebsd-arm64/-/esbuild-freebsd-arm64-0.13.3.tgz}
-    name: esbuild-freebsd-arm64
-    version: 0.13.3
-    cpu: [arm64]
-    os: [freebsd]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  mirrors.tencent.com/esbuild-freebsd-arm64/0.14.48:
-    resolution: {integrity: sha512-gXqKdO8wabVcYtluAbikDH2jhXp+Klq5oCD5qbVyUG6tFiGhrC9oczKq3vIrrtwcxDQqK6+HDYK8Zrd4bCA9Gw==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-freebsd-arm64/-/esbuild-freebsd-arm64-0.14.48.tgz}
-    name: esbuild-freebsd-arm64
-    version: 0.14.48
-    engines: {node: '>=12'}
-    cpu: [arm64]
-    os: [freebsd]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  mirrors.tencent.com/esbuild-linux-ppc64le/0.13.3:
-    resolution: {integrity: sha512-GU6CqqKtJEoyxC2QWHiJtmuOz9wc/jMv8ZloK2WwiGY5yMvAmM3PI103Dj7xcjebNTHBqITTUw/aigY1wx5A3w==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-linux-ppc64le/-/esbuild-linux-ppc64le-0.13.3.tgz}
-    name: esbuild-linux-ppc64le
-    version: 0.13.3
-    cpu: [ppc64]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  mirrors.tencent.com/esbuild-linux-ppc64le/0.14.48:
-    resolution: {integrity: sha512-+2F0vJMkuI0Wie/wcSPDCqXvSFEELH7Jubxb7mpWrA/4NpT+/byjxDz0gG6R1WJoeDefcrMfpBx4GFNN1JQorQ==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-linux-ppc64le/-/esbuild-linux-ppc64le-0.14.48.tgz}
-    name: esbuild-linux-ppc64le
-    version: 0.14.48
-    engines: {node: '>=12'}
-    cpu: [ppc64]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  mirrors.tencent.com/esbuild-windows-32/0.13.3:
-    resolution: {integrity: sha512-ZlgDz7d1nk8wQACi+z8IDzNZVUlN9iprAme+1YSTsfFDlkyI8jeaGWPk9EQFNY7rJzsLVYm6eZ2mhPioc7uT5A==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-windows-32/-/esbuild-windows-32-0.13.3.tgz}
-    name: esbuild-windows-32
-    version: 0.13.3
-    cpu: [ia32]
-    os: [win32]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  mirrors.tencent.com/esbuild-windows-32/0.14.48:
-    resolution: {integrity: sha512-EPgRuTPP8vK9maxpTGDe5lSoIBHGKO/AuxDncg5O3NkrPeLNdvvK8oywB0zGaAZXxYWfNNSHskvvDgmfVTguhg==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-windows-32/-/esbuild-windows-32-0.14.48.tgz}
-    name: esbuild-windows-32
-    version: 0.14.48
-    engines: {node: '>=12'}
-    cpu: [ia32]
-    os: [win32]
-    requiresBuild: true
-    dev: true
-    optional: true
-
   mirrors.tencent.com/escape-html/1.0.3:
     resolution: {integrity: sha1-Aljq5NPQwJdN4cFpGI7wBR0dGYg=, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/escape-html/-/escape-html-1.0.3.tgz}
     name: escape-html
@@ -6590,16 +6590,6 @@ packages:
     name: fs.realpath
     version: 1.0.0
     dev: true
-
-  mirrors.tencent.com/fsevents/2.3.2:
-    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/fsevents/-/fsevents-2.3.2.tgz}
-    name: fsevents
-    version: 2.3.2
-    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
-    os: [darwin]
-    requiresBuild: true
-    dev: true
-    optional: true
 
   mirrors.tencent.com/function-bind/1.1.1:
     resolution: {integrity: sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/function-bind/-/function-bind-1.1.1.tgz}
