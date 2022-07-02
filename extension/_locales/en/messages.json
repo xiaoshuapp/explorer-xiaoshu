@@ -1,0 +1,65 @@
+{
+	"name": {
+		"message": "Explorer Xiaoshu - Powerful and fast sidebar search toggle tool"
+	},
+	"description": {
+		"message": "Powerful and fast sidebar search toggle tool"
+	},
+	"title": {
+		"message": "Explorer Xiaoshu"
+	},
+	"groupMenuTitle": {
+		"message": "Change Title"
+	},
+	"groupMenuAdd": {
+		"message": "Add a Search Engine"
+	},
+	"groupMenuRemove": {
+		"message": "Delete Group"
+	},
+	"itemMenuEdit": {
+		"message": "Edit"
+	},
+	"itemMenuRemove": {
+		"message": "Delete"
+	},
+	"addGroup": {
+		"message": "Add Group"
+	},
+	"options": {
+		"message": "Options"
+	},
+	"optionsNavHome": {
+		"message": "Home"
+	},
+	"optionsNavStars": {
+		"message": "RATE 5 STARS"
+	},
+	"optionsNavIssues": {
+		"message": "Issues"
+	},
+	"optionsUI": {
+		"message": "Interface Settings"
+	},
+	"optionsUIHidden": {
+		"message": "Put it away deeper"
+	},
+	"optionsUIRight": {
+		"message": "Show on the right"
+	},
+	"optionsFunction": {
+		"message": "Function Settings"
+	},
+	"optionsFunctionOpenNew": {
+		"message": "Open in new tab"
+	},
+	"optionsFunctionAutomaticAdvance": {
+		"message": "Related groups are automatically advanced"
+	},
+	"optionsFunctionGetSelection": {
+		"message": "Use Explorer Xiaoshu when selecting words"
+	},
+	"optionsFunctionEnableOnly": {
+		"message": "Use Explorer Xiaoshu only in the search engine in the list (Sniffing and selection will be disabled)"
+	}
+}
