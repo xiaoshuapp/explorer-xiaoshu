@@ -16,6 +16,10 @@ const saveInfoF = (): void => {
     }, 3000)
 }
 
+const geti18n = (name: string): string => {
+    return browser.i18n.getMessage(name)
+}
+
 browser.storage.sync.get({ setting: settingData, listData: originData }).then(
     (data: any) => {
         listData.value = data.listData
@@ -48,12 +52,14 @@ watch(
 
 <template>
     <main class="container">
-        <h1>Explorer Xiaoshu / 探索者小舒</h1>
+        <h1>{{ geti18n('title') }}</h1>
         <nav style="margin-left: 2rem">
             <ul>
-                <li><a checked>Home</a></li>
                 <li>
-                    <a href="#">Star / 好评</a>
+                    <a checked>{{ geti18n('optionsNavHome') }}</a>
+                </li>
+                <li>
+                    <a href="#">{{ geti18n('optionsNavStars') }}</a>
                     <ul>
                         <li>
                             <a
@@ -92,33 +98,33 @@ watch(
                 </li>
                 <li>
                     <a
-                        href="https://github.com/xiaoshuapp/explorer-xiaoshu/issues"
+                        href="https://github.com/xiaoshuapp/explorer-xiaoshu/discussions"
                         target="_blank"
-                        >反馈 / Issue</a
+                        >{{ geti18n('optionsNavIssues') }}</a
                     >
                 </li>
             </ul>
         </nav>
-        <h2>UI / 界面设置</h2>
+        <h2>{{ geti18n('optionsUI') }}</h2>
         <hr />
         <p>
             <label
-                ><input v-model="setting.hidden" type="checkbox" /> Put it away
-                deeper / 收起得更深</label
+                ><input v-model="setting.hidden" type="checkbox" />
+                {{ geti18n('optionsUIHidden') }}</label
             >
         </p>
         <p>
             <label
-                ><input v-model="setting.right" type="checkbox" /> Show on the
-                right / 显示在右边</label
+                ><input v-model="setting.right" type="checkbox" />
+                {{ geti18n('optionsUIRight') }}</label
             >
         </p>
-        <h2>Functions / 功能设置</h2>
+        <h2>{{ geti18n('optionsFunction') }}</h2>
         <hr />
         <p>
             <label
                 ><input v-model="setting.function.openNew" type="checkbox" />
-                Open in new tabs / 在新标签页打开</label
+                {{ geti18n('optionsFunctionOpenNew') }}</label
             >
         </p>
         <p>
@@ -127,7 +133,7 @@ watch(
                     v-model="setting.function.automaticAdvance"
                     type="checkbox"
                 />
-                Automatic advance / 相关分组自动提前</label
+                {{ geti18n('optionsFunctionAutomaticAdvance') }}</label
             >
         </p>
         <p>
@@ -136,14 +142,13 @@ watch(
                     v-model="setting.function.getSelection"
                     type="checkbox"
                 />
-                Get the selected words / 划词召唤探索者小舒</label
+                {{ geti18n('optionsFunctionGetSelection') }}</label
             >
         </p>
         <p>
             <label
                 ><input v-model="setting.function.enableOnly" type="checkbox" />
-                Only use Explorer Xiaoshu in search engines in the list. /
-                仅在列表中的搜索引擎中使用探索者小舒（将导致嗅探和划词功能失效）</label
+                {{ geti18n('optionsFunctionEnableOnly') }}</label
             >
         </p>
         <h2>Your Data / 你的数据</h2>
