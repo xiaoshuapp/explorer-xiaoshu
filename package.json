@@ -1,7 +1,7 @@
 {
   "name": "explorer-xiaoshu",
   "displayName": "Explorer Xiaoshu",
-  "version": "0.9.9",
+  "version": "0.9.10",
   "description": "Powerful and fast sidebar search toggle tool",
   "private": true,
   "scripts": {
@@ -35,7 +35,7 @@
     "@vitejs/plugin-vue": "2.3.3",
     "@vue/compiler-sfc": "3.2.37",
     "@vueuse/core": "8.7.5",
-    "body-parser": "1.19.1",
+    "body-parser": "1.19.2",
     "chokidar": "3.5.3",
     "cross-env": "7.0.3",
     "crx": "5.0.1",
@@ -44,7 +44,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "esno": "0.16.3",
-    "express": "4.17.2",
+    "express": "4.17.3",
     "fs-extra": "10.1.0",
     "kolorist": "1.5.1",
     "npm-run-all": "4.1.5",
@@ -63,8 +63,8 @@
     "webextension-polyfill": "0.9.0"
   },
   "dependencies": {
-    "nexmoe.css": "0.5.3",
-    "sharer.js": "0.5.1",
-    "vuedraggable": "4.1.0"
+    "@xiaoshuapp/draggable": "^4.1.1",
+    "nexmoe.css": "0.5.6",
+    "sharer.js": "0.5.1"
   }
 }
