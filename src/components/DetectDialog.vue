@@ -62,30 +62,6 @@ const addEngine = () => {
 
 <style scoped>
 dialog {
-    --active-brightness: 0.8;
-    --hover-brightness: 1.2;
-    --border-radius: 6px;
-    --color-primary: rgb(23, 23, 23);
-    --color-link: #df5d64;
-    --color-text: rgb(23, 23, 23);
-    --color-bg: #fff;
-    --color-hover: rgba(23, 23, 23, 0.15);
-    --nexmoe-gap: 16px;
-    --icon-checkbox: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23FFF' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
-    --icon-summary: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(23, 23, 23)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-}
-
-@media (prefers-color-scheme: dark) {
-    dialog {
-        --color-primary: #fff;
-        --color-text: #f7f7f7;
-        --color-bg: #111;
-        --color-hover: rgba(230, 230, 230, 0.15);
-        --icon-checkbox: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
-        --icon-summary: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23f7f7f7' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-    }
-}
-dialog {
     zoom: 0.8;
 }
 button,

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import 'nexmoe.css'
-import draggable from 'vuedraggable'
+import draggable from '@xiaoshuapp/draggable'
 import { ref } from 'vue'
 import DetectDialog from '../../components/DetectDialog.vue'
 import settingData from '../../options/setting.json'
@@ -422,11 +422,13 @@ const enable = computed(() => {
     transition: opacity 0.3s;
     transition: transform 0.3s;
 }
+
 #menu.show {
     z-index: 10;
     opacity: 1;
     transform: translateY(0);
 }
+
 .menu {
     cursor: pointer;
     display: block;
@@ -435,9 +437,11 @@ const enable = computed(() => {
     padding: 10px 18px;
     transition: all 0.3s ease-in-out;
 }
+
 .menu:hover {
     background-color: rgba(120, 120, 120, 0.2);
 }
+
 .transitionNone,
 .transitionNone * {
     -webkit-transition: none !important;
@@ -446,12 +450,15 @@ const enable = computed(() => {
     -o-transition: none !important;
     transition: none !important;
 }
+
 .flip-list-move {
     transition: transform 0.5s;
 }
+
 .no-move {
     transition: transform 0s;
 }
+
 .explorer-xiaoshu {
     background-color: #f1f1f1;
     width: 56px;
@@ -471,6 +478,7 @@ const enable = computed(() => {
 .explorer-xiaoshu.hidden {
     left: -50px;
 }
+
 .explorer-xiaoshu:hover {
     padding: 0.8em;
     width: 240px;
@@ -478,15 +486,18 @@ const enable = computed(() => {
     box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.15);
     left: 0;
 }
+
 .explorer-xiaoshu.right.hidden {
     right: -50px;
     left: unset;
 }
+
 .explorer-xiaoshu.right:hover,
 .explorer-xiaoshu.right {
     right: 0;
     left: unset;
 }
+
 .group {
     background-color: transparent;
     border-radius: 10px;
@@ -494,13 +505,16 @@ const enable = computed(() => {
     margin-bottom: 0.8em;
     transition: background-color 0.2s ease-in-out;
 }
+
 .explorer-xiaoshu:hover .group {
     background-color: #fff;
 }
+
 ul {
     padding: 0;
     margin: 0;
 }
+
 .list-item {
     transition: all 0.2s ease-in-out;
     display: flex;
@@ -511,13 +525,16 @@ ul {
     color: #000;
     position: relative;
 }
+
 .list-item:hover {
     background-color: rgba(120, 120, 120, 0.2);
 }
+
 .list-item.active {
     background-color: #df5d64;
     color: #fff;
 }
+
 .list-item .menu2 {
     transition: all 0.3s ease-in-out;
     opacity: 0;
@@ -535,13 +552,16 @@ ul {
     color: #e07277;
     backdrop-filter: blur(7px);
 }
+
 .list-item .menu2 span {
     margin: 0 5px;
 }
+
 .list-item.menu-active .menu2 {
     z-index: 9;
     opacity: 1;
 }
+
 .item-icon {
     width: 24px;
     min-width: 24px;
@@ -551,11 +571,12 @@ ul {
     justify-content: center;
     transition: margin-right 0.2s ease-in-out;
     border-radius: 100%;
-    box-shadow: 0 0 0 1.5px #fff;
 }
+
 .explorer-xiaoshu:hover .item-icon {
     margin-right: 6px;
 }
+
 .item-title {
     white-space: nowrap;
     overflow: hidden;
@@ -563,17 +584,21 @@ ul {
     font-size: 0.7em;
     transition: width 0.2s ease-in-out;
 }
+
 .explorer-xiaoshu:hover .item-title {
     width: calc(100% - 30px);
 }
+
 .xiaoshu-h4 {
     color: #df5d64;
     margin-bottom: 0.2em;
 }
+
 .control,
 .add {
     cursor: pointer;
 }
+
 .delete {
     color: #df5d64 !important;
     border-top: 1px solid #eee;
@@ -584,17 +609,48 @@ ul {
         background-color: #0f0f0f;
         color: #fff;
     }
+
     .explorer-xiaoshu:hover .group {
         background-color: #1e1e1e;
     }
+
     .explorer-xiaoshu .delete {
         border-top: 1px solid rgba(0, 0, 0, 0.3);
     }
+
     .explorer-xiaoshu .list-item {
         color: #fff;
     }
+
     #menu {
         background-color: #000;
+    }
+}
+</style>
+
+<style>
+.explorer-xiaoshu {
+    --active-brightness: 0.8;
+    --hover-brightness: 1.2;
+    --border-radius: 6px;
+    --color-primary: rgb(23, 23, 23);
+    --color-link: #df5d64;
+    --color-text: rgb(23, 23, 23);
+    --color-bg: #fff;
+    --color-hover: rgba(23, 23, 23, 0.15);
+    --nexmoe-gap: 1rem;
+    --icon-checkbox: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23FFF' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+    --icon-summary: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(23, 23, 23)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+}
+
+@media (prefers-color-scheme: dark) {
+    .explorer-xiaoshu {
+        --color-primary: #fff;
+        --color-text: #f7f7f7;
+        --color-bg: #111;
+        --color-hover: rgba(230, 230, 230, 0.15);
+        --icon-checkbox: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+        --icon-summary: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23f7f7f7' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
     }
 }
 </style>
