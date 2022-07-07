@@ -13,22 +13,22 @@ specifiers:
   '@vitejs/plugin-vue': 2.3.3
   '@vue/compiler-sfc': 3.2.37
   '@vueuse/core': 8.7.5
-  '@xiaoshuapp/draggable': ^4.1.1
+  '@xiaoshuapp/draggable': 4.1.1
   body-parser: 1.19.2
   chokidar: 3.5.3
   cross-env: 7.0.3
   crx: 5.0.1
   download: 8.0.0
   eslint: 8.18.0
-  eslint-config-prettier: ^8.5.0
-  eslint-plugin-prettier: ^4.2.1
+  eslint-config-prettier: 8.5.0
+  eslint-plugin-prettier: 4.2.1
   esno: 0.16.3
   express: 4.17.3
   fs-extra: 10.1.0
   kolorist: 1.5.1
   nexmoe.css: 0.5.6
   npm-run-all: 4.1.5
-  prettier: ^2.7.1
+  prettier: 2.7.1
   rimraf: 3.0.2
   safe-compare: 1.1.4
   sharer.js: 0.5.1
@@ -74,7 +74,7 @@ devDependencies:
   fs-extra: 10.1.0
   kolorist: 1.5.1
   npm-run-all: 4.1.5
-  prettier: mirrors.tencent.com/prettier/2.7.1
+  prettier: 2.7.1
   rimraf: 3.0.2
   safe-compare: 1.1.4
   typescript: 4.7.4
@@ -769,7 +769,7 @@ packages:
     peerDependencies:
       vue: ^3.0.1
     dependencies:
-      sortablejs: mirrors.tencent.com/sortablejs/1.15.0
+      sortablejs: 1.15.0
       vue: 3.2.37
     dev: false
 
@@ -1929,6 +1929,15 @@ packages:
     dev: true
     optional: true
 
+  /esbuild-android-arm64/0.14.48:
+    resolution: {integrity: sha512-vptI3K0wGALiDq+EvRuZotZrJqkYkN5282iAfcffjI5lmGG9G1ta/CIVauhY42MBXwEgDJkweiDcDMRLzBZC4g==}
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [android]
+    requiresBuild: true
+    dev: true
+    optional: true
+
   /esbuild-darwin-64/0.14.48:
     resolution: {integrity: sha512-gGQZa4+hab2Va/Zww94YbshLuWteyKGD3+EsVon8EWTWhnHFRm5N9NbALNbwi/7hQ/hM1Zm4FuHg+k6BLsl5UA==}
     engines: {node: '>=12'}
@@ -1951,6 +1960,15 @@ packages:
     resolution: {integrity: sha512-1NOlwRxmOsnPcWOGTB10JKAkYSb2nue0oM1AfHWunW/mv3wERfJmnYlGzL3UAOIUXZqW8GeA2mv+QGwq7DToqA==}
     engines: {node: '>=12'}
     cpu: [x64]
+    os: [freebsd]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-freebsd-arm64/0.14.48:
+    resolution: {integrity: sha512-gXqKdO8wabVcYtluAbikDH2jhXp+Klq5oCD5qbVyUG6tFiGhrC9oczKq3vIrrtwcxDQqK6+HDYK8Zrd4bCA9Gw==}
+    engines: {node: '>=12'}
+    cpu: [arm64]
     os: [freebsd]
     requiresBuild: true
     dev: true
@@ -2001,6 +2019,15 @@ packages:
     dev: true
     optional: true
 
+  /esbuild-linux-ppc64le/0.14.48:
+    resolution: {integrity: sha512-+2F0vJMkuI0Wie/wcSPDCqXvSFEELH7Jubxb7mpWrA/4NpT+/byjxDz0gG6R1WJoeDefcrMfpBx4GFNN1JQorQ==}
+    engines: {node: '>=12'}
+    cpu: [ppc64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
   /esbuild-linux-riscv64/0.14.48:
     resolution: {integrity: sha512-BmaK/GfEE+5F2/QDrIXteFGKnVHGxlnK9MjdVKMTfvtmudjY3k2t8NtlY4qemKSizc+QwyombGWTBDc76rxePA==}
     engines: {node: '>=12'}
@@ -2046,6 +2073,15 @@ packages:
     dev: true
     optional: true
 
+  /esbuild-windows-32/0.14.48:
+    resolution: {integrity: sha512-EPgRuTPP8vK9maxpTGDe5lSoIBHGKO/AuxDncg5O3NkrPeLNdvvK8oywB0zGaAZXxYWfNNSHskvvDgmfVTguhg==}
+    engines: {node: '>=12'}
+    cpu: [ia32]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
   /esbuild-windows-64/0.14.48:
     resolution: {integrity: sha512-YmpXjdT1q0b8ictSdGwH3M8VCoqPpK1/UArze3X199w6u8hUx3V8BhAi1WjbsfDYRBanVVtduAhh2sirImtAvA==}
     engines: {node: '>=12'}
@@ -2071,23 +2107,23 @@ packages:
     requiresBuild: true
     optionalDependencies:
       esbuild-android-64: 0.14.48
-      esbuild-android-arm64: mirrors.tencent.com/esbuild-android-arm64/0.14.48
+      esbuild-android-arm64: 0.14.48
       esbuild-darwin-64: 0.14.48
       esbuild-darwin-arm64: 0.14.48
       esbuild-freebsd-64: 0.14.48
-      esbuild-freebsd-arm64: mirrors.tencent.com/esbuild-freebsd-arm64/0.14.48
+      esbuild-freebsd-arm64: 0.14.48
       esbuild-linux-32: 0.14.48
       esbuild-linux-64: 0.14.48
       esbuild-linux-arm: 0.14.48
       esbuild-linux-arm64: 0.14.48
       esbuild-linux-mips64le: 0.14.48
-      esbuild-linux-ppc64le: mirrors.tencent.com/esbuild-linux-ppc64le/0.14.48
+      esbuild-linux-ppc64le: 0.14.48
       esbuild-linux-riscv64: 0.14.48
       esbuild-linux-s390x: 0.14.48
       esbuild-netbsd-64: 0.14.48
       esbuild-openbsd-64: 0.14.48
       esbuild-sunos-64: 0.14.48
-      esbuild-windows-32: mirrors.tencent.com/esbuild-windows-32/0.14.48
+      esbuild-windows-32: 0.14.48
       esbuild-windows-64: 0.14.48
       esbuild-windows-arm64: 0.14.48
     dev: true
@@ -2287,7 +2323,7 @@ packages:
     dependencies:
       eslint: mirrors.tencent.com/eslint/8.18.0
       eslint-config-prettier: 8.5.0_eslint@8.18.0
-      prettier: mirrors.tencent.com/prettier/2.7.1
+      prettier: 2.7.1
       prettier-linter-helpers: 1.0.0
     dev: true
 
@@ -3868,7 +3904,7 @@ packages:
     dev: true
 
   /mv/2.1.1:
-    resolution: {integrity: sha1-rmzg1vbV4KT32JN5jQPB6pVZtqI=}
+    resolution: {integrity: sha512-at/ZndSy3xEGJ8i0ygALh8ru9qy7gWW1cmkaqBN29JmMlIvM//MEO9y1sk/avxuwnPcfhkejkLsuPxH81BrkSg==}
     engines: {node: '>=0.8.0'}
     requiresBuild: true
     dependencies:
@@ -4374,6 +4410,12 @@ packages:
       fast-diff: 1.2.0
     dev: true
 
+  /prettier/2.7.1:
+    resolution: {integrity: sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
+    dev: true
+
   /process-nextick-args/2.0.1:
     resolution: {integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==}
     dev: true
@@ -4830,6 +4872,10 @@ packages:
     dependencies:
       is-plain-obj: mirrors.tencent.com/is-plain-obj/1.1.0
     dev: true
+
+  /sortablejs/1.15.0:
+    resolution: {integrity: sha512-bv9qgVMjUMf89wAvM6AxVvS/4MX3sPeN0+agqShejLU5z5GX4C75ow1O2e5k4L6XItUyAK3gH6AxSbXrOM5e8w==}
+    dev: false
 
   /source-map-js/0.6.2:
     resolution: {integrity: sha512-/3GptzWzu0+0MBQFrDKzw/DvvMTUORvgY6k6jd/VS6iCR4RDTKWH6v6WPwQoUO8667uQEf9Oe38DxAYWY5F/Ug==}
@@ -6062,50 +6108,6 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  mirrors.tencent.com/esbuild-android-arm64/0.14.48:
-    resolution: {integrity: sha512-vptI3K0wGALiDq+EvRuZotZrJqkYkN5282iAfcffjI5lmGG9G1ta/CIVauhY42MBXwEgDJkweiDcDMRLzBZC4g==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-android-arm64/-/esbuild-android-arm64-0.14.48.tgz}
-    name: esbuild-android-arm64
-    version: 0.14.48
-    engines: {node: '>=12'}
-    cpu: [arm64]
-    os: [android]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  mirrors.tencent.com/esbuild-freebsd-arm64/0.14.48:
-    resolution: {integrity: sha512-gXqKdO8wabVcYtluAbikDH2jhXp+Klq5oCD5qbVyUG6tFiGhrC9oczKq3vIrrtwcxDQqK6+HDYK8Zrd4bCA9Gw==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-freebsd-arm64/-/esbuild-freebsd-arm64-0.14.48.tgz}
-    name: esbuild-freebsd-arm64
-    version: 0.14.48
-    engines: {node: '>=12'}
-    cpu: [arm64]
-    os: [freebsd]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  mirrors.tencent.com/esbuild-linux-ppc64le/0.14.48:
-    resolution: {integrity: sha512-+2F0vJMkuI0Wie/wcSPDCqXvSFEELH7Jubxb7mpWrA/4NpT+/byjxDz0gG6R1WJoeDefcrMfpBx4GFNN1JQorQ==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-linux-ppc64le/-/esbuild-linux-ppc64le-0.14.48.tgz}
-    name: esbuild-linux-ppc64le
-    version: 0.14.48
-    engines: {node: '>=12'}
-    cpu: [ppc64]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  mirrors.tencent.com/esbuild-windows-32/0.14.48:
-    resolution: {integrity: sha512-EPgRuTPP8vK9maxpTGDe5lSoIBHGKO/AuxDncg5O3NkrPeLNdvvK8oywB0zGaAZXxYWfNNSHskvvDgmfVTguhg==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/esbuild-windows-32/-/esbuild-windows-32-0.14.48.tgz}
-    name: esbuild-windows-32
-    version: 0.14.48
-    engines: {node: '>=12'}
-    cpu: [ia32]
-    os: [win32]
-    requiresBuild: true
-    dev: true
-    optional: true
-
   mirrors.tencent.com/eslint-import-resolver-node/0.3.6:
     resolution: {integrity: sha512-0En0w03NRVMn9Uiyn8YRPDKvWjxCWkslUEhGNTdGx15RvPJYQ+lbOlqrlNI2vEAs4pDYK4f/HN2TbDmk5TP0iw==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/eslint-import-resolver-node/-/eslint-import-resolver-node-0.3.6.tgz}
     name: eslint-import-resolver-node
@@ -6868,14 +6870,6 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  mirrors.tencent.com/prettier/2.7.1:
-    resolution: {integrity: sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/prettier/-/prettier-2.7.1.tgz}
-    name: prettier
-    version: 2.7.1
-    engines: {node: '>=10.13.0'}
-    hasBin: true
-    dev: true
-
   mirrors.tencent.com/queue/6.0.2:
     resolution: {integrity: sha512-iHZWu+q3IdFZFX36ro/lKBkSvfkztY5Y7HMiPlOUjhupPcG2JMfst2KKEpu5XndviX/3UhFbRngUPNKtgvtZiA==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/queue/-/queue-6.0.2.tgz}
     name: queue
@@ -7057,12 +7051,6 @@ packages:
     dependencies:
       sort-keys: 1.1.2
     dev: true
-
-  mirrors.tencent.com/sortablejs/1.15.0:
-    resolution: {integrity: sha512-bv9qgVMjUMf89wAvM6AxVvS/4MX3sPeN0+agqShejLU5z5GX4C75ow1O2e5k4L6XItUyAK3gH6AxSbXrOM5e8w==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/sortablejs/-/sortablejs-1.15.0.tgz}
-    name: sortablejs
-    version: 1.15.0
-    dev: false
 
   mirrors.tencent.com/strict-uri-encode/1.1.0:
     resolution: {integrity: sha1-J5siXfHVgrH1TmWt3UNS4Y+qBxM=, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/strict-uri-encode/-/strict-uri-encode-1.1.0.tgz}
