@@ -9,14 +9,14 @@ const listData = ref(originData)
 
 const saveInfo = ref(false)
 
-const saveInfoF = (): void => {
+const saveInfoFunc = (): void => {
     saveInfo.value = true
     setTimeout(() => {
         saveInfo.value = false
     }, 3000)
 }
 
-const geti18n = (name: string): string => {
+const getI18n = (name: string): string => {
     return browser.i18n.getMessage(name)
 }
 
@@ -35,14 +35,11 @@ watch(
     setting,
     () => {
         const data = JSON.parse(JSON.stringify(setting.value))
-        browser.storage.sync.set({ setting: data }).then(
-            () => {
-                saveInfoF()
-            },
-            (error: Error) => {
+        browser.storage.sync
+            .set({ setting: data })
+            .then(saveInfoFunc, (error) => {
                 window.console.log(error)
-            },
-        )
+            })
     },
     {
         deep: true,
@@ -52,14 +49,14 @@ watch(
 
 <template>
     <main class="container">
-        <h1>{{ geti18n('title') }}</h1>
+        <h1>{{ getI18n('title') }}</h1>
         <nav style="margin-left: 2rem">
             <ul>
                 <li>
-                    <a checked>{{ geti18n('optionsNavHome') }}</a>
+                    <a checked>{{ getI18n('optionsNavHome') }}</a>
                 </li>
                 <li>
-                    <a href="#">{{ geti18n('optionsNavStars') }}</a>
+                    <a href="#">{{ getI18n('optionsNavStars') }}</a>
                     <ul>
                         <li>
                             <a
@@ -100,31 +97,31 @@ watch(
                     <a
                         href="https://github.com/xiaoshuapp/explorer-xiaoshu/discussions"
                         target="_blank"
-                        >{{ geti18n('optionsNavIssues') }}</a
+                        >{{ getI18n('optionsNavIssues') }}</a
                     >
                 </li>
             </ul>
         </nav>
-        <h2>{{ geti18n('optionsUI') }}</h2>
+        <h2>{{ getI18n('optionsUI') }}</h2>
         <hr />
         <p>
             <label
                 ><input v-model="setting.hidden" type="checkbox" />
-                {{ geti18n('optionsUIHidden') }}</label
+                {{ getI18n('optionsUIHidden') }}</label
             >
         </p>
         <p>
             <label
                 ><input v-model="setting.right" type="checkbox" />
-                {{ geti18n('optionsUIRight') }}</label
+                {{ getI18n('optionsUIRight') }}</label
             >
         </p>
-        <h2>{{ geti18n('optionsFunction') }}</h2>
+        <h2>{{ getI18n('optionsFunction') }}</h2>
         <hr />
         <p>
             <label
                 ><input v-model="setting.function.openNew" type="checkbox" />
-                {{ geti18n('optionsFunctionOpenNew') }}</label
+                {{ getI18n('optionsFunctionOpenNew') }}</label
             >
         </p>
         <p>
@@ -133,7 +130,7 @@ watch(
                     v-model="setting.function.automaticAdvance"
                     type="checkbox"
                 />
-                {{ geti18n('optionsFunctionAutomaticAdvance') }}</label
+                {{ getI18n('optionsFunctionAutomaticAdvance') }}</label
             >
         </p>
         <p>
@@ -142,13 +139,13 @@ watch(
                     v-model="setting.function.getSelection"
                     type="checkbox"
                 />
-                {{ geti18n('optionsFunctionGetSelection') }}</label
+                {{ getI18n('optionsFunctionGetSelection') }}</label
             >
         </p>
         <p>
             <label
                 ><input v-model="setting.function.enableOnly" type="checkbox" />
-                {{ geti18n('optionsFunctionEnableOnly') }}</label
+                {{ getI18n('optionsFunctionEnableOnly') }}</label
             >
         </p>
         <h2>Your Data / 你的数据</h2>

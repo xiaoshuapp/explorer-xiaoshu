@@ -1,17 +1,18 @@
 <script lang="ts" setup>
 import 'nexmoe.css'
-import draggable from '@xiaoshuapp/draggable'
+import draggable from 'vuedraggable'
+import type { Ref } from 'vue'
 import { ref } from 'vue'
 import DetectDialog from '../../components/DetectDialog.vue'
 import settingData from '../../options/setting.json'
 import originData from './data.json'
 
 const listData = ref(originData)
-const drag = ref(false)
-const loaded = ref(false)
-const active = ref()
-const keyword = ref() // 划词 + getKeyword()
-const searchKeyword = ref('') // getKeyword()
+const drag: Ref<boolean> = ref(false)
+const loaded: Ref<boolean> = ref(false)
+const active: Ref<string | null> = ref(null)
+const keyword: Ref<string | null> = ref(null) // 划词 + getKeyword()
+const searchKeyword: Ref<string> = ref('') // getKeyword()
 const setting = ref(settingData)
 const dragGroups = {
     group: 'group',
@@ -25,10 +26,10 @@ const dragOptions = {
     animation: 200,
 }
 
-const menuLeft = ref()
-const menuTop = ref()
+const menuLeft: Ref<string | null> = ref(null)
+const menuTop: Ref<string | null> = ref(null)
 const menu = ref(false)
-const menuIndex = ref()
+const menuIndex = ref(0)
 
 const menuX = (event: MouseEvent, index: number) => {
     event.preventDefault()
@@ -187,11 +188,11 @@ const geti18n = (name: string): string => {
 const engineHref = (engine: string): string => {
     if (engine.includes('%s')) {
         if (engine.includes('?')) {
-            return `${engine.replace('%s', keyword.value)}&exxshu=${
+            return `${engine.replace('%s', keyword.value || '')}&exxshu=${
                 keyword.value
             }`
         } else {
-            return `${engine.replace('%s', keyword.value)}?exxshu=${
+            return `${engine.replace('%s', keyword.value || '')}?exxshu=${
                 keyword.value
             }`
         }
@@ -289,7 +290,7 @@ const enable = computed(() => {
     >
         <div
             id="menu"
-            :style="{ left: menuLeft, top: menuTop }"
+            :style="{ left: menuLeft || 'unset', top: menuTop || 'unset' }"
             :class="{ show: menu }"
         >
             <div class="menu" @click="changeTitle(menuIndex)">修改标题</div>
@@ -308,7 +309,7 @@ const enable = computed(() => {
 
         <DetectDialog
             v-if="detectOpen"
-            :keyword="keyword"
+            :keyword="keyword ?? ''"
             @add-to-list="addToList"
         />
 
@@ -316,10 +317,9 @@ const enable = computed(() => {
             class="list-group"
             item-key="name"
             :list="listData"
-            tag="transition-group"
             :component-data="{
                 tag: 'ul',
-                type: 'transition-group',
+                // type: 'transition-group',
                 name: !drag ? 'flip-list' : null,
             }"
             v-bind="dragGroups"
@@ -346,10 +346,9 @@ const enable = computed(() => {
                         class="list-group"
                         item-key="name"
                         :list="element.list"
-                        tag="transition-group"
                         :component-data="{
                             tag: 'ul',
-                            type: 'transition-group',
+                            // type: 'transition-group',
                             name: !drag ? 'flip-list' : null,
                         }"
                         v-bind="dragOptions"
