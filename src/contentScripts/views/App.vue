@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import 'nexmoe.css'
-import draggable from 'vuedraggable'
+import draggable from '@xiaoshuapp/draggable'
 import type { Ref } from 'vue'
 import { ref } from 'vue'
 import DetectDialog from '../../components/DetectDialog.vue'
