@@ -15,7 +15,7 @@ const init = () => {
     // mount component to context window
     const container = document.createElement('div')
     const root = document.createElement('div')
-    container.id = 'exploerer-xiaoshu'
+    container.id = 'explorer-xiaoshu'
     const styleEl = document.createElement('link')
     const shadowDOM =
         container.attachShadow?.({ mode: __DEV__ ? 'open' : 'closed' }) ||
@@ -35,7 +35,7 @@ init()
 
 let url_prec = window.location.href
 window.setInterval(() => {
-    if (!document.getElementById('exploerer-xiaoshu')) {
+    if (!document.getElementById('explorer-xiaoshu')) {
         if (url_prec !== window.location.href) {
             url_prec = window.location.href
             init()

@@ -64,7 +64,7 @@
   },
   "dependencies": {
     "@xiaoshuapp/draggable": "^4.1.1",
-    "nexmoe.css": "0.5.3",
+    "nexmoe.css": "0.5.6",
     "sharer.js": "0.5.1"
   }
 }
