@@ -1,10 +1,10 @@
 {
-	"hidden": false,
-	"right": false,
-	"function": {
-		"openNew": false,
-		"getSelection": true,
-		"automaticAdvance": true,
-		"enableOnly": false
-	}
+    "hidden": false,
+    "right": false,
+    "function": {
+        "openNew": false,
+        "getSelection": true,
+        "automaticAdvance": true,
+        "enableOnly": false
+    }
 }
