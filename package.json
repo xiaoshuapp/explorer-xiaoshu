@@ -63,8 +63,8 @@
     "webextension-polyfill": "0.8.0"
   },
   "dependencies": {
-    "nexmoe.css": "0.5.3",
-    "sharer.js": "0.5.1",
-    "vuedraggable": "4.1.0"
+    "@xiaoshuapp/draggable": "^4.1.1",
+    "nexmoe.css": "0.5.6",
+    "sharer.js": "0.5.1"
   }
 }
