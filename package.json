@@ -43,7 +43,7 @@
     "eslint": "8.18.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "esno": "0.10.1",
+    "esno": "0.16.3",
     "express": "4.17.2",
     "fs-extra": "10.1.0",
     "kolorist": "1.5.1",
