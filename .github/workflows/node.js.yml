@@ -1,0 +1,54 @@
+name: Node.js CI
+
+on:
+  pull_request:
+    branches: [ master ]
+  push:
+    branches: [ master ]
+jobs:
+  test:
+    name: Build
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
+    steps:
+    - uses: actions/checkout@v3
+    - uses: pnpm/action-setup@v2.0.1
+      name: Install pnpm
+      id: pnpm-install
+      with:
+        version: 7
+        run_install: false
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'pnpm'  
+    - name: Install dependencies
+      run: pnpm install
+    - name: Build
+      run: pnpm run build
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x]
+    steps:
+    - uses: actions/checkout@v3
+    - uses: pnpm/action-setup@v2.0.1
+      name: Install pnpm
+      id: pnpm-install
+      with:
+        version: 7
+        run_install: false
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'pnpm'  
+    - name: Install dependencies
+      run: pnpm install
+    - name: Lint
+      run: pnpm run lint
