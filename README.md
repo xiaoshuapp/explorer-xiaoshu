@@ -6,25 +6,25 @@ Homepage: <https://ex.xiaoshu.app/>
 
 # Installation
 
-- [Edge](https://microsoftedge.microsoft.com/addons/detail/coneollgjonabefaacemccaknmicmncj)
-- [Chrome](https://chrome.google.com/webstore/detail/lcalpcoppmdamffdmmchmadbpaoibaep)
-- [Firefox](https://addons.mozilla.org/addon/explorer-xiaoshu/)
+-   [Edge](https://microsoftedge.microsoft.com/addons/detail/coneollgjonabefaacemccaknmicmncj)
+-   [Chrome](https://chrome.google.com/webstore/detail/lcalpcoppmdamffdmmchmadbpaoibaep)
+-   [Firefox](https://addons.mozilla.org/addon/explorer-xiaoshu/)
 
 # Contribution
 
 ## Folders
 
-- `src` - main source.
-  - `contentScript` - scripts and components to be injected as `content_script`
-  - `background` - scripts for background.
-  - `components` - auto-imported Vue components that are shared in popup and options page.
-  - `styles` - styles shared in popup and options page
-  - `assets` - assets used in Vue components
-  - `manifest.ts` - manifest for the extension.
-- `extension` - extension package root.
-  - `assets` - static assets (mainly for `manifest.json`).
-  - `dist` - built files, also serve stub entry for Vite on development.
-- `scripts` - development and bundling helper scripts.
+-   `src` - main source.
+    -   `contentScript` - scripts and components to be injected as `content_script`
+    -   `background` - scripts for background.
+    -   `components` - auto-imported Vue components that are shared in popup and options page.
+    -   `styles` - styles shared in popup and options page
+    -   `assets` - assets used in Vue components
+    -   `manifest.ts` - manifest for the extension.
+-   `extension` - extension package root.
+    -   `assets` - static assets (mainly for `manifest.json`).
+    -   `dist` - built files, also serve stub entry for Vite on development.
+-   `scripts` - development and bundling helper scripts.
 
 ## Development
 
@@ -46,8 +46,8 @@ pnpm start:firefox
 
 ## Related Projects
 
-- <https://github.com/nexmoe/nexmoe.css>
-- <https://github.com/xiaoshuapp/vue.draggable.next>
+-   <https://github.com/nexmoe/nexmoe.css>
+-   <https://github.com/xiaoshuapp/vue.draggable.next>
 
 # Help to translate
 

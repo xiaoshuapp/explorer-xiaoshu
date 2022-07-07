@@ -1,6 +1,52 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:base"
-  ]
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": [
+        "config:base",
+        "default:automergeMinor",
+        "default:disableRateLimiting",
+        "default:rebaseStalePrs",
+        "group:allNonMajor"
+    ],
+    "packageRules": [
+        {
+            "groupName": "Vite & Vue packages",
+            "matchPackagePatterns": ["vite", "vue", "vueuse", "unplugin"]
+        },
+        {
+            "groupName": "TypeScript & Type Definitions",
+            "matchPackagePatterns": ["typescript", "@types"]
+        },
+        {
+            "groupName": "Lint packages",
+            "matchPackagePatterns": [
+                "eslint",
+                "prettier",
+                "commitlint",
+                "stylelint",
+                "husky",
+                "lint-staged"
+            ]
+        },
+        {
+            "groupName": "WebExt packages",
+            "matchPackagePatterns": [
+                "web-ext",
+                "webext-bridge",
+                "webextension-polyfill",
+                "body-parser",
+                "express",
+                "crx"
+            ]
+        },
+        {
+            "groupName": "Dev Tools packages",
+            "matchPackagePatterns": [
+                "esno ",
+                "npm-run-all",
+                "rimraf",
+                "kolorist",
+                "fs-extra"
+            ]
+        }
+    ]
 }
