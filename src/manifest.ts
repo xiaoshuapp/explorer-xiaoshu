@@ -23,7 +23,12 @@ export async function getManifest() {
             48: './assets/icon128.png',
             128: './assets/icon128.png',
         },
-        permissions: ['storage', 'http://*/', 'https://*/'],
+        permissions: [
+            'storage',
+            'unlimitedStorage', // 无限制存储，用于缓存
+            'http://*/',
+            'https://*/',
+        ],
         content_scripts: [
             {
                 matches: ['http://*/*', 'https://*/*'],

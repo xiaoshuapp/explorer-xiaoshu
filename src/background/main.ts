@@ -1,5 +1,9 @@
 import { onMessage, sendMessage } from 'webext-bridge'
 import type { Tabs } from 'webextension-polyfill'
+import {
+    Instance as FileCacheInstance,
+    Utils as FileCacheUtils,
+} from './libs/fileCache'
 
 // only on dev mode
 if (import.meta.hot) {
@@ -73,6 +77,61 @@ onMessage('get-current-tab', async () => {
     } catch {
         return {
             title: undefined,
+        }
+    }
+})
+
+// 缓存资源
+onMessage('remember-resources', async (message) => {
+    try {
+        const result = await FileCacheUtils.rememberResources(
+            message.data.items,
+        )
+        return {
+            isError: false,
+            data: result.map((item, index) => {
+                return {
+                    id: item.id!,
+                    name: item.name,
+                    url: message.data.items[index].url,
+                    file: item,
+                }
+            }),
+            error: null,
+        }
+    } catch (err) {
+        return {
+            isError: true,
+            error: err as Error,
+            data: null,
+        }
+    }
+})
+
+// 缓存资源
+onMessage('update-resources', async (message) => {
+    try {
+        await FileCacheUtils.updateResources(message.data.items)
+        const result = await FileCacheInstance.batchGet(
+            message.data.items.flatMap((item) => item.id),
+        )
+        return {
+            isError: false,
+            data: result.map((item, index) => {
+                return {
+                    id: item.id!,
+                    name: item.name,
+                    url: message.data.items[index].url,
+                    file: item,
+                }
+            }),
+            error: null,
+        }
+    } catch (err) {
+        return {
+            isError: true,
+            error: err as Error,
+            data: null,
         }
     }
 })
