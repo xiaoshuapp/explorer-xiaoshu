@@ -1,4 +1,18 @@
 import { ProtocolWithReturn } from 'webext-bridge'
+import { File as FileStoreElement } from './src/background/libs/fileCache'
+
+interface ResourceResponse {
+    isError: boolean
+    error: Error | null
+    data:
+        | {
+              id: number
+              name: string
+              url: string
+              file: FileStoreElement
+          }[]
+        | null
+}
 
 declare module 'webext-bridge' {
     export interface ProtocolMap {
@@ -8,6 +22,14 @@ declare module 'webext-bridge' {
         'get-current-tab': ProtocolWithReturn<
             { tabId: number },
             { title?: string }
+        >
+        'remember-resources': ProtocolWithReturn<
+            { items: { name: string; url: string; ex: number }[] },
+            ResourceResponse
+        >
+        'update-resources': ProtocolWithReturn<
+            { items: { id: number; name: string; url: string }[] },
+            ResourceResponse
         >
     }
 }
