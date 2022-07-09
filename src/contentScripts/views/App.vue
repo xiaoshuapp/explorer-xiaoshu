@@ -112,7 +112,7 @@ const getActive = (): void => {
 }
 
 const addGroup = (): void => {
-    listData.value.push({
+    listData.value.unshift({
         icon: '😀',
         name: 'New Group',
         list: [],
@@ -179,6 +179,10 @@ const addToList = (data: any): void => {
         name: data.name,
         engine: data.engine,
     })
+}
+
+const DetectIgnore = (): void => {
+    detectOpen.value = false
 }
 
 const geti18n = (name: string): string => {
@@ -295,23 +299,37 @@ const enable = computed(() => {
         >
             <div class="menu" @click="changeTitle(menuIndex)">修改标题</div>
             <div class="menu" @click="addEngine(menuIndex)">添加搜索引擎</div>
-            <div class="menu" @click="deleteGroup(menuIndex)">
-                {{ geti18n('deleteGroup') }}
-            </div>
-        </div>
-
-        <div v-if="searchKeyword && !active" class="group">
-            <div class="list-item" @click="detectOpen = true">
-                <div class="item-icon">🆕</div>
-                <div class="item-title">检测到新的搜索引擎</div>
-            </div>
+            <div class="menu" @click="deleteGroup(menuIndex)">删除该分组</div>
         </div>
 
         <DetectDialog
             v-if="detectOpen"
             :keyword="keyword ?? ''"
             @add-to-list="addToList"
+            @detect-ignore="DetectIgnore"
         />
+        <div class="setting">
+            <div class="group add">
+                <div
+                    v-if="searchKeyword && !active"
+                    class="list-item"
+                    @click="detectOpen = true"
+                >
+                    <div class="item-icon">🆕</div>
+                    <div class="item-title">检测到搜索引擎</div>
+                </div>
+                <div class="list-item" @click="addGroup()">
+                    <div class="item-icon">➕</div>
+                    <div class="item-title">
+                        {{ geti18n('addGroup') }}
+                    </div>
+                </div>
+                <div class="list-item" @click="openOptionsPage()">
+                    <div class="item-icon">⚙</div>
+                    <div class="item-title">扩展设置</div>
+                </div>
+            </div>
+        </div>
 
         <draggable
             class="list-group"
@@ -389,49 +407,29 @@ const enable = computed(() => {
                 </div>
             </template>
         </draggable>
-        <div class="setting">
-            <div class="group add">
-                <div class="list-item" @click="addGroup()">
-                    <div class="item-icon">➕</div>
-                    <div class="item-title">
-                        {{ geti18n('addGroup') }}
-                    </div>
-                </div>
-                <div class="list-item" @click="openOptionsPage()">
-                    <div class="item-icon">⚙</div>
-                    <div class="item-title">扩展设置</div>
-                </div>
-            </div>
-        </div>
     </div>
 </template>
 
 <style scoped>
 #menu {
-    left: -150px;
     border-radius: 3px;
-    transform: translateY(-15px);
     padding: 10px 0;
-    opacity: 0;
+    display: none;
     background-color: #fff;
     overflow: hidden;
     box-shadow: 0 5px 5px -3px rgb(0 0 0 / 20%), 0 8px 10px 1px rgb(0 0 0 / 14%),
         0 3px 14px 2px rgb(0 0 0 / 12%);
     position: fixed;
-    transition: opacity 0.3s;
-    transition: transform 0.3s;
 }
 
 #menu.show {
+    display: block;
     z-index: 10;
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .menu {
     cursor: pointer;
     display: block;
-    width: 100px;
     font-size: 14px;
     padding: 10px 18px;
     transition: all 0.3s ease-in-out;

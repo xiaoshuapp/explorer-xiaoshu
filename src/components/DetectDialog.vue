@@ -3,11 +3,10 @@ import { onMounted, ref } from 'vue'
 const props = defineProps({
     keyword: String,
 })
-const emit = defineEmits(['addToList'])
+const emit = defineEmits(['addToList', 'detectIgnore'])
 const dialog = ref()
 const name = ref(window.location.hostname)
 const engine = ref('')
-let ignoreV = localStorage.getItem('storage-ingore') || false
 
 onMounted(() => {
     if (props.keyword) {
@@ -19,8 +18,7 @@ onMounted(() => {
 })
 
 const ignore = () => {
-    ignoreV = 'true'
-    localStorage.setItem('storage-ingore', ignoreV)
+    emit('detectIgnore')
     dialog.value.close()
 }
 
@@ -64,6 +62,7 @@ const addEngine = () => {
 dialog {
     zoom: 0.8;
 }
+
 button,
 input,
 select,
@@ -71,13 +70,16 @@ textarea {
     font-size: 16px;
     padding: 8px 16px;
 }
+
 input {
     width: 440px;
 }
+
 dialog fieldset legend {
     font-size: 24px;
     font-weight: bold;
 }
+
 p {
     margin: 0;
 }
