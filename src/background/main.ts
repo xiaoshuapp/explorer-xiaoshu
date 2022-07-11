@@ -84,6 +84,7 @@ onMessage('get-current-tab', async () => {
 // 缓存资源
 onMessage('remember-resources', async (message) => {
     try {
+        FileCacheInstance.init()
         const result = await FileCacheUtils.rememberResources(
             message.data.items,
         )
@@ -111,6 +112,7 @@ onMessage('remember-resources', async (message) => {
 // 缓存资源
 onMessage('update-resources', async (message) => {
     try {
+        FileCacheInstance.init()
         await FileCacheUtils.updateResources(message.data.items)
         const result = await FileCacheInstance.batchGet(
             message.data.items.flatMap((item) => item.id),

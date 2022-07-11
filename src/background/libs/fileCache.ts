@@ -24,7 +24,9 @@ class FileCacheDatabase extends Dexie {
 export class Instance {
     static db: FileCacheDatabase
     static init() {
-        Instance.db = new FileCacheDatabase()
+        if (!Instance.db) {
+            Instance.db = new FileCacheDatabase()
+        }
     }
 
     static async get(id: number): Promise<File | undefined> {
