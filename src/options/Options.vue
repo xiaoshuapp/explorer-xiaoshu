@@ -56,41 +56,10 @@ watch(
                     <a checked>{{ getI18n('optionsNavHome') }}</a>
                 </li>
                 <li>
-                    <a href="#">{{ getI18n('optionsNavStars') }}</a>
-                    <ul>
-                        <li>
-                            <a
-                                href="https://github.com/xiaoshuapp/explorer-xiaoshu"
-                                target="_blank"
-                                >Github</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                href="https://microsoftedge.microsoft.com/addons/detail/coneollgjonabefaacemccaknmicmncj"
-                                target="_blank"
-                                >Edge</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                href="https://chrome.google.com/webstore/detail/lcalpcoppmdamffdmmchmadbpaoibaep?authuser=0&hl=zh-CN"
-                                target="_blank"
-                                >Chrome</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                href="https://addons.mozilla.org/addon/explorer-xiaoshu/"
-                                target="_blank"
-                                >Firefox</a
-                            >
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="https://twitter.com/nexmoe" target="_blank"
-                        >Twitter</a
+                    <a
+                        href="https://explorer.xiaoshuapp.com/star.html"
+                        target="_blank"
+                        >{{ getI18n('optionsNavStars') }}</a
                     >
                 </li>
                 <li>
@@ -98,6 +67,13 @@ watch(
                         href="https://github.com/xiaoshuapp/explorer-xiaoshu/discussions"
                         target="_blank"
                         >{{ getI18n('optionsNavIssues') }}</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="https://github.com/xiaoshuapp/explorer-xiaoshu/releases"
+                        target="_blank"
+                        >Changelog</a
                     >
                 </li>
             </ul>
@@ -199,19 +175,6 @@ watch(
             </div>
         </article>
         <br />
-        <article>
-            <details>
-                <summary>Telegram 获取更新日志</summary>
-            </details>
-            <div>
-                <p>
-                    Channel:
-                    <a href="https://t.me/explorer_xiaoshuc" target="_blank"
-                        >https://t.me/explorer_xiaoshuc</a
-                    >
-                </p>
-            </div>
-        </article>
         <p>
             Made width ❤ by
             <a href="https://twitter.com/nexmoe" target="_blank">Nexmoe</a>
@@ -229,9 +192,11 @@ watch(
     max-width: 720px;
     font-size: 17px;
 }
+
 a[target='_blank']::after {
     content: '↗';
 }
+
 .alert {
     position: fixed;
     top: 0;

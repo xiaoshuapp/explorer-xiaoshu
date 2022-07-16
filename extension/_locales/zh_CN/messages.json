@@ -18,7 +18,7 @@
     "optionsNavIssues": { "message": "反馈" },
 
     "optionsUI": { "message": "界面设置" },
-    "optionsUIHidden": { "message": "收起得更深" },
+    "optionsUIHidden": { "message": "极简模式" },
     "optionsUIRight": { "message": "显示在右边" },
 
     "optionsFunction": { "message": "功能设置" },
