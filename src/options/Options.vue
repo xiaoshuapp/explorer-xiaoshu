@@ -243,4 +243,10 @@ a[target='_blank']::after {
     border-bottom: 1px solid #ccc;
     text-align: center;
 }
+
+@media (prefers-color-scheme: dark) {
+    .alert {
+        background: rgba(120, 120, 120, 0.2);
+    }
+}
 </style>
