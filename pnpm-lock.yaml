@@ -43,7 +43,7 @@ specifiers:
   unplugin-vue-components: 0.21.1
   vite: 2.9.14
   vue: 3.2.37
-  vue-demi: 0.13.4
+  vue-demi: 0.13.5
   vue-eslint-parser: 9.0.3
   web-ext: 7.1.1
   webext-bridge: 5.0.5
@@ -94,7 +94,7 @@ devDependencies:
   unplugin-vue-components: 0.21.1_vite@2.9.14+vue@3.2.37
   vite: 2.9.14
   vue: 3.2.37
-  vue-demi: 0.13.4_vue@3.2.37
+  vue-demi: 0.13.5_vue@3.2.37
   vue-eslint-parser: 9.0.3_eslint@8.19.0
   web-ext: 7.1.1_tipoqawfgfdftsvun74lud337q
   webext-bridge: 5.0.5
@@ -992,7 +992,7 @@ packages:
       '@vueuse/metadata': 8.9.3
       '@vueuse/shared': 8.9.3_vue@3.2.37
       vue: 3.2.37
-      vue-demi: 0.13.4_vue@3.2.37
+      vue-demi: 0.13.5_vue@3.2.37
     dev: true
 
   /@vueuse/metadata/8.9.3:
@@ -1011,7 +1011,7 @@ packages:
         optional: true
     dependencies:
       vue: 3.2.37
-      vue-demi: 0.13.4_vue@3.2.37
+      vue-demi: 0.13.5_vue@3.2.37
     dev: true
 
   /@xiaoshuapp/draggable/4.1.1_vue@3.2.37:
@@ -6844,8 +6844,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vue-demi/0.13.4_vue@3.2.37:
-    resolution: {integrity: sha512-KP4lq9uSz0KZbaqCllRhnxMV3mYRsRWJfdsAhZyt5bV5O1RTpoeDptBRV9NOa/JgOpfaA9ane88VF7OjWNK/DA==}
+  /vue-demi/0.13.5_vue@3.2.37:
+    resolution: {integrity: sha512-tO3K2bML3AwiHmVHeKCq6HLef2st4zBXIV5aEkoJl6HZ+gJWxWv2O8wLH8qrA3SX3lDoTDHNghLX1xZg83MXvw==}
     engines: {node: '>=12'}
     hasBin: true
     requiresBuild: true
