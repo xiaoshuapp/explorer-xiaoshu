@@ -275,6 +275,19 @@ const onError = (e: { srcElement: any }) => {
     img.style.display = 'none'
 }
 
+let url_prec = window.location.href
+window.setInterval(() => {
+    if (url_prec !== window.location.href) {
+        url_prec = window.location.href
+        getActive()
+        window.onload = () => {
+            searchKeyword.value = getKeyword()
+            keyword.value = getKeyword()
+            loaded.value = true
+        }
+    }
+}, 1000)
+
 const enable = computed(() => {
     if (setting.value.function.enableOnly) return active.value && keyword.value
     else return keyword.value
@@ -312,7 +325,7 @@ const enable = computed(() => {
             <div class="group add">
                 <div
                     v-if="searchKeyword && !active"
-                    class="list-item"
+                    class="list-item active"
                     @click="detectOpen = true"
                 >
                     <div class="item-icon">🆕</div>
