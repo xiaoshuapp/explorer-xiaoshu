@@ -37,7 +37,7 @@
         "@ffflorian/jszip-cli": "3.1.6",
         "@iconify/json": "2.1.78",
         "@types/download": "8.0.1",
-        "@types/file-saver": "^2.0.5",
+        "@types/file-saver": "2.0.5",
         "@types/fs-extra": "9.0.13",
         "@types/node": "16.11.45",
         "@types/webextension-polyfill": "0.9.0",
