@@ -61,5 +61,11 @@
     },
     "optionsFunctionEnableOnly": {
         "message": "Use Explorer Xiaoshu only in the search engine in the list (Sniffing and selection will be disabled)"
+    },
+    "exportSettings": {
+        "message": "导出设置"
+    },
+    "importSettings": {
+        "message": "导入配置"
     }
 }
