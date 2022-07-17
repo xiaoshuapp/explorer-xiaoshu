@@ -1,6 +1,7 @@
 <script setup lang="ts">
 /* eslint-disable vue/no-textarea-mustache */
 import 'nexmoe.css'
+import { saveAs } from 'file-saver'
 import originData from '../contentScripts/views/data.json'
 import settingData from './setting.json'
 
@@ -8,6 +9,8 @@ const setting = ref(settingData)
 const listData = ref(originData)
 
 const saveInfo = ref(false)
+const importAlert = ref(false)
+const inputFileRef = ref(null)
 
 const saveInfoFunc = (): void => {
     saveInfo.value = true
@@ -16,20 +19,78 @@ const saveInfoFunc = (): void => {
     }, 3000)
 }
 
+const importAlertFunc = (): void => {
+    importAlert.value = true
+    setTimeout(() => {
+        importAlert.value = false
+    }, 3000)
+}
+
 const getI18n = (name: string): string => {
     return browser.i18n.getMessage(name)
 }
 
-browser.storage.sync.get({ setting: settingData, listData: originData }).then(
-    (data: any) => {
-        listData.value = data.listData
-        Object.assign(setting.value, data.setting)
-        setTimeout(() => {
-            saveInfo.value = false
-        }, 10)
-    },
-    (error: any) => console.error(error),
-)
+const exportSettings = () => {
+    try {
+        const data = {
+            setting: setting.value,
+            listData: listData.value,
+        }
+
+        saveAs(
+            new Blob([JSON.stringify(data)], { type: 'application/json' }),
+            'explorer-xiaoshu.json',
+        )
+    } catch (error) {
+        console.error(error)
+    }
+}
+
+const readFile = (file: File) => {
+    const reader = new FileReader()
+    reader.onload = (e: Event) => {
+        const target = e.target as FileReader
+        const data = JSON.parse(target.result as string)
+        const { setting, listData } = data
+        browser.storage.sync
+            .set({
+                setting,
+                listData,
+            })
+            .then(() => {
+                getData()
+                importAlertFunc()
+            })
+            .catch((error) => {
+                console.error(error)
+            })
+    }
+    reader.readAsText(file)
+}
+
+const onFileChange = (e: Event) => {
+    const target = e.target as HTMLInputElement
+    const files = target.files
+    if (!files) {
+        return
+    }
+    readFile(files[0])
+}
+
+function getData() {
+    browser.storage.sync
+        .get({ setting: settingData, listData: originData })
+        .then(
+            (data: any) => {
+                listData.value = data.listData
+                Object.assign(setting.value, data.setting)
+                setTimeout(() => {
+                    saveInfo.value = false
+                }, 10)
+            },
+            (error: any) => console.error(error),
+        )
+}
 
 watch(
     setting,
@@ -45,6 +106,10 @@ watch(
         deep: true,
     },
 )
+
+onMounted(() => {
+    getData()
+})
 </script>
 
 <template>
@@ -78,6 +143,23 @@ watch(
                 </li>
             </ul>
         </nav>
+        <div class="btn-wrap">
+            <button @click="exportSettings">
+                {{ getI18n('exportSettings') }}
+            </button>
+            <div class="file-btn">
+                <button>
+                    {{ getI18n('importSettings') }}
+                </button>
+                <input
+                    ref="inputFileRef"
+                    type="file"
+                    style="opacity: 0"
+                    accept=".json"
+                    @change="onFileChange"
+                />
+            </div>
+        </div>
         <h2>{{ getI18n('optionsUI') }}</h2>
         <hr />
         <p>
@@ -184,6 +266,7 @@ watch(
             >
         </p>
         <div v-if="saveInfo" class="alert">设置已保存！</div>
+        <div v-if="importAlert" class="alert">配置文件成功导入!</div>
     </main>
 </template>
 
@@ -209,9 +292,26 @@ a[target='_blank']::after {
     text-align: center;
 }
 
+.btn-wrap {
+    display: flex;
+}
+.file-btn {
+    position: relative;
+    margin-left: 10px;
+}
+
+.file-btn input {
+    opacity: 0;
+    height: 50px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
 @media (prefers-color-scheme: dark) {
     .alert {
-        background: rgba(120, 120, 120, 0.2);
+        background: rgb(30, 30, 30);
     }
 }
 </style>
