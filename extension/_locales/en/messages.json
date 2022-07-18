@@ -42,13 +42,13 @@
         "message": "Interface Settings"
     },
     "optionsUIHidden": {
-        "message": "极简模式"
+        "message": "Minimal Mode"
     },
     "optionsUIRight": {
         "message": "Show on the right"
     },
     "optionsFunction": {
-        "message": "Function Settings"
+        "message": "Feature Settings"
     },
     "optionsFunctionOpenNew": {
         "message": "Open in new tab"
@@ -63,18 +63,18 @@
         "message": "Use Explorer Xiaoshu only in the search engine in the list (Sniffing and selection will be disabled)"
     },
     "optionsData": {
-        "message": "你的数据"
+        "message": "Your Data"
     },
     "optionsSaved": {
-        "message": "设置已保存！"
+        "message": "Settings saved!"
     },
     "optionsImportSucceeded": {
-        "message": "配置文件成功导入"
+        "message": "Settings imported successfully"
     },
     "exportSettings": {
-        "message": "导出配置"
+        "message": "Export settings"
     },
     "importSettings": {
-        "message": "导入配置"
+        "message": "Import settings"
     }
 }
