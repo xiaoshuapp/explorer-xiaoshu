@@ -1,5 +1,4 @@
 <script setup lang="ts">
-/* eslint-disable vue/no-textarea-mustache */
 import 'nexmoe.css'
 import { saveAs } from 'file-saver'
 import originData from '../contentScripts/views/data.json'
@@ -7,27 +6,19 @@ import settingData from './setting.json'
 
 const setting = ref(settingData)
 const listData = ref(originData)
+const alertList = ref([])
 
-const saveInfo = ref(false)
-const importAlert = ref(false)
 const inputFileRef = ref(null)
-
-const saveInfoFunc = (): void => {
-    saveInfo.value = true
-    setTimeout(() => {
-        saveInfo.value = false
-    }, 3000)
-}
-
-const importAlertFunc = (): void => {
-    importAlert.value = true
-    setTimeout(() => {
-        importAlert.value = false
-    }, 3000)
-}
 
 const getI18n = (name: string): string => {
     return browser.i18n.getMessage(name)
+}
+
+const optionsAlert = (text: string) => {
+    alertList.value.push(text)
+    setTimeout(() => {
+        alertList.value.shift()
+    }, 3000)
 }
 
 const exportSettings = () => {
@@ -59,7 +50,7 @@ const readFile = (file: File) => {
             })
             .then(() => {
                 getData()
-                importAlertFunc()
+                optionsAlert(getI18n('optionsImportSucceeded'))
             })
             .catch((error) => {
                 console.error(error)
@@ -84,9 +75,6 @@ function getData() {
             (data: any) => {
                 listData.value = data.listData
                 Object.assign(setting.value, data.setting)
-                setTimeout(() => {
-                    saveInfo.value = false
-                }, 10)
             },
             (error: any) => console.error(error),
         )
@@ -96,11 +84,14 @@ watch(
     setting,
     () => {
         const data = JSON.parse(JSON.stringify(setting.value))
-        browser.storage.sync
-            .set({ setting: data })
-            .then(saveInfoFunc, (error) => {
+        browser.storage.sync.set({ setting: data }).then(
+            () => {
+                optionsAlert(getI18n('optionsSaved'))
+            },
+            (error) => {
                 window.console.log(error)
-            })
+            },
+        )
     },
     {
         deep: true,
@@ -109,6 +100,9 @@ watch(
 
 onMounted(() => {
     getData()
+    setTimeout(() => {
+        alertList.value.shift()
+    }, 10)
 })
 </script>
 
@@ -143,23 +137,6 @@ onMounted(() => {
                 </li>
             </ul>
         </nav>
-        <div class="btn-wrap">
-            <button @click="exportSettings">
-                {{ getI18n('exportSettings') }}
-            </button>
-            <div class="file-btn">
-                <button>
-                    {{ getI18n('importSettings') }}
-                </button>
-                <input
-                    ref="inputFileRef"
-                    type="file"
-                    style="opacity: 0"
-                    accept=".json"
-                    @change="onFileChange"
-                />
-            </div>
-        </div>
         <h2>{{ getI18n('optionsUI') }}</h2>
         <hr />
         <p>
@@ -206,14 +183,27 @@ onMounted(() => {
                 {{ getI18n('optionsFunctionEnableOnly') }}</label
             >
         </p>
-        <h2>Your Data / 你的数据</h2>
+        <h2>{{ getI18n('optionsData') }}</h2>
         <hr />
-        <p>
-            <textarea style="width: 100%; height: 10em">{{
-                listData
-            }}</textarea>
-        </p>
-        <article>
+        <div class="btn-wrap">
+            <button @click="exportSettings">
+                {{ getI18n('exportSettings') }}
+            </button>
+            <div class="file-btn">
+                <button>
+                    {{ getI18n('importSettings') }}
+                </button>
+                <input
+                    ref="inputFileRef"
+                    type="file"
+                    style="opacity: 0"
+                    accept=".json"
+                    @change="onFileChange"
+                />
+            </div>
+        </div>
+
+        <article style="margin-top: 4em">
             <details>
                 <summary>强烈推荐，开发者的另一款应用</summary>
             </details>
@@ -265,8 +255,11 @@ onMounted(() => {
                 >Nexmoe.css</a
             >
         </p>
-        <div v-if="saveInfo" class="alert">设置已保存！</div>
-        <div v-if="importAlert" class="alert">配置文件成功导入!</div>
+        <div class="alert">
+            <dialog v-for="item in alertList" :key="item" open>
+                {{ item }}
+            </dialog>
+        </div>
     </main>
 </template>
 
@@ -283,15 +276,16 @@ a[target='_blank']::after {
 .alert {
     position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
+    right: 1em;
     z-index: 999;
-    background: #f5f5f5;
-    padding: 0.8rem;
-    border-bottom: 1px solid #ccc;
-    text-align: center;
+    width: 100%;
 }
 
+.alert dialog {
+    position: relative;
+    margin-right: 0;
+    margin-top: 1em;
+}
 .btn-wrap {
     display: flex;
 }
@@ -307,11 +301,5 @@ a[target='_blank']::after {
     width: 100%;
     top: 0;
     left: 0;
-}
-
-@media (prefers-color-scheme: dark) {
-    .alert {
-        background: rgb(30, 30, 30);
-    }
 }
 </style>
