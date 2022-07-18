@@ -108,7 +108,9 @@ onMounted(() => {
 
 <template>
     <main class="container">
-        <h1>{{ getI18n('title') }}</h1>
+        <h1>
+            <img class="logo" src="/assets/icon.svg" />{{ getI18n('title') }}
+        </h1>
         <nav style="margin-left: 2rem">
             <ul>
                 <li>
@@ -301,5 +303,14 @@ a[target='_blank']::after {
     width: 100%;
     top: 0;
     left: 0;
+}
+
+.logo {
+    height: 1.2em;
+    vertical-align: middle;
+    margin-bottom: 0.15em;
+    box-shadow: unset;
+    margin-right: 0.3em;
+    margin-left: -0.1em;
 }
 </style>
