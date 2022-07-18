@@ -42,7 +42,7 @@
         "message": "Interface Settings"
     },
     "optionsUIHidden": {
-        "message": "Put it away deeper"
+        "message": "极简模式"
     },
     "optionsUIRight": {
         "message": "Show on the right"
@@ -62,6 +62,19 @@
     "optionsFunctionEnableOnly": {
         "message": "Use Explorer Xiaoshu only in the search engine in the list (Sniffing and selection will be disabled)"
     },
-    "exportSettings": { "message": "export settings" },
-    "importSettings": { "message": "import settings" }
+    "optionsData": {
+        "message": "你的数据"
+    },
+    "optionsSaved": {
+        "message": "设置已保存！"
+    },
+    "optionsImportSucceeded": {
+        "message": "配置文件成功导入"
+    },
+    "exportSettings": {
+        "message": "导出配置"
+    },
+    "importSettings": {
+        "message": "导入配置"
+    }
 }
