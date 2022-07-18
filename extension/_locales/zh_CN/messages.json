@@ -34,6 +34,6 @@
     "optionsSaved": { "message": "设置已保存！" },
     "optionsImportSucceeded": { "message": "配置文件成功导入" },
 
-    "exportSettings": { "message": "导出设置" },
+    "exportSettings": { "message": "导出配置" },
     "importSettings": { "message": "导入配置" }
 }
