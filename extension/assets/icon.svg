@@ -1,3 +1,54 @@
-<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M26.6667 1.66667H24V7H8V9.66667H5.33333V20.3333H8V23H10.6667V28.3333H21.3333V25.6667H26.6667V23H21.3333V20.3333H26.6667V17.6667H21.3333V15H10.6667V20.3333H8V9.66667H24V7H26.6667V1.66667ZM18.6667 25.6667H13.3333V17.6667H18.6667V25.6667Z" fill="#888888"/>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" width="100%" height="100%" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet" color-interpolation-filters="sRGB" style="margin: auto;">
+  <g fill="#333" class="icon-text-wrapper icon-svg-group iconsvg" transform="translate(0,0)">
+    <g fill="#333" class="iconsvg-imagesvg icon_container" transform="translate(0,0)">
+      <svg viewBox="0 0 60 60" x="0" y="0" width="512" height="512" class="image-svg-svg bn" style="overflow: visible;">
+        <g hollow-target="iconBnFill" mask="url(#a16082a9-f36c-4010-aa9b-308e6e9441fd)">
+          <g>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" xml:space="preserve" version="1.1" style="shape-rendering: geometricprecision; text-rendering: geometricprecision; overflow: visible;" viewBox="0 0 249 249" x="0" y="0" fill-rule="evenodd" clip-rule="evenodd" width="60" height="60" filtersec="colorsf9431835162" filter="url(#OSA4ufPNL2Cam6tWE1Xwh)">
+              <g transform="scale(1, 1) skewX(0)">
+                <defs>
+                  <filter id="OSA4ufPNL2Cam6tWE1Xwh">
+                    <feColorMatrix type="matrix" values="0 0 0 0 0.19921875  0 0 0 0 0.19921875  0 0 0 0 0.19921875  0 0 0 1 0"/>
+                  </filter>
+                </defs>
+                <g>
+                  <path class="fil0" d="M125 0c68,0 124,56 124,125 0,68 -56,124 -124,124 -69,0 -125,-56 -125,-124 0,-69 56,-125 125,-125z"/>
+                </g>
+              </g>
+            </svg>
+          </g>
+          <g filter="url(#colors461697388)">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" version="1.1" viewBox="80.30177307128906 23 172.8113555908203 287.25" x="16" y="16" fill-rule="evenodd" clip-rule="evenodd" width="28" height="28" class="image-svg-icon">
+              <defs/>
+              <g>
+                <path d="M167 23c-39,61 -121,191 -71,255 35,43 106,43 141,0 51,-63 -32,-194 -70,-255z"/>
+                <path d="M218 242c-5,21 -25,37 -48,37 -4,0 -8,-1 -13,-2"/>
+              </g>
+            </svg>
+          </g>
+        </g>
+        <mask id="a16082a9-f36c-4010-aa9b-308e6e9441fd">
+          <g fill="white">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" version="1.1" style="shape-rendering: geometricprecision; text-rendering: geometricprecision; overflow: visible;" viewBox="0 0 249 249" x="0" y="0" fill-rule="evenodd" clip-rule="evenodd" width="60" height="60" filtersec="colorsf9431835162">
+              <g transform="scale(1, 1) skewX(0)">
+                <defs/>
+                <g>
+                  <path d="M125 0c68,0 124,56 124,125 0,68 -56,124 -124,124 -69,0 -125,-56 -125,-124 0,-69 56,-125 125,-125z"/>
+                </g>
+              </g>
+            </svg>
+          </g>
+          <g fill="black">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" version="1.1" viewBox="80.30177307128906 23 172.8113555908203 287.25" x="16" y="16" fill-rule="evenodd" clip-rule="evenodd" width="28" height="28" class="image-svg-icon">
+              <defs/>
+              <g>
+                <path d="M167 23c-39,61 -121,191 -71,255 35,43 106,43 141,0 51,-63 -32,-194 -70,-255z"/>
+                <path d="M218 242c-5,21 -25,37 -48,37 -4,0 -8,-1 -13,-2"/>
+              </g>
+            </svg>
+          </g>
+        </mask>
+      </svg>
+    </g>
+  </g>
 </svg>
