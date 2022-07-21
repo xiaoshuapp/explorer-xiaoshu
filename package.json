@@ -66,7 +66,7 @@
         "rimraf": "3.0.2",
         "safe-compare": "1.1.4",
         "typescript": "4.7.4",
-        "unplugin-auto-import": "0.9.3",
+        "unplugin-auto-import": "0.9.4",
         "unplugin-icons": "0.14.7",
         "unplugin-vue-components": "0.21.1",
         "vite": "3.0.2",
