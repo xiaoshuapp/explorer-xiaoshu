@@ -40,7 +40,7 @@ specifiers:
   safe-compare: 1.1.4
   sharer.js: 0.5.1
   typescript: 4.7.4
-  unplugin-auto-import: 0.9.4
+  unplugin-auto-import: 0.10.0
   unplugin-icons: 0.14.7
   unplugin-vue-components: 0.21.1
   vite: 3.0.2
@@ -93,7 +93,7 @@ devDependencies:
   rimraf: 3.0.2
   safe-compare: 1.1.4
   typescript: 4.7.4
-  unplugin-auto-import: 0.9.4_h424so5tb623alsee2e3aarhfi
+  unplugin-auto-import: 0.10.0_h424so5tb623alsee2e3aarhfi
   unplugin-icons: 0.14.7_k67hgvp74nrfdoz4qfzypbx4um
   unplugin-vue-components: 0.21.1_vite@3.0.2+vue@3.2.37
   vite: 3.0.2
@@ -6672,8 +6672,8 @@ packages:
     engines: {node: '>= 0.8'}
     dev: true
 
-  /unplugin-auto-import/0.9.4_h424so5tb623alsee2e3aarhfi:
-    resolution: {integrity: sha512-xCFPdUeZmfBIkbkMYbBij4WREX85vJKpdBklFXuo/oq6XA8/4sMg4XbVxRcIvomA9x0SltCyieWUU6sJ/Ehf+g==}
+  /unplugin-auto-import/0.10.0_h424so5tb623alsee2e3aarhfi:
+    resolution: {integrity: sha512-XvGa/38TlHQnyNvKX+PgyM7og1DR+q3DPNp0RkifCQ2t8JCFUEixfRj9yDlfzNnLuEppFxqBZaUxNYjrstCUBA==}
     engines: {node: '>=14'}
     peerDependencies:
       '@vueuse/core': '*'
