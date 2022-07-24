@@ -40,7 +40,7 @@ specifiers:
   safe-compare: 1.1.4
   sharer.js: 0.5.1
   typescript: 4.7.4
-  unplugin-auto-import: 0.10.0
+  unplugin-auto-import: 0.10.1
   unplugin-icons: 0.14.7
   unplugin-vue-components: 0.21.1
   vite: 3.0.2
@@ -93,7 +93,7 @@ devDependencies:
   rimraf: 3.0.2
   safe-compare: 1.1.4
   typescript: 4.7.4
-  unplugin-auto-import: 0.10.0_h424so5tb623alsee2e3aarhfi
+  unplugin-auto-import: 0.10.1_h424so5tb623alsee2e3aarhfi
   unplugin-icons: 0.14.7_k67hgvp74nrfdoz4qfzypbx4um
   unplugin-vue-components: 0.21.1_vite@3.0.2+vue@3.2.37
   vite: 3.0.2
@@ -6624,8 +6624,8 @@ packages:
       through: 2.3.8
     dev: true
 
-  /unimport/0.6.1_vite@3.0.2:
-    resolution: {integrity: sha512-xOM8KYoV7uJGNKpqRtdRRSeKDzH6XoJDdD0J7BVyRKw5NpH20i9J2Mw53Wxdze3VqjCOEfdUIZX+IIwhWfDVeA==}
+  /unimport/0.6.3_vite@3.0.2:
+    resolution: {integrity: sha512-+DVHqCoOoJcmYRLUrKbKDs/Iq/is6m0K7rTdFJAV7/MfyvWCKeSuSOrLeONgLBd6yC6iZFEzdc8di7S27PQyoA==}
     dependencies:
       '@rollup/pluginutils': 4.2.1
       escape-string-regexp: 5.0.0
@@ -6672,8 +6672,8 @@ packages:
     engines: {node: '>= 0.8'}
     dev: true
 
-  /unplugin-auto-import/0.10.0_h424so5tb623alsee2e3aarhfi:
-    resolution: {integrity: sha512-XvGa/38TlHQnyNvKX+PgyM7og1DR+q3DPNp0RkifCQ2t8JCFUEixfRj9yDlfzNnLuEppFxqBZaUxNYjrstCUBA==}
+  /unplugin-auto-import/0.10.1_h424so5tb623alsee2e3aarhfi:
+    resolution: {integrity: sha512-aBvlCOvkgZRceYDEIEpduD86XYCS1wV4atNeUtAZsNK7FSKRb0Nu073SYYAeU46IitK3GPeGd5BETtqz6It5Ng==}
     engines: {node: '>=14'}
     peerDependencies:
       '@vueuse/core': '*'
@@ -6686,7 +6686,7 @@ packages:
       '@vueuse/core': 8.9.4_vue@3.2.37
       local-pkg: 0.4.2
       magic-string: 0.26.2
-      unimport: 0.6.1_vite@3.0.2
+      unimport: 0.6.3_vite@3.0.2
       unplugin: 0.7.2_vite@3.0.2
     transitivePeerDependencies:
       - esbuild
