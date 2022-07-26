@@ -71,7 +71,7 @@
         "unplugin-vue-components": "0.21.2",
         "vite": "3.0.3",
         "vue": "3.2.37",
-        "vue-demi": "0.13.5",
+        "vue-demi": "0.13.6",
         "vue-eslint-parser": "9.0.3",
         "web-ext": "7.1.1",
         "webext-bridge": "5.0.5",
