@@ -296,6 +296,7 @@ const enable = computed(() => {
 </script>
 
 <template>
+    <StarDialog v-if="enable" />
     <div
         v-if="enable"
         class="explorer-xiaoshu"
@@ -315,8 +316,6 @@ const enable = computed(() => {
             <div class="menu" @click="addEngine(menuIndex)">添加搜索引擎</div>
             <div class="menu" @click="deleteGroup(menuIndex)">删除该分组</div>
         </div>
-
-        <StarDialog />
 
         <DetectDialog
             v-if="detectOpen"
@@ -642,7 +641,7 @@ ul {
 </style>
 
 <style>
-.explorer-xiaoshu {
+div {
     --active-brightness: 0.8;
     --hover-brightness: 1.2;
     --border-radius: 6px;
@@ -651,13 +650,13 @@ ul {
     --color-text: rgb(23, 23, 23);
     --color-bg: #fff;
     --color-hover: rgba(23, 23, 23, 0.15);
-    --nexmoe-gap: 1rem;
+    --nexmoe-gap: 1em;
     --icon-checkbox: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23FFF' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
     --icon-summary: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(23, 23, 23)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
 }
 
 @media (prefers-color-scheme: dark) {
-    .explorer-xiaoshu {
+    div {
         --color-primary: #fff;
         --color-text: #f7f7f7;
         --color-bg: #111;

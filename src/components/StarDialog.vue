@@ -5,17 +5,16 @@ const nowTime = new Date().getTime()
 
 onMounted(() => {
     let storageTime
-    browser.storage.local.get({ storageTime }).then((data) => {
+    browser.storage.local.get('storageTime').then((data) => {
         storageTime = data.storageTime
+        if (storageTime === undefined) {
+            storageTime = nowTime - 7 * 24 * 60 * 60 * 1000
+            browser.storage.local.set({ storageTime })
+        }
+        if (nowTime - storageTime >= 14 * 24 * 60 * 60 * 1000) {
+            dialog.value.show()
+        }
     })
-
-    if (!storageTime) {
-        storageTime = nowTime - 7 * 24 * 60 * 60 * 1000
-        browser.storage.local.set({ storageTime })
-    }
-    if (nowTime - storageTime >= 14 * 24 * 60 * 60 * 1000) {
-        dialog.value.show()
-    }
 })
 
 const ignore = () => {
@@ -35,14 +34,11 @@ const go = () => {
     <dialog id="xiaoshu-dialog" ref="dialog">
         <form onsubmit="return false">
             <fieldset>
-                <legend>检测到当前页面有可用的引擎</legend>
-                <div
-                    style="display: flex; gap: 16px; flex-direction: column"
-                ></div>
+                <legend>你已经使用了一段时间了，来给个好评吧！</legend>
             </fieldset>
             <menu>
                 <button text @click="ignore()">忽略</button>
-                <button @click="go()">添加</button>
+                <button @click="go()">去好评</button>
             </menu>
         </form>
     </dialog>
@@ -50,6 +46,8 @@ const go = () => {
 
 <style scoped>
 dialog {
-    zoom: 0.8;
+    position: fixed;
+    bottom: 24px;
+    z-index: 9999;
 }
 </style>
