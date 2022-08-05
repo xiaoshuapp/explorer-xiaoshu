@@ -4,6 +4,7 @@ import draggable from '@xiaoshuapp/draggable'
 import type { Ref } from 'vue'
 import { ref } from 'vue'
 import DetectDialog from '../../components/DetectDialog.vue'
+import StarDialog from '../../components/StarDialog.vue'
 import settingData from '../../options/setting.json'
 import originData from './data.json'
 
@@ -314,6 +315,8 @@ const enable = computed(() => {
             <div class="menu" @click="addEngine(menuIndex)">添加搜索引擎</div>
             <div class="menu" @click="deleteGroup(menuIndex)">删除该分组</div>
         </div>
+
+        <StarDialog />
 
         <DetectDialog
             v-if="detectOpen"
