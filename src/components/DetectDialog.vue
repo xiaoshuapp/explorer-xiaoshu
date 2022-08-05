@@ -63,14 +63,6 @@ dialog {
     zoom: 0.8;
 }
 
-button,
-input,
-select,
-textarea {
-    font-size: 16px;
-    padding: 8px 16px;
-}
-
 input {
     width: 440px;
 }
