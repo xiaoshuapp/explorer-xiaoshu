@@ -1,0 +1,80 @@
+{
+    "name": {
+        "message": "探索者小舒 - 强大快捷的侧栏搜索切换工具"
+    },
+    "description": {
+        "message": "强大快捷的侧栏搜索切换工具"
+    },
+    "title": {
+        "message": "探索者小舒"
+    },
+    "groupMenuTitle": {
+        "message": "修改标题"
+    },
+    "groupMenuAdd": {
+        "message": "添加搜索引擎"
+    },
+    "groupMenuRemove": {
+        "message": "删除该分组"
+    },
+    "itemMenuEdit": {
+        "message": "编辑"
+    },
+    "itemMenuRemove": {
+        "message": "删除"
+    },
+    "addGroup": {
+        "message": "添加分组"
+    },
+    "options": {
+        "message": "扩展设置"
+    },
+    "optionsNavHome": {
+        "message": "首页"
+    },
+    "optionsNavStars": {
+        "message": "5星好评"
+    },
+    "optionsNavIssues": {
+        "message": "反馈"
+    },
+    "optionsUI": {
+        "message": "界面设置"
+    },
+    "optionsUIHidden": {
+        "message": "极简模式"
+    },
+    "optionsUIRight": {
+        "message": "显示在右边"
+    },
+    "optionsFunction": {
+        "message": "功能设置"
+    },
+    "optionsFunctionOpenNew": {
+        "message": "在新标签页打开"
+    },
+    "optionsFunctionAutomaticAdvance": {
+        "message": "相关分组自动提前"
+    },
+    "optionsFunctionGetSelection": {
+        "message": "划词召唤探索者小舒"
+    },
+    "optionsFunctionEnableOnly": {
+        "message": "仅在列表中的搜索引擎中使用探索者小舒（将导致嗅探和划词功能失效）"
+    },
+    "optionsData": {
+        "message": "你的数据"
+    },
+    "optionsSaved": {
+        "message": "设置已保存！"
+    },
+    "optionsImportSucceeded": {
+        "message": "配置文件成功导入"
+    },
+    "exportSettings": {
+        "message": "导出配置"
+    },
+    "importSettings": {
+        "message": "导入配置"
+    }
+}
