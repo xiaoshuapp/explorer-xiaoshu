@@ -15,7 +15,7 @@ specifiers:
   '@typescript-eslint/parser': 5.34.0
   '@vitejs/plugin-vue': 3.0.3
   '@vue/compiler-sfc': 3.2.37
-  '@vueuse/core': 9.1.0
+  '@vueuse/core': 9.1.1
   '@xiaoshuapp/draggable': 4.1.1
   body-parser: 1.20.0
   chokidar: 3.5.3
@@ -45,7 +45,7 @@ specifiers:
   unplugin-vue-components: 0.22.4
   vite: 3.0.9
   vue: 3.2.37
-  vue-demi: 0.13.8
+  vue-demi: 0.13.9
   vue-eslint-parser: 9.0.3
   web-ext: 7.2.0
   webext-bridge: 5.0.5
@@ -72,7 +72,7 @@ devDependencies:
   '@typescript-eslint/parser': 5.34.0_4rv7y5c6xz3vfxwhbrcxxi73bq
   '@vitejs/plugin-vue': 3.0.3_vite@3.0.9+vue@3.2.37
   '@vue/compiler-sfc': 3.2.37
-  '@vueuse/core': 9.1.0_vue@3.2.37
+  '@vueuse/core': 9.1.1_vue@3.2.37
   body-parser: mirrors.tencent.com/body-parser/1.20.0
   chokidar: 3.5.3
   cross-env: 7.0.3
@@ -93,12 +93,12 @@ devDependencies:
   rimraf: 3.0.2
   safe-compare: 1.1.4
   typescript: 4.7.4
-  unplugin-auto-import: 0.11.2_3wfpyx4dwyezeeatxtwoszqqzi
+  unplugin-auto-import: 0.11.2_jfxn32i2eq37u3jpfk3zc3f4hy
   unplugin-icons: 0.14.8_jz6tpbhhn2upnbiwxxr6wx7age
   unplugin-vue-components: 0.22.4_vite@3.0.9+vue@3.2.37
   vite: 3.0.9
   vue: 3.2.37
-  vue-demi: 0.13.8_vue@3.2.37
+  vue-demi: 0.13.9_vue@3.2.37
   vue-eslint-parser: 9.0.3_eslint@8.22.0
   web-ext: 7.2.0_tipoqawfgfdftsvun74lud337q
   webext-bridge: 5.0.5
@@ -968,26 +968,26 @@ packages:
   /@vue/shared/3.2.37:
     resolution: {integrity: sha512-4rSJemR2NQIo9Klm1vabqWjD8rs/ZaJSzMxkMNeJS6lHiUjjUeYFbooN19NgFjztubEKh3WlZUeOLVdbbUWHsw==}
 
-  /@vueuse/core/9.1.0_vue@3.2.37:
-    resolution: {integrity: sha512-BIroqvXEqt826aE9r3K5cox1zobuPuAzdYJ36kouC2TVhlXvFKIILgFVWrpp9HZPwB3aLzasmG3K87q7TSyXZg==}
+  /@vueuse/core/9.1.1_vue@3.2.37:
+    resolution: {integrity: sha512-QfuaNWRDMQcCUwXylCyYhPC3ScS9Tiiz4J0chdwr3vOemBwRToSywq8MP+ZegKYFnbETzRY8G/5zC+ca30wrRQ==}
     dependencies:
       '@types/web-bluetooth': 0.0.15
-      '@vueuse/metadata': 9.1.0
-      '@vueuse/shared': 9.1.0_vue@3.2.37
-      vue-demi: 0.13.8_vue@3.2.37
+      '@vueuse/metadata': 9.1.1
+      '@vueuse/shared': 9.1.1_vue@3.2.37
+      vue-demi: 0.13.9_vue@3.2.37
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
     dev: true
 
-  /@vueuse/metadata/9.1.0:
-    resolution: {integrity: sha512-8OEhlog1iaAGTD3LICZ8oBGQdYeMwByvXetOtAOZCJOzyCRSwqwdggTsmVZZ1rkgYIEqgUBk942AsAPwM21s6A==}
+  /@vueuse/metadata/9.1.1:
+    resolution: {integrity: sha512-XZ2KtSW+85LLHB/IdGILPAtbIVHasPsAW7aqz3BRMzJdAQWRiM/FGa1OKBwLbXtUw/AmjKYFlZJo7eOFIBXRog==}
     dev: true
 
-  /@vueuse/shared/9.1.0_vue@3.2.37:
-    resolution: {integrity: sha512-pB/3njQu4tfJJ78ajELNda0yMG6lKfpToQW7Soe09CprF1k3QuyoNi1tBNvo75wBDJWD+LOnr+c4B5HZ39jY/Q==}
+  /@vueuse/shared/9.1.1_vue@3.2.37:
+    resolution: {integrity: sha512-c+IfcOYmHiHqoEa3ED1Tbpue5GHmoUmTp8PtO4YbczthtY155Rt6DmWhjxMLXBF1Bcidagxljmp/7xtAzEHXLw==}
     dependencies:
-      vue-demi: 0.13.8_vue@3.2.37
+      vue-demi: 0.13.9_vue@3.2.37
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
@@ -6820,7 +6820,7 @@ packages:
     engines: {node: '>= 0.8'}
     dev: true
 
-  /unplugin-auto-import/0.11.2_3wfpyx4dwyezeeatxtwoszqqzi:
+  /unplugin-auto-import/0.11.2_jfxn32i2eq37u3jpfk3zc3f4hy:
     resolution: {integrity: sha512-1+VwBfn9dtiYv9SQLKP1AvZolUbK9xTVeAT+iOcEk4EHSFUlmIqBVLEKI76cifSQTLOJ3rZyPrEgptf3SZNLlQ==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -6831,7 +6831,7 @@ packages:
     dependencies:
       '@antfu/utils': 0.5.2
       '@rollup/pluginutils': 4.2.1
-      '@vueuse/core': 9.1.0_vue@3.2.37
+      '@vueuse/core': 9.1.1_vue@3.2.37
       local-pkg: 0.4.2
       magic-string: 0.26.2
       unimport: 0.6.7_vite@3.0.9
@@ -7086,8 +7086,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vue-demi/0.13.8_vue@3.2.37:
-    resolution: {integrity: sha512-Vy1zbZhCOdsmvGR6tJhAvO5vhP7eiS8xkbYQSoVa7o6KlIy3W8Rc53ED4qI4qpeRDjv3mLfXSEpYU6Yq4pgXRg==}
+  /vue-demi/0.13.9_vue@3.2.37:
+    resolution: {integrity: sha512-+4hVlCaBMsX5O3cbYA8xyLAK6jFJVWhmHHmyYTFRkwPhGvyxJbBUfizZiuXCdmDnrGjj7k2n1mhHJ2JvT4JTtA==}
     engines: {node: '>=12'}
     hasBin: true
     requiresBuild: true
