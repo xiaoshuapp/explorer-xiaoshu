@@ -45,7 +45,7 @@ specifiers:
   unplugin-vue-components: 0.22.4
   vite: 3.0.9
   vue: 3.2.37
-  vue-demi: 0.13.9
+  vue-demi: 0.13.10
   vue-eslint-parser: 9.0.3
   web-ext: 7.2.0
   webext-bridge: 5.0.5
@@ -98,7 +98,7 @@ devDependencies:
   unplugin-vue-components: 0.22.4_vite@3.0.9+vue@3.2.37
   vite: 3.0.9
   vue: 3.2.37
-  vue-demi: 0.13.9_vue@3.2.37
+  vue-demi: 0.13.10_vue@3.2.37
   vue-eslint-parser: 9.0.3_eslint@8.22.0
   web-ext: 7.2.0_tipoqawfgfdftsvun74lud337q
   webext-bridge: 5.0.5
@@ -974,7 +974,7 @@ packages:
       '@types/web-bluetooth': 0.0.15
       '@vueuse/metadata': 9.1.1
       '@vueuse/shared': 9.1.1_vue@3.2.37
-      vue-demi: 0.13.9_vue@3.2.37
+      vue-demi: 0.13.10_vue@3.2.37
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
@@ -987,7 +987,7 @@ packages:
   /@vueuse/shared/9.1.1_vue@3.2.37:
     resolution: {integrity: sha512-c+IfcOYmHiHqoEa3ED1Tbpue5GHmoUmTp8PtO4YbczthtY155Rt6DmWhjxMLXBF1Bcidagxljmp/7xtAzEHXLw==}
     dependencies:
-      vue-demi: 0.13.9_vue@3.2.37
+      vue-demi: 0.13.10_vue@3.2.37
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
@@ -7086,8 +7086,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vue-demi/0.13.9_vue@3.2.37:
-    resolution: {integrity: sha512-+4hVlCaBMsX5O3cbYA8xyLAK6jFJVWhmHHmyYTFRkwPhGvyxJbBUfizZiuXCdmDnrGjj7k2n1mhHJ2JvT4JTtA==}
+  /vue-demi/0.13.10_vue@3.2.37:
+    resolution: {integrity: sha512-/R4QhdqGyGqSysOfhkxmYHKwdETZq2z6HAf/fjeGErdJX9cJifX5ijHJS+VjNblGIhjXz/yQTwe/t7Cip+/aJw==}
     engines: {node: '>=12'}
     hasBin: true
     requiresBuild: true
