@@ -13,7 +13,7 @@ specifiers:
   '@types/webextension-polyfill': 0.9.1
   '@typescript-eslint/eslint-plugin': 5.38.1
   '@typescript-eslint/parser': 5.38.1
-  '@vitejs/plugin-vue': 3.1.0
+  '@vitejs/plugin-vue': 3.1.2
   '@vue/compiler-sfc': 3.2.40
   '@vueuse/core': 9.3.0
   '@xiaoshuapp/draggable': 4.1.1
@@ -70,7 +70,7 @@ devDependencies:
   '@types/webextension-polyfill': 0.9.1
   '@typescript-eslint/eslint-plugin': 5.38.1_c7qepppml3d4ahu5cnfwqe6ltq
   '@typescript-eslint/parser': 5.38.1_ypn2ylkkyfa5i233caldtndbqa
-  '@vitejs/plugin-vue': 3.1.0_vite@3.1.4+vue@3.2.40
+  '@vitejs/plugin-vue': 3.1.2_vite@3.1.4+vue@3.2.40
   '@vue/compiler-sfc': 3.2.40
   '@vueuse/core': 9.3.0_vue@3.2.40
   body-parser: mirrors.tencent.com/body-parser/1.20.0
@@ -888,8 +888,8 @@ packages:
       eslint-visitor-keys: 3.3.0
     dev: true
 
-  /@vitejs/plugin-vue/3.1.0_vite@3.1.4+vue@3.2.40:
-    resolution: {integrity: sha512-fmxtHPjSOEIRg6vHYDaem+97iwCUg/uSIaTzp98lhELt2ISOQuDo2hbkBdXod0g15IhfPMQmAxh4heUks2zvDA==}
+  /@vitejs/plugin-vue/3.1.2_vite@3.1.4+vue@3.2.40:
+    resolution: {integrity: sha512-3zxKNlvA3oNaKDYX0NBclgxTQ1xaFdL7PzwF6zj9tGFziKwmBa3Q/6XcJQxudlT81WxDjEhHmevvIC4Orc1LhQ==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       vite: ^3.0.0
