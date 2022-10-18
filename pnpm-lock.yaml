@@ -47,7 +47,7 @@ specifiers:
   vue: 3.2.41
   vue-demi: 0.13.11
   vue-eslint-parser: 9.1.0
-  web-ext: 7.3.0
+  web-ext: 7.3.1
   webext-bridge: 5.0.5
   webextension-polyfill: 0.10.0
 
@@ -100,7 +100,7 @@ devDependencies:
   vue: 3.2.41
   vue-demi: 0.13.11_vue@3.2.41
   vue-eslint-parser: 9.1.0_eslint@8.25.0
-  web-ext: 7.3.0_a2rzakwpfqcdeyyo46mreeuc4u
+  web-ext: 7.3.1_a2rzakwpfqcdeyyo46mreeuc4u
   webext-bridge: 5.0.5
   webextension-polyfill: 0.10.0
 
@@ -1261,7 +1261,7 @@ packages:
       archiver-utils: 2.1.0
       async: 2.6.3
       buffer-crc32: 0.2.13
-      glob: 7.1.7
+      glob: 7.2.0
       readable-stream: 3.6.0
       tar-stream: 2.2.0
       zip-stream: 2.1.3
@@ -7287,8 +7287,8 @@ packages:
       defaults: 1.0.3
     dev: true
 
-  /web-ext/7.3.0_a2rzakwpfqcdeyyo46mreeuc4u:
-    resolution: {integrity: sha512-w8ZaeD4b+P84/RJJaGCRtuUu+3jEOWC3wT+xu1Sebt7WkO1zfDseBxXk+P3KaRf19dlvcH/1dYdMSMAtrH2dww==}
+  /web-ext/7.3.1_a2rzakwpfqcdeyyo46mreeuc4u:
+    resolution: {integrity: sha512-ZTfktd1zcQpWaFAM3U+IQW674G89d1IW/Oh0Ncw9LwFvKvAcW/nA5EB4pwqB8LiW/6OSYQhHBP4x2XUTBu1SKg==}
     engines: {node: '>=14.0.0', npm: '>=6.9.0'}
     hasBin: true
     dependencies:
