@@ -65,7 +65,7 @@
         "prettier": "2.8.1",
         "rimraf": "3.0.2",
         "safe-compare": "1.1.4",
-        "typescript": "4.9.3",
+        "typescript": "4.9.4",
         "unplugin-auto-import": "0.12.0",
         "unplugin-icons": "0.14.14",
         "unplugin-vue-components": "0.22.11",
