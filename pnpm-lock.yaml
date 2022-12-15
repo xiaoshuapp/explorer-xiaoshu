@@ -6,7 +6,7 @@ specifiers:
   '@commitlint/config-conventional': 17.3.0
   '@ffflorian/jszip-cli': 3.1.6
   '@iconify/json': 2.1.152
-  '@types/download': 8.0.1
+  '@types/download': 8.0.2
   '@types/file-saver': 2.0.5
   '@types/fs-extra': 9.0.13
   '@types/node': 16.18.9
@@ -63,7 +63,7 @@ devDependencies:
   '@commitlint/config-conventional': 17.3.0
   '@ffflorian/jszip-cli': 3.1.6
   '@iconify/json': 2.1.152
-  '@types/download': 8.0.1
+  '@types/download': 8.0.2
   '@types/file-saver': 2.0.5
   '@types/fs-extra': 9.0.13
   '@types/node': 16.18.9
@@ -693,11 +693,11 @@ packages:
       '@types/node': 16.18.9
     dev: true
 
-  /@types/download/8.0.1:
-    resolution: {integrity: sha512-t5DjMD6Y1DxjXtEHl7Kt+nQn9rOmVLYD8p4Swrcc5QpgyqyqR2gXTIK6RwwMnNeFJ+ZIiIW789fQKzCrK7AOFA==}
+  /@types/download/8.0.2:
+    resolution: {integrity: sha512-z1Jbba+2mUP3LuQ6EaH9xsVElphj7eY7UMCnIQ5Jw6L4ZZOC3oizFo7MbyjUx8DRMupsZvEZZfXnTmLEPQFzQg==}
     dependencies:
       '@types/decompress': 4.2.4
-      '@types/got': 8.3.6
+      '@types/got': 9.6.12
       '@types/node': 16.18.9
     dev: true
 
@@ -715,10 +715,12 @@ packages:
       '@types/node': 16.18.9
     dev: true
 
-  /@types/got/8.3.6:
-    resolution: {integrity: sha512-nvLlj+831dhdm4LR2Ly+HTpdLyBaMynoOr6wpIxS19d/bPeHQxFU5XQ6Gp6ohBpxvCWZM1uHQIC2+ySRH1rGrQ==}
+  /@types/got/9.6.12:
+    resolution: {integrity: sha512-X4pj/HGHbXVLqTpKjA2ahI4rV/nNBc9mGO2I/0CgAra+F2dKgMXnENv2SRpemScBzBAI4vMelIVYViQxlSE6xA==}
     dependencies:
       '@types/node': 16.18.9
+      '@types/tough-cookie': 4.0.2
+      form-data: 2.5.1
     dev: true
 
   /@types/http-cache-semantics/4.0.1:
@@ -781,6 +783,10 @@ packages:
 
   /@types/semver/7.3.12:
     resolution: {integrity: sha512-WwA1MW0++RfXmCr12xeYOOC5baSC9mSb0ZqCquFzKhcoF4TvHu5MKOuXsncgZcpVFhB1pXd5hZmM0ryAoCp12A==}
+    dev: true
+
+  /@types/tough-cookie/4.0.2:
+    resolution: {integrity: sha512-Q5vtl1W5ue16D+nIaW8JWebSSraJVlK+EthKn7e7UcD4KWsaSJ8BqGPXNaPghgtcn/fhvrN17Tv8ksUsQpiplw==}
     dev: true
 
   /@types/unist/2.0.6:
@@ -3668,6 +3674,15 @@ packages:
 
   /form-data/2.3.3:
     resolution: {integrity: sha512-1lLKB2Mu3aGP1Q/2eCOx0fNbRMe7XdwktwOruhfqqd0rIJWwN4Dh+E3hrPSlDCXnSR7UtZ1N38rVXm+6+MEhJQ==}
+    engines: {node: '>= 0.12'}
+    dependencies:
+      asynckit: 0.4.0
+      combined-stream: 1.0.8
+      mime-types: 2.1.35
+    dev: true
+
+  /form-data/2.5.1:
+    resolution: {integrity: sha512-m21N3WOmEEURgk6B9GLOE4RuWOFf28Lhh9qGYeNlGq4VDXUlJy2th2slBNU8Gp8EzloYZOibZJ7t5ecIrFSjVA==}
     engines: {node: '>= 0.12'}
     dependencies:
       asynckit: 0.4.0
