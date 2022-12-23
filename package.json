@@ -45,7 +45,7 @@
         "@typescript-eslint/parser": "5.47.0",
         "@vitejs/plugin-vue": "3.2.0",
         "@vue/compiler-sfc": "3.2.45",
-        "@vueuse/core": "9.8.2",
+        "@vueuse/core": "9.9.0",
         "body-parser": "1.20.1",
         "chokidar": "3.5.3",
         "cross-env": "7.0.3",
