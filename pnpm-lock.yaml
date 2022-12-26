@@ -9,7 +9,7 @@ specifiers:
   '@types/download': 8.0.2
   '@types/file-saver': 2.0.5
   '@types/fs-extra': 9.0.13
-  '@types/node': 16.18.10
+  '@types/node': 16.18.11
   '@types/webextension-polyfill': 0.9.2
   '@typescript-eslint/eslint-plugin': 5.47.0
   '@typescript-eslint/parser': 5.47.0
@@ -66,7 +66,7 @@ devDependencies:
   '@types/download': 8.0.2
   '@types/file-saver': 2.0.5
   '@types/fs-extra': 9.0.13
-  '@types/node': 16.18.10
+  '@types/node': 16.18.11
   '@types/webextension-polyfill': 0.9.2
   '@typescript-eslint/eslint-plugin': 5.47.0_ncmi6noazr3nzas7jxykisekym
   '@typescript-eslint/parser': 5.47.0_lzzuuodtsqwxnvqeq4g4likcqa
@@ -96,7 +96,7 @@ devDependencies:
   unplugin-auto-import: 0.12.1_@vueuse+core@9.9.0
   unplugin-icons: 0.14.15_@vue+compiler-sfc@3.2.45
   unplugin-vue-components: 0.22.12_vue@3.2.45
-  vite: 3.2.5_@types+node@16.18.10
+  vite: 3.2.5_@types+node@16.18.11
   vue: 3.2.45
   vue-demi: 0.13.11_vue@3.2.45
   vue-eslint-parser: 9.1.0_eslint@8.30.0
@@ -683,14 +683,14 @@ packages:
     dependencies:
       '@types/http-cache-semantics': 4.0.1
       '@types/keyv': 3.1.4
-      '@types/node': 16.18.10
+      '@types/node': 16.18.11
       '@types/responselike': 1.0.0
     dev: true
 
   /@types/decompress/4.2.4:
     resolution: {integrity: sha512-/C8kTMRTNiNuWGl5nEyKbPiMv6HA+0RbEXzFhFBEzASM6+oa4tJro9b8nj7eRlOFfuLdzUU+DS/GPDlvvzMOhA==}
     dependencies:
-      '@types/node': 16.18.10
+      '@types/node': 16.18.11
     dev: true
 
   /@types/download/8.0.2:
@@ -698,7 +698,7 @@ packages:
     dependencies:
       '@types/decompress': 4.2.4
       '@types/got': 9.6.12
-      '@types/node': 16.18.10
+      '@types/node': 16.18.11
     dev: true
 
   /@types/estree/1.0.0:
@@ -712,13 +712,13 @@ packages:
   /@types/fs-extra/9.0.13:
     resolution: {integrity: sha512-nEnwB++1u5lVDM2UI4c1+5R+FYaKfaAzS4OococimjVm3nQw3TuzH5UNsocrcTBbhnerblyHj4A49qXbIiZdpA==}
     dependencies:
-      '@types/node': 16.18.10
+      '@types/node': 16.18.11
     dev: true
 
   /@types/got/9.6.12:
     resolution: {integrity: sha512-X4pj/HGHbXVLqTpKjA2ahI4rV/nNBc9mGO2I/0CgAra+F2dKgMXnENv2SRpemScBzBAI4vMelIVYViQxlSE6xA==}
     dependencies:
-      '@types/node': 16.18.10
+      '@types/node': 16.18.11
       '@types/tough-cookie': 4.0.2
       form-data: 2.5.1
     dev: true
@@ -742,7 +742,7 @@ packages:
   /@types/keyv/3.1.4:
     resolution: {integrity: sha512-BQ5aZNSCpj7D6K2ksrRCTmKRLEpnPvWDiLPfoGyhZ++8YtiK9d/3DBKPJgry359X/P1PfruyYwvnvwFjuEiEIg==}
     dependencies:
-      '@types/node': 16.18.10
+      '@types/node': 16.18.11
     dev: true
 
   /@types/mdast/3.0.10:
@@ -763,8 +763,8 @@ packages:
     resolution: {integrity: sha512-0b+utRBSYj8L7XAp0d+DX7lI4cSmowNaaTkk6/1SKzbKkG+doLuPusB9EOvzLJ8ahJSk03bTLIL6cWaEd4dBKA==}
     dev: true
 
-  /@types/node/16.18.10:
-    resolution: {integrity: sha512-XU1+v7h81p7145ddPfjv7jtWvkSilpcnON3mQ+bDi9Yuf7OI56efOglXRyXWgQ57xH3fEQgh7WOJMncRHVew5w==}
+  /@types/node/16.18.11:
+    resolution: {integrity: sha512-3oJbGBUWuS6ahSnEq1eN2XrCyf4YsWI8OyCvo7c64zQJNplk3mO84t53o8lfTk+2ji59g5ycfc6qQ3fdHliHuA==}
     dev: true
 
   /@types/normalize-package-data/2.4.1:
@@ -778,7 +778,7 @@ packages:
   /@types/responselike/1.0.0:
     resolution: {integrity: sha512-85Y2BjiufFzaMIlvJDvTTB8Fxl2xfLo4HgmHzVBz08w4wDePCTjYw66PdrolO0kzli3yam/YCgRufyo1DdQVTA==}
     dependencies:
-      '@types/node': 16.18.10
+      '@types/node': 16.18.11
     dev: true
 
   /@types/semver/7.3.12:
@@ -808,7 +808,7 @@ packages:
   /@types/yauzl/2.10.0:
     resolution: {integrity: sha512-Cn6WYCm0tXv8p6k+A8PvbDG763EDpBoTzHdA+Q/MF6H3sapGjCm9NzoaJncJS9tUKSuCoDs9XHxYYsQDgxR6kw==}
     dependencies:
-      '@types/node': 16.18.10
+      '@types/node': 16.18.11
     dev: true
 
   /@typescript-eslint/eslint-plugin/5.47.0_ncmi6noazr3nzas7jxykisekym:
@@ -947,7 +947,7 @@ packages:
       vite: ^3.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 3.2.5_@types+node@16.18.10
+      vite: 3.2.5_@types+node@16.18.11
       vue: 3.2.45
     dev: true
 
@@ -1706,7 +1706,7 @@ packages:
     engines: {node: '>=12.13.0'}
     hasBin: true
     dependencies:
-      '@types/node': 16.18.10
+      '@types/node': 16.18.11
       escape-string-regexp: 4.0.0
       is-wsl: 2.2.0
       lighthouse-logger: 1.3.0
@@ -7355,7 +7355,7 @@ packages:
       extsprintf: 1.3.0
     dev: true
 
-  /vite/3.2.5_@types+node@16.18.10:
+  /vite/3.2.5_@types+node@16.18.11:
     resolution: {integrity: sha512-4mVEpXpSOgrssFZAOmGIr85wPHKvaDAcXqxVxVRZhljkJOMZi1ibLibzjLHzJvcok8BMguLc7g1W6W/GqZbLdQ==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -7380,7 +7380,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 16.18.10
+      '@types/node': 16.18.11
       esbuild: 0.15.10
       postcss: 8.4.19
       resolve: 1.22.1
