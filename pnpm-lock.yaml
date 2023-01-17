@@ -5,7 +5,7 @@ specifiers:
   '@commitlint/cli': 17.4.2
   '@commitlint/config-conventional': 17.4.2
   '@ffflorian/jszip-cli': 3.1.6
-  '@iconify/json': 2.2.7
+  '@iconify/json': 2.2.8
   '@types/download': 8.0.2
   '@types/file-saver': 2.0.5
   '@types/fs-extra': 9.0.13
@@ -62,7 +62,7 @@ devDependencies:
   '@commitlint/cli': 17.4.2
   '@commitlint/config-conventional': 17.4.2
   '@ffflorian/jszip-cli': 3.1.6
-  '@iconify/json': 2.2.7
+  '@iconify/json': 2.2.8
   '@types/download': 8.0.2
   '@types/file-saver': 2.0.5
   '@types/fs-extra': 9.0.13
@@ -551,8 +551,8 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
 
-  /@iconify/json/2.2.7:
-    resolution: {integrity: sha512-cWDwr+KE0KNSFmxrR0rvM5AmP4JmJWCZiyhFZ1bywwBJsrV/x+19bLbEAvmn4pmKKYWCAy4F9clpVWynYslzoQ==}
+  /@iconify/json/2.2.8:
+    resolution: {integrity: sha512-Vusnz/QRrTmGFzzmZ1Mf6mG2OEbBWLrd/gXgaBpCbjP/abDLdKd7+DMRJlaZA/jqMJ0rsIL0juZ9FwApBnh/ww==}
     dependencies:
       '@iconify/types': 2.0.0
       pathe: 1.0.0
