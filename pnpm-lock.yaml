@@ -31,7 +31,7 @@ specifiers:
   file-saver: 2.0.5
   fs-extra: 10.1.0
   husky: 8.0.3
-  kolorist: 1.6.0
+  kolorist: 1.7.0
   lint-staged: 13.1.0
   nexmoe.css: 0.6.0
   npm-run-all: 4.1.5
@@ -86,7 +86,7 @@ devDependencies:
   file-saver: 2.0.5
   fs-extra: 10.1.0
   husky: 8.0.3
-  kolorist: 1.6.0
+  kolorist: 1.7.0
   lint-staged: 13.1.0
   npm-run-all: 4.1.5
   prettier: 2.8.3
@@ -741,7 +741,7 @@ packages:
       '@antfu/utils': 0.7.2
       '@iconify/types': 2.0.0
       debug: 4.3.4
-      kolorist: 1.6.0
+      kolorist: 1.7.0
       local-pkg: 0.4.3
     transitivePeerDependencies:
       - supports-color
@@ -5242,8 +5242,8 @@ packages:
     resolution: {integrity: sha512-dWl0Dbjm6Xm+kDxhPQJsCBTxrJzuGl0aP9rhr+TG8D3l+GL90N8O8lYUi7dTSAN2uuDqCtNgb6aEuQH5wsiV8Q==}
     dev: true
 
-  /kolorist/1.6.0:
-    resolution: {integrity: sha512-dLkz37Ab97HWMx9KTes3Tbi3D1ln9fCAy2zr2YVExJasDRPGRaKcoE4fycWNtnCAJfjFqe0cnY+f8KT2JePEXQ==}
+  /kolorist/1.7.0:
+    resolution: {integrity: sha512-ymToLHqL02udwVdbkowNpzjFd6UzozMtshPQKVi5k1EjKRqKqBrOnE9QbLEb0/pV76SAiIT13hdL8R6suc+f3g==}
     dev: true
 
   /latest-version/7.0.0:
@@ -7833,7 +7833,7 @@ packages:
       '@iconify/utils': 2.1.0
       '@vue/compiler-sfc': 3.2.47
       debug: 4.3.4
-      kolorist: 1.6.0
+      kolorist: 1.7.0
       local-pkg: 0.4.3
       unplugin: 1.0.1
     transitivePeerDependencies:
