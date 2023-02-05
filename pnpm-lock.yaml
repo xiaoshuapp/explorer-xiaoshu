@@ -4,7 +4,7 @@ specifiers:
   '@antfu/eslint-config': 0.35.1
   '@commitlint/cli': 17.4.2
   '@commitlint/config-conventional': 17.4.2
-  '@ffflorian/jszip-cli': 3.1.7
+  '@ffflorian/jszip-cli': 3.1.9
   '@iconify/json': 2.2.16
   '@types/download': 8.0.2
   '@types/file-saver': 2.0.5
@@ -61,7 +61,7 @@ devDependencies:
   '@antfu/eslint-config': 0.35.1_4vsywjlpuriuw3tl5oq6zy5a64
   '@commitlint/cli': 17.4.2
   '@commitlint/config-conventional': 17.4.2
-  '@ffflorian/jszip-cli': 3.1.7
+  '@ffflorian/jszip-cli': 3.1.9
   '@iconify/json': 2.2.16
   '@types/download': 8.0.2
   '@types/file-saver': 2.0.5
@@ -690,8 +690,8 @@ packages:
       - supports-color
     dev: true
 
-  /@ffflorian/jszip-cli/3.1.7:
-    resolution: {integrity: sha512-CjDDooA5ZV2zlIhDgn8OjseN8wKvRn7OaQAwiHR8pBfnoAFRk2GfSqaZKCZIzx6J+jwRAJRkc6oBLlFeHdXrmw==}
+  /@ffflorian/jszip-cli/3.1.9:
+    resolution: {integrity: sha512-7kAH7VSZj9ezvGnUsGno1JvXAVr1xZ2/knK7SoJ1bcCp8CXI7SYTnNifi0jFC0iMZpL+nHW4x6bgYM6RY/Bw8A==}
     engines: {node: '>= 10.9'}
     hasBin: true
     dependencies:
