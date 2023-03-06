@@ -35,7 +35,7 @@
         "@commitlint/cli": "17.4.4",
         "@commitlint/config-conventional": "17.4.4",
         "@ffflorian/jszip-cli": "3.1.9",
-        "@iconify/json": "2.2.30",
+        "@iconify/json": "2.2.31",
         "@types/download": "8.0.2",
         "@types/file-saver": "2.0.5",
         "@types/fs-extra": "9.0.13",
