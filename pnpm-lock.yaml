@@ -41,7 +41,7 @@ specifiers:
   sharer.js: 0.5.1
   typescript: 4.9.5
   unplugin-auto-import: 0.15.2
-  unplugin-icons: 0.15.3
+  unplugin-icons: 0.16.0
   unplugin-vue-components: 0.24.1
   vite: 3.2.5
   vue: 3.2.47
@@ -94,7 +94,7 @@ devDependencies:
   safe-compare: 1.1.4
   typescript: 4.9.5
   unplugin-auto-import: 0.15.2_@vueuse+core@9.13.0
-  unplugin-icons: 0.15.3_@vue+compiler-sfc@3.2.47
+  unplugin-icons: 0.16.0_@vue+compiler-sfc@3.2.47
   unplugin-vue-components: 0.24.1_vue@3.2.47
   vite: 3.2.5_@types+node@16.18.21
   vue: 3.2.47
@@ -585,8 +585,8 @@ packages:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
     dev: true
 
-  /@iconify/utils/2.1.2:
-    resolution: {integrity: sha512-SM5vvo30FlLMI5zOQ+ZrTI/CerdQa8icocnDl8rKPgy3evqw4mgw0qAYT2bnbvtlh0+F5cPwG2scnOb1kWBc9w==}
+  /@iconify/utils/2.1.5:
+    resolution: {integrity: sha512-6MvDI+I6QMvXn5rK9KQGdpEE4mmLTcuQdLZEiX5N+uZB+vc4Yw9K1OtnOgkl8mp4d9X0UrILREyZgF1NUwUt+Q==}
     dependencies:
       '@antfu/install-pkg': 0.1.1
       '@antfu/utils': 0.7.2
@@ -7287,10 +7287,10 @@ packages:
       - rollup
     dev: true
 
-  /unplugin-icons/0.15.3_@vue+compiler-sfc@3.2.47:
-    resolution: {integrity: sha512-YWgJqv5AahrokeOnta8uX/m1damZA6Rf6zPClgHg2Fa/45iyOe3Lj+Wn/Ba+CSsq9yBffn17YfKfJNyWCNZPvw==}
+  /unplugin-icons/0.16.0_@vue+compiler-sfc@3.2.47:
+    resolution: {integrity: sha512-1YDsaMmJDVj9JDffpDrngWvrVtZZeZDHvyDqKEx4O9aQNiS4jRlGC7B14IKy91aHtBZ8/Q3RiF2YrjsyFgGO/A==}
     peerDependencies:
-      '@svgr/core': '>=5.5.0'
+      '@svgr/core': '>=7.0.0'
       '@vue/compiler-sfc': ^3.0.2 || ^2.7.0
       vue-template-compiler: ^2.6.12
       vue-template-es2015-compiler: ^1.9.0
@@ -7306,12 +7306,12 @@ packages:
     dependencies:
       '@antfu/install-pkg': 0.1.1
       '@antfu/utils': 0.7.2
-      '@iconify/utils': 2.1.2
+      '@iconify/utils': 2.1.5
       '@vue/compiler-sfc': 3.2.47
       debug: 4.3.4
       kolorist: 1.7.0
       local-pkg: 0.4.3
-      unplugin: 1.0.1
+      unplugin: 1.3.1
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -7343,15 +7343,6 @@ packages:
     transitivePeerDependencies:
       - rollup
       - supports-color
-    dev: true
-
-  /unplugin/1.0.1:
-    resolution: {integrity: sha512-aqrHaVBWW1JVKBHmGo33T5TxeL0qWzfvjWokObHA9bYmN7eNDkwOxmLjhioHl9878qDFMAaT51XNroRyuz7WxA==}
-    dependencies:
-      acorn: 8.8.2
-      chokidar: 3.5.3
-      webpack-sources: 3.2.3
-      webpack-virtual-modules: 0.5.0
     dev: true
 
   /unplugin/1.1.0:
