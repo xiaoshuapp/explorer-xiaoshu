@@ -124,8 +124,8 @@ devDependencies:
     specifier: 0.15.2
     version: 0.15.2(@vueuse/core@9.13.0)
   unplugin-icons:
-    specifier: 0.16.0
-    version: 0.16.0(@vue/compiler-sfc@3.2.47)
+    specifier: 0.16.1
+    version: 0.16.1(@vue/compiler-sfc@3.2.47)
   unplugin-vue-components:
     specifier: 0.24.1
     version: 0.24.1(vue@3.2.47)
@@ -7334,8 +7334,8 @@ packages:
       - rollup
     dev: true
 
-  /unplugin-icons@0.16.0(@vue/compiler-sfc@3.2.47):
-    resolution: {integrity: sha512-1YDsaMmJDVj9JDffpDrngWvrVtZZeZDHvyDqKEx4O9aQNiS4jRlGC7B14IKy91aHtBZ8/Q3RiF2YrjsyFgGO/A==}
+  /unplugin-icons@0.16.1(@vue/compiler-sfc@3.2.47):
+    resolution: {integrity: sha512-qTunFUkpAyDnwzwV7YV1ZgCWRYfLuURcCurhhXOWMy2ipY88qx1pADvral2hJu4Xymh0X0t3Zcll3BIru2AVLQ==}
     peerDependencies:
       '@svgr/core': '>=7.0.0'
       '@vue/compiler-sfc': ^3.0.2 || ^2.7.0
