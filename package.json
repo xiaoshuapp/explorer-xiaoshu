@@ -34,7 +34,7 @@
         "@antfu/eslint-config": "0.37.0",
         "@commitlint/cli": "17.5.1",
         "@commitlint/config-conventional": "17.4.4",
-        "@ffflorian/jszip-cli": "3.1.11",
+        "@ffflorian/jszip-cli": "3.2.0",
         "@iconify/json": "2.2.46",
         "@types/download": "8.0.2",
         "@types/file-saver": "2.0.5",
