@@ -25,8 +25,8 @@ devDependencies:
     specifier: 17.4.4
     version: 17.4.4
   '@ffflorian/jszip-cli':
-    specifier: 3.2.0
-    version: 3.2.0
+    specifier: 3.3.0
+    version: 3.3.0
   '@iconify/json':
     specifier: 2.2.47
     version: 2.2.47
@@ -598,8 +598,8 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@ffflorian/jszip-cli@3.2.0:
-    resolution: {integrity: sha512-crKUQheiCzmsSVQr0aJpFaG5RXLNKcYDsA5J0/6gxpJDAlPpYh3PEQ49KBDxkzlRpPhocHG4tXosCc6/RzorKw==}
+  /@ffflorian/jszip-cli@3.3.0:
+    resolution: {integrity: sha512-M4iMo6dT8thDwiZxFY27Az5MJy6yHnQvUkQyGQSKepummYeLvbYngIa4HMLoNe977pdUjSh9s5nyUD+SCExlnQ==}
     engines: {node: '>= 10.9'}
     hasBin: true
     dependencies:
