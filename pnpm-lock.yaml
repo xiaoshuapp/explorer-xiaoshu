@@ -142,8 +142,8 @@ devDependencies:
     specifier: 9.1.0
     version: 9.1.0(eslint@8.37.0)
   web-ext:
-    specifier: 7.6.1
-    version: 7.6.1(body-parser@1.20.2)(express@4.18.2)(safe-compare@1.1.4)
+    specifier: 7.6.2
+    version: 7.6.2(body-parser@1.20.2)(express@4.18.2)(safe-compare@1.1.4)
   webext-bridge:
     specifier: 5.0.5
     version: 5.0.5
@@ -5969,7 +5969,7 @@ packages:
     dev: true
 
   /path-is-absolute@1.0.1:
-    resolution: {integrity: sha1-F0uSaHNVNP+8es5r9TpanhtcX18=}
+    resolution: {integrity: sha512-AVbw3UJ2e9bq64vSaS9Am0fje1Pa8pbGqTTsmXfaIiMpnr5DlDhfJOuLj9Sf95ZPVDAUerDfEk88MPmPe7UCQg==}
     engines: {node: '>=0.10.0'}
     dev: true
 
@@ -7729,8 +7729,8 @@ packages:
       defaults: 1.0.3
     dev: true
 
-  /web-ext@7.6.1(body-parser@1.20.2)(express@4.18.2)(safe-compare@1.1.4):
-    resolution: {integrity: sha512-zU7nCiUiNgrZbiF1M9f1HJmwoeyKqb/QTahsEF8ke6aBFQYK6x3NcASi7Mrd7vUrPUvhWLvWB1YFC72VZnARAg==}
+  /web-ext@7.6.2(body-parser@1.20.2)(express@4.18.2)(safe-compare@1.1.4):
+    resolution: {integrity: sha512-xlxbzgFBIS/UWWlvWxyR1PIqRRzDj1cutoHh+VZu4ZTcJTfv35KVdKkLRZv4PQwHu4dg8VfTg7WEcNP4QLaaFQ==}
     engines: {node: '>=14.0.0', npm: '>=6.9.0'}
     hasBin: true
     dependencies:
