@@ -248,7 +248,7 @@ watch(
         const data = JSON.parse(JSON.stringify(listData.value))
         browser.storage.sync.set({ listData: data }).then(
             () => {
-                window.console.log('OK')
+                window.console.log('Watching listData Done')
             },
             (error: Error) => {
                 window.console.log(error)
@@ -280,11 +280,10 @@ window.setInterval(() => {
     if (url_prec !== window.location.href) {
         url_prec = window.location.href
         getActive()
-        window.onload = () => {
-            searchKeyword.value = getKeyword()
-            keyword.value = getKeyword()
-            loaded.value = true
-        }
+        window.console.log(`URL changed`)
+        searchKeyword.value = getKeyword()
+        keyword.value = getKeyword()
+        loaded.value = true
     }
 }, 1000)
 
