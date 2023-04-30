@@ -296,7 +296,6 @@ const enable = computed(() => {
 </script>
 
 <template>
-    <StarDialog v-if="enable" />
     <div
         v-if="enable"
         class="explorer-xiaoshu"
