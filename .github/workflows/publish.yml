@@ -21,8 +21,8 @@ jobs:
         run: pnpm run build
       - name: Zip Extension
         run: pnpm run pack:zip
-      - name: Browser Plugin Publish
-        uses: PlasmoHQ/bpp@v2
+      - name: Browser Platform Publish
+        uses: PlasmoHQ/bpp@v3
         with:
-          artifact: "extension.zip"
           keys: ${{ secrets.BPP_KEYS }}
+  
