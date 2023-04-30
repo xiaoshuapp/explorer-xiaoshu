@@ -16,7 +16,7 @@ if (import.meta.hot) {
 browser.runtime.onInstalled.addListener((detail) => {
     if (detail.reason === 'install') {
         browser.tabs.create({
-            url: 'https://www.baidu.com/s?wd=%E6%8E%A2%E7%B4%A2%E8%80%85%E5%B0%8F%E8%88%92%20ex.xiaoshu.app',
+            url: 'https://www.baidu.com/s?wd=%E6%8E%A2%E7%B4%A2%E8%80%85%E5%B0%8F%E8%88%92',
         })
     }
 })
