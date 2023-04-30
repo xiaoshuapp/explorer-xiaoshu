@@ -4,7 +4,6 @@ import draggable from '@xiaoshuapp/draggable'
 import type { Ref } from 'vue'
 import { ref } from 'vue'
 import DetectDialog from '../../components/DetectDialog.vue'
-import StarDialog from '../../components/StarDialog.vue'
 import settingData from '../../options/setting.json'
 import originData from './data.json'
 
