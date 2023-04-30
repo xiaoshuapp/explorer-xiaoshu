@@ -1,7 +1,7 @@
 {
     "name": "explorer-xiaoshu",
     "displayName": "Explorer Xiaoshu",
-    "version": "0.9.13",
+    "version": "0.9.15",
     "private": true,
     "description": "Powerful and fast sidebar search toggle tool",
     "scripts": {
