@@ -1,4 +1,4 @@
-import { dirname, relative } from 'path'
+import { dirname, relative } from 'node:path'
 import type { UserConfig } from 'vite'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
@@ -18,6 +18,11 @@ export const sharedConfig: UserConfig = {
     },
     define: {
         __DEV__: isDev,
+        'process.platform': null,
+        'process.version': null,
+        'process.env.NODE_ENV': JSON.stringify(
+            process.env.NODE_ENV || 'production',
+        ),
     },
     plugins: [
         Vue(),
