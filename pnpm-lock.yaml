@@ -28,8 +28,8 @@ devDependencies:
     specifier: 3.4.1
     version: 3.4.1
   '@iconify/json':
-    specifier: 2.2.58
-    version: 2.2.58
+    specifier: 2.2.59
+    version: 2.2.59
   '@types/download':
     specifier: 8.0.2
     version: 8.0.2
@@ -817,8 +817,8 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
 
-  /@iconify/json@2.2.58:
-    resolution: {integrity: sha512-brAK+R9/ZhhY8NwSK1Jp++qHR5WHFis7K2kIHPT9Zd/uyijX6CPMaVCepRNNXMhPnNYW6Re372lne5Z+OxBHtQ==}
+  /@iconify/json@2.2.59:
+    resolution: {integrity: sha512-6R/VF9OGrZsk+JRGsL3k4ghF5PZVuwYCVCvYvEoebCXWeWK/paMAfTlZAa5I20PpUT3KvcBCP47d5LN8OaQnFg==}
     dependencies:
       '@iconify/types': 2.0.0
       pathe: 1.1.0
