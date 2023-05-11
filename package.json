@@ -39,7 +39,7 @@
         "@types/download": "8.0.2",
         "@types/file-saver": "2.0.5",
         "@types/fs-extra": "11.0.1",
-        "@types/node": "18.16.7",
+        "@types/node": "18.16.8",
         "@types/webextension-polyfill": "0.10.0",
         "@typescript-eslint/eslint-plugin": "5.57.0",
         "@typescript-eslint/parser": "5.57.0",
