@@ -136,8 +136,8 @@ devDependencies:
     specifier: 3.3.2
     version: 3.3.2
   vue-demi:
-    specifier: 0.14.1
-    version: 0.14.1(vue@3.3.2)
+    specifier: 0.14.4
+    version: 0.14.4(vue@3.3.2)
   vue-eslint-parser:
     specifier: 9.1.0
     version: 9.1.0(eslint@8.37.0)
@@ -1302,7 +1302,7 @@ packages:
       '@types/web-bluetooth': 0.0.17
       '@vueuse/metadata': 10.1.2
       '@vueuse/shared': 10.1.2(vue@3.3.2)
-      vue-demi: 0.14.1(vue@3.3.2)
+      vue-demi: 0.14.4(vue@3.3.2)
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
@@ -1315,7 +1315,7 @@ packages:
   /@vueuse/shared@10.1.2(vue@3.3.2):
     resolution: {integrity: sha512-1uoUTPBlgyscK9v6ScGeVYDDzlPSFXBlxuK7SfrDGyUTBiznb3mNceqhwvZHjtDRELZEN79V5uWPTF1VDV8svA==}
     dependencies:
-      vue-demi: 0.14.1(vue@3.3.2)
+      vue-demi: 0.14.4(vue@3.3.2)
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
@@ -7661,8 +7661,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vue-demi@0.14.1(vue@3.3.2):
-    resolution: {integrity: sha512-rt+yuCtXvscYot9SQQj3WKZJVSriPNqVkpVBNEHPzSgBv7QIYzsS410VqVgvx8f9AAPgjg+XPKvmV3vOqqkJQQ==}
+  /vue-demi@0.14.4(vue@3.3.2):
+    resolution: {integrity: sha512-YR9bCmtIYgsqNVRG3MLLWlhbZ9tTNMuWHPd7yx0pHS3NDX17MeVNHgKTOClYE8pBjsfNe4CMaReP7zQtHDIbiA==}
     engines: {node: '>=12'}
     hasBin: true
     requiresBuild: true
