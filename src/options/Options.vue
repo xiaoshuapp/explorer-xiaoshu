@@ -252,7 +252,7 @@ onMounted(() => {
         </article>
         <br />
         <p>
-            Made width ❤ by
+            Made with ❤ by
             <a href="https://twitter.com/nexmoe" target="_blank">Nexmoe</a>
             With
             <a href="https://github.com/nexmoe/nexmoe.css" target="_blank"
