@@ -1,0 +1,196 @@
+[
+    {
+        "icon": "😀",
+        "name": "搜索引擎",
+        "list": [
+            {
+                "name": "百度",
+                "engine": "https://www.baidu.com/s?wd=%s"
+            },
+            {
+                "name": "必应",
+                "engine": "https://cn.bing.com/search?q=%s"
+            },
+            {
+                "name": "萌搜",
+                "engine": "https://mengso.com/search?q=%s"
+            },
+            {
+                "name": "360搜索",
+                "engine": "https://www.so.com/s?q=%s"
+            },
+            {
+                "name": "夸克搜索",
+                "engine": "http://quark.sm.cn/s?q=%s"
+            }
+        ]
+    },
+    {
+        "name": "视频",
+        "icon": "🎦",
+        "list": [
+            {
+                "name": "哔哩哔哩",
+                "engine": "https://www.bilibili.com/search?keyword=%s"
+            },
+            {
+                "name": "爱奇艺",
+                "engine": "https://so.iqiyi.com/so/q_%s"
+            },
+            {
+                "name": "优酷视频搜索",
+                "engine": "https://so.youku.com/search_video/q_%s"
+            },
+            {
+                "name": "芒果TV",
+                "engine": "https://so.mgtv.com/so?k=%s"
+            },
+            {
+                "name": "YouTube",
+                "engine": "https://www.youtube.com/results?search_query=%s"
+            },
+            {
+                "name": "腾讯视频",
+                "engine": "https://v.qq.com/x/search/?q=%s"
+            },
+            {
+                "name": "爱奇艺",
+                "engine": "http://so.iqiyi.com/so/q_%s"
+            },
+            {
+                "name": "AcFun",
+                "engine": "https://www.acfun.cn/search?keyword=%s"
+            },
+            {
+                "name": "搜狐",
+                "engine": "http://so.tv.sohu.com/mts?wd=%s"
+            }
+        ]
+    },
+    {
+        "name": "Search Engine",
+        "list": [
+            {
+                "name": "Google HK",
+                "engine": "https://www.google.com.hk/search?q=%s"
+            },
+            {
+                "name": "DuckDuckGo",
+                "engine": "https://duckduckgo.com/?q=%s"
+            },
+            {
+                "name": "Bing",
+                "engine": "https://www.bing.com/search?q=%s"
+            },
+            {
+                "name": "Qwant",
+                "engine": "https://www.qwant.com/?q=%s"
+            },
+            {
+                "name": "Yandex",
+                "engine": "https://yandex.com/search/?text=%s"
+            }
+        ]
+    },
+
+    {
+        "name": "音乐",
+        "icon": "🎵",
+        "list": [
+            {
+                "name": "QQ音乐",
+                "engine": "https://y.qq.com/n/ryqq/search?w=%s"
+            },
+            {
+                "name": "酷我音乐",
+                "engine": "https://www.kuwo.cn/search/list?key=%s"
+            },
+            {
+                "name": "网易云音乐",
+                "engine": "https://music.163.com/#/search/m/?s=%s"
+            },
+            {
+                "name": "酷狗音乐",
+                "engine": "https://www.kugou.com/yy/html/search.html#searchKeyWord=%s"
+            }
+        ]
+    },
+    {
+        "name": "摸鱼",
+        "icon": "🐟",
+        "list": [
+            {
+                "name": "豆瓣",
+                "engine": "https://www.douban.com/search?q=%s"
+            },
+            {
+                "name": "知乎",
+                "engine": "http://www.zhihu.com/search?q=%s"
+            },
+            {
+                "name": "斗鱼",
+                "engine": "https://www.douyu.com/search?kw=%s"
+            },
+            {
+                "name": "抖音",
+                "engine": "https://www.douyin.com/search/%s"
+            }
+        ]
+    },
+    {
+        "name": "Scholar",
+        "icon": "🎓",
+        "list": [
+            {
+                "name": "Google Scholar",
+                "engine": "https://scholar.google.com/scholar?q=%s"
+            },
+            {
+                "name": "百度学术",
+                "engine": "https://xueshu.baidu.com/s?wd=%s"
+            },
+            {
+                "name": "必应学术",
+                "engine": "https://cn.bing.com/academic/search?q=%s"
+            },
+            {
+                "name": "OALib",
+                "engine": "https://www.oalib.com/search?kw=%s"
+            }
+        ]
+    },
+    {
+        "name": "Developer",
+        "icon": "💻",
+        "list": [
+            {
+                "name": "MDN",
+                "engine": "https://developer.mozilla.org/zh-CN/search?q=%s"
+            },
+            {
+                "name": "Stack Overflow",
+                "engine": "https://stackoverflow.com/search?q=%s"
+            },
+            {
+                "name": "掘金",
+                "engine": "https://juejin.im/search?query=%s&type=all"
+            },
+            {
+                "name": "Can I Use",
+                "engine": "http://caniuse.com/#search=%s"
+            },
+            {
+                "name": "GitHub",
+                "engine": "https://github.com/search?utf8=✓&q=%s"
+            },
+            {
+                "name": "菜鸟教程",
+                "engine": "http://www.runoob.com/?s=%s"
+            },
+            {
+                "name": "Docker Hub",
+                "engine": "https://hub.docker.com/search?q=%s&type=image"
+            }
+        ]
+    }
+]

@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import App from './views/App.vue'
 import '@/assets/index.css'
-
+import Test from './views/Test.vue'
 
 export default defineContentScript({
   matches: ['<all_urls>'],
@@ -27,17 +27,21 @@ export default defineContentScript({
 
     // 4. Mount the UI
     ui.mount();
+    
+    // remount
+    let url_prec = window.location.href
+    window.setInterval(() => {
+      if (!document.querySelector('explorer-search')) {
+        if (url_prec !== window.location.href) {
+          url_prec = window.location.href
+          console.log('[NEX] remount',url_prec)
+          ui.mount();
+        }
+      }
+    }, 1000)
   },
 });
 
-// let url_prec = window.location.href
-// window.setInterval(() => {
-//   if (!document.getElementById('explorer-xiaoshu')) {
-//     if (url_prec !== window.location.href) {
-//       url_prec = window.location.href
-//       init()
-//     }
-//   }
-// }, 1000)
+
 
 
