@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import 'nexmoe.css'
 import { saveAs } from 'file-saver'
-import originData from '../contentScripts/views/data.json'
+import originData from '../content/views/data.json'
 import settingData from './setting.json'
 
 const setting = ref(settingData)
