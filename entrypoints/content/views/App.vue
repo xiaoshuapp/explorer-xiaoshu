@@ -5,6 +5,12 @@ import type { Ref } from 'vue'
 import { ref } from 'vue'
 import settingData from '../../options/setting.json'
 import originData from './data.json'
+import {
+  ContextMenu,
+  ContextMenuContent,
+  ContextMenuItem,
+  ContextMenuTrigger,
+} from '@/components/ui/context-menu'
 
 const listData = ref(originData)
 const drag: Ref<boolean> = ref(false)
@@ -338,16 +344,26 @@ const enable = computed(() => {
 		>
 			<template #item="{ element, index }">
 				<div class="group">
-					<div class="xiaoshu-h4" @contextmenu="menuX($event, index)">
-						<div class="list-item">
-							<div class="item-icon">
-								<span @dblclick="changeTitle(index)">{{ element.icon || '😀' }}</span>
-							</div>
-							<div class="item-title">
-								<span @dblclick="changeTitle(index)">{{ element.name }}</span>
-							</div>
-						</div>
-					</div>
+					<ContextMenu>
+						<ContextMenuTrigger
+							><div class="xiaoshu-h4 font-bold">
+								<div class="list-item">
+									<div class="item-icon">
+										<span @dblclick="changeTitle(index)">{{ element.icon || '😀' }}</span>
+									</div>
+									<div class="item-title">
+										<span @dblclick="changeTitle(index)">{{ element.name }}</span>
+									</div>
+								</div>
+							</div></ContextMenuTrigger
+						>
+						<ContextMenuContent>
+							<ContextMenuItem>Profile</ContextMenuItem>
+							<ContextMenuItem>Billing</ContextMenuItem>
+							<ContextMenuItem>Team</ContextMenuItem>
+							<ContextMenuItem>Subscription</ContextMenuItem>
+						</ContextMenuContent>
+					</ContextMenu>
 					<draggable
 						class="list-group"
 						item-key="name"

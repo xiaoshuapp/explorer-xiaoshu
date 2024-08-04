@@ -1,6 +1,6 @@
-import { onMessage } from 'webext-bridge'
 import { createApp } from 'vue'
 import App from './views/App.vue'
+import '@/assets/index.css'
 
 
 export default defineContentScript({
@@ -11,7 +11,7 @@ export default defineContentScript({
   async main(ctx) {
     // 3. Define your UI
     const ui = await createShadowRootUi(ctx, {
-      name: 'example-ui',
+      name: 'explorer-search',
       position: 'inline',
       onMount: (container) => {
         // Define how your UI will be mounted inside the container

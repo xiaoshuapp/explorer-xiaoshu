@@ -1,12 +1,15 @@
 <script setup lang="ts">
-import 'nexmoe.css'
+import 'nexmoe.css' 
 import { saveAs } from 'file-saver'
 import originData from '../content/views/data.json'
 import settingData from './setting.json'
+import '@/assets/index.css'
+import { Button } from '@/components/ui/button'
+import { Toaster } from '@/components/ui/sonner'
+import { toast } from 'vue-sonner'
 
 const setting = ref(settingData)
 const listData = ref(originData)
-const alertList = ref(Array<string>())
 
 const inputFileRef = ref(null)
 
@@ -16,13 +19,6 @@ const logo = ref(
 
 const getI18n = (name: string): string => {
     return browser.i18n.getMessage(name)
-}
-
-const optionsAlert = (text: string) => {
-    alertList.value.push(text)
-    setTimeout(() => {
-        alertList.value.shift()
-    }, 3000)
 }
 
 const exportSettings = () => {
@@ -54,7 +50,7 @@ const readFile = (file: File) => {
             })
             .then(() => {
                 getData()
-                optionsAlert(getI18n('optionsImportSucceeded'))
+                toast(getI18n('optionsImportSucceeded'))
             })
             .catch((error) => {
                 console.error(error)
@@ -90,7 +86,7 @@ watch(
         const data = JSON.parse(JSON.stringify(setting.value))
         browser.storage.sync.set({ setting: data }).then(
             () => {
-                optionsAlert(getI18n('optionsSaved'))
+                toast(getI18n('optionsSaved'))
             },
             (error) => {
                 window.console.log(error)
@@ -104,14 +100,12 @@ watch(
 
 onMounted(() => {
     getData()
-    setTimeout(() => {
-        alertList.value.shift()
-    }, 10)
 })
 </script>
 
 <template>
     <main class="container">
+        <Toaster />
         <h1><img class="logo" :src="logo" />{{ getI18n('title') }}</h1>
         <nav style="margin-left: 2rem">
             <ul>
@@ -190,13 +184,13 @@ onMounted(() => {
         <h2>{{ getI18n('optionsData') }}</h2>
         <hr />
         <div class="btn-wrap">
-            <button @click="exportSettings">
+            <Button @click="exportSettings">
                 {{ getI18n('exportSettings') }}
-            </button>
+            </Button>
             <div class="file-btn">
-                <button>
+                <Button>
                     {{ getI18n('importSettings') }}
-                </button>
+                </Button>
                 <input
                     ref="inputFileRef"
                     type="file"
@@ -229,28 +223,6 @@ onMounted(() => {
             </div>
         </article>
         <br />
-        <article>
-            <details>
-                <summary>QQ群</summary>
-            </details>
-            <div>
-                <p>
-                    点击链接加入群聊【探索者小舒】：<a
-                        href="https://jq.qq.com/?_wv=1027&amp;k=S5K2tc3C"
-                        target="_blank"
-                        >https://jq.qq.com/?_wv=1027&amp;k=S5K2tc3C</a
-                    >
-                </p>
-                <p>
-                    <img
-                        style="width: 300px"
-                        src="https://ex.xiaoshu.app/assets/20220215135858.a055ef3e.jpg"
-                        alt="QQ群"
-                    />
-                </p>
-            </div>
-        </article>
-        <br />
         <p>
             Made with ❤ by
             <a href="https://twitter.com/nexmoe" target="_blank">Nexmoe</a>
@@ -259,11 +231,6 @@ onMounted(() => {
                 >Nexmoe.css</a
             >
         </p>
-        <div class="alert">
-            <dialog v-for="item in alertList" :key="item" open>
-                {{ item }}
-            </dialog>
-        </div>
     </main>
 </template>
 
@@ -277,19 +244,6 @@ a[target='_blank']::after {
     content: '↗';
 }
 
-.alert {
-    position: fixed;
-    top: 0;
-    right: 1em;
-    z-index: 999;
-    width: 100%;
-}
-
-.alert dialog {
-    position: relative;
-    margin-right: 0;
-    margin-top: 1em;
-}
 .btn-wrap {
     display: flex;
 }

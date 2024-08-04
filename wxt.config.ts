@@ -1,4 +1,7 @@
 import { defineConfig } from 'wxt';
+import tailwind from 'tailwindcss'
+import autoprefixer from 'autoprefixer'
+import path from 'node:path'
 
 // See https://wxt.dev/api/config.html
 export default defineConfig({
@@ -10,5 +13,16 @@ export default defineConfig({
       'unlimitedStorage', // 无限制存储，用于缓存
     ],
   },
-
+  vite: () => ({
+    css: {
+      postcss: {
+        plugins: [tailwind(), autoprefixer()],
+      },
+    },
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, './'),
+      },
+    },
+  })
 });
