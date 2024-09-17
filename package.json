@@ -73,8 +73,8 @@
         "vue": "3.3.4",
         "vue-demi": "0.14.5",
         "vue-eslint-parser": "9.1.0",
-        "web-ext": "7.6.2",
-        "webext-bridge": "5.0.5",
+        "web-ext": "8.3.0",
+        "webext-bridge": "6.0.1",
         "webextension-polyfill": "0.10.0"
     }
 }
