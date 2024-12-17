@@ -167,8 +167,6 @@ browser.storage.sync
 		(error: any) => console.error(error)
 	)
 
-
-
 // 划词搜索
 document.onmouseup = () => {
 	if (setting.value.function.getSelection) {
@@ -183,14 +181,28 @@ const onError = (e: { srcElement: any }) => {
 	img.style.display = 'none'
 }
 
+function statef() {
+	console.log('statef')
+	getActive()
+	const keywordT = getKeyword()
+	console.log('keyword',keywordT)
+	searchKeyword.value = keywordT
+	keyword.value = keywordT
+	loaded.value = true
+}
+
+statef()
+
 let url_prec = window.location.href
 window.setInterval(() => {
-	if (url_prec !== window.location.href) {
+	console.log('interval', url_prec)
+	if (url_prec != window.location.href) {
 		url_prec = window.location.href
-		getActive()
 		window.console.log(`URL changed`)
-		searchKeyword.value = getKeyword()
-		keyword.value = getKeyword()
+		getActive()
+		const keyword = getKeyword()
+		searchKeyword.value = keyword
+		keyword.value = keyword
 		loaded.value = true
 	}
 }, 1000)
@@ -298,7 +310,7 @@ const enable = computed(() => {
 								<img
 									class="item-icon"
 									loading="lazy"
-									:src="`https://lib.xiaoshuapp.com/icon/x?url=${element.engine.replace(
+									:src="`https://icon.102417.xyz/favicon/${element.engine.replace(
 										'%s',
 										''
 									)}`"
