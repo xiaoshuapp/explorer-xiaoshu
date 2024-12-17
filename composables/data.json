@@ -12,10 +12,6 @@
 				"engine": "https://cn.bing.com/search?q=%s"
 			},
 			{
-				"name": "萌搜",
-				"engine": "https://mengso.com/search?q=%s"
-			},
-			{
 				"name": "360搜索",
 				"engine": "https://www.so.com/s?q=%s"
 			},

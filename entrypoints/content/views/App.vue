@@ -278,7 +278,7 @@ const enable = computed(() => {
 					<div class="xiaoshu-h4" @contextmenu="menuX($event, index)">
 						<div class="list-item">
 							<div class="item-icon">
-								<span @dblclick="changeTitle(index)">{{ element.icon || '😀' }}</span>
+								<span @dblclick="changeTitle(index)">{{ element.icon || '📂' }}</span>
 							</div>
 							<div class="item-title">
 								<span @dblclick="changeTitle(index)">{{ element.name }}</span>
