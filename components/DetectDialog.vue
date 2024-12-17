@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 const props = defineProps({
-    keyword: String,
+	keyword: String,
 })
 const emit = defineEmits(['addToList', 'detectIgnore'])
 const dialog = ref()
@@ -9,29 +9,29 @@ const name = ref(window.location.hostname)
 const engine = ref('')
 
 onMounted(() => {
-    if (props.keyword) {
-        engine.value = decodeURIComponent(window.location.href)
-            .replace(/\+/g, ' ')
-            .replace(props.keyword, '%s')
-        dialog.value.showModal()
-    }
+	if (props.keyword) {
+		engine.value = decodeURIComponent(window.location.href)
+			.replace(/\+/g, ' ')
+			.replace(props.keyword, '%s')
+		dialog.value.showModal()
+	}
 })
 
 const ignore = () => {
-    emit('detectIgnore')
-    dialog.value.close()
+	emit('detectIgnore')
+	dialog.value.close()
 }
 
 const addEngine = () => {
-    if (name.value && engine.value) {
-        emit('addToList', {
-            name: name.value,
-            engine: engine.value,
-        })
-        dialog.value.close()
-    } else {
-        alert('请填写')
-    }
+	if (name.value && engine.value) {
+		emit('addToList', {
+			name: name.value,
+			engine: engine.value,
+		})
+		dialog.value.close()
+	} else {
+		alert('请填写')
+	}
 }
 </script>
 

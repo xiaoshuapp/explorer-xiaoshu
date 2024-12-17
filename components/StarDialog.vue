@@ -4,29 +4,29 @@ const dialog = ref()
 const nowTime = new Date().getTime()
 
 onMounted(() => {
-    let storageTime
-    browser.storage.local.get('storageTime').then((data) => {
-        storageTime = data.storageTime
-        if (storageTime === undefined) {
-            storageTime = nowTime - 7 * 24 * 60 * 60 * 1000
-            browser.storage.local.set({ storageTime })
-        }
-        if (nowTime - storageTime >= 14 * 24 * 60 * 60 * 1000) {
-            dialog.value.show()
-        }
-    })
+	let storageTime
+	browser.storage.local.get('storageTime').then((data) => {
+		storageTime = data.storageTime
+		if (storageTime === undefined) {
+			storageTime = nowTime - 7 * 24 * 60 * 60 * 1000
+			browser.storage.local.set({ storageTime })
+		}
+		if (nowTime - storageTime >= 14 * 24 * 60 * 60 * 1000) {
+			dialog.value.show()
+		}
+	})
 })
 
 const ignore = () => {
-    browser.storage.local.set({ storageTime: nowTime })
-    dialog.value.close()
+	browser.storage.local.set({ storageTime: nowTime })
+	dialog.value.close()
 }
 const go = () => {
-    browser.storage.local.set({
-        storageTime: nowTime + 42 * 24 * 60 * 60 * 1000,
-    })
-    dialog.value.close()
-    window.open('https://explorer.xiaoshuapp.com/star.html')
+	browser.storage.local.set({
+		storageTime: nowTime + 42 * 24 * 60 * 60 * 1000,
+	})
+	dialog.value.close()
+	window.open('https://explorer.xiaoshuapp.com/star.html')
 }
 </script>
 

@@ -1,10 +1,10 @@
 <script lang="ts" setup>
 import 'nexmoe.css'
+import useListData from '@/composables/useListData'
 import draggable from '@xiaoshuapp/draggable'
 import type { Ref } from 'vue'
 import settingData from '../../options/setting.json'
 import originData from './data.json'
-import useListData from '@/composables/useListData'
 
 const useList = useListData()
 const {
@@ -63,14 +63,16 @@ const menu2closed = (e: any) => {
 	e.currentTarget.classList.remove('menu-active')
 }
 
-window.onclick = function (e) {
+window.onclick = (e) => {
 	menuXClosed()
 }
 
 // 获取当前搜索关键词
 const getKeyword = (): string => {
 	let keywordTemporary = ''
-	const params = new URLSearchParams(document.location.search.substring(1) || document.location.hash)
+	const params = new URLSearchParams(
+		document.location.search.substring(1) || document.location.hash,
+	)
 	const kw =
 		params.get('exxshu') ||
 		params.get('q') ||
@@ -164,14 +166,15 @@ browser.storage.sync
 				loaded.value = true
 			}
 		},
-		(error: any) => console.error(error)
+		(error: any) => console.error(error),
 	)
 
 // 划词搜索
 document.onmouseup = () => {
 	if (setting.value.function.getSelection) {
 		const selection = window.getSelection()
-		if (selection !== null && selection.toString() !== '') keyword.value = selection.toString()
+		if (selection !== null && selection.toString() !== '')
+			keyword.value = selection.toString()
 		else keyword.value = getKeyword()
 	}
 }
@@ -185,7 +188,7 @@ function statef() {
 	console.log('statef')
 	getActive()
 	const keywordT = getKeyword()
-	console.log('keyword',keywordT)
+	console.log('keyword', keywordT)
 	searchKeyword.value = keywordT
 	keyword.value = keywordT
 	loaded.value = true

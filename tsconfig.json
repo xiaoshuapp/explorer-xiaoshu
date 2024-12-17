@@ -1,13 +1,11 @@
 {
-  "extends": "./.wxt/tsconfig.json",
-  "compilerOptions": {
-    // ...
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./*"
-      ]
-    }
-    // ...
-  }
+	"extends": "./.wxt/tsconfig.json",
+	"compilerOptions": {
+		// ...
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["./*"]
+		}
+		// ...
+	}
 }

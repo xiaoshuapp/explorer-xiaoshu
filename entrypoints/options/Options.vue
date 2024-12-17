@@ -4,13 +4,19 @@ import originData from '../content/views/data.json'
 import settingData from './setting.json'
 import '@/assets/index.css'
 import { Button } from '@/components/ui/button'
+import {
+	FormControl,
+	FormDescription,
+	FormField,
+	FormItem,
+	FormLabel,
+} from '@/components/ui/form'
 import { Toaster } from '@/components/ui/sonner'
-import { toast } from 'vue-sonner'
-import { useForm } from 'vee-validate'
-import { toTypedSchema } from '@vee-validate/zod'
-import * as z from 'zod'
 import { Switch } from '@/components/ui/switch'
-import { FormControl, FormDescription, FormField, FormItem, FormLabel } from '@/components/ui/form'
+import { toTypedSchema } from '@vee-validate/zod'
+import { useForm } from 'vee-validate'
+import { toast } from 'vue-sonner'
+import * as z from 'zod'
 
 const setting = ref(settingData)
 const listData = ref(originData)
@@ -27,7 +33,7 @@ const formSchema = toTypedSchema(
 			automaticAdvance: z.boolean().default(true),
 			enableOnly: z.boolean().default(false),
 		}),
-	})
+	}),
 )
 
 const { handleSubmit, setValues } = useForm({
@@ -42,7 +48,7 @@ const onSubmit = handleSubmit((values) => {
 		},
 		(error) => {
 			window.console.log(error)
-		}
+		},
 	)
 })
 
@@ -57,7 +63,10 @@ const exportSettings = () => {
 			listData: listData.value,
 		}
 
-		saveAs(new Blob([JSON.stringify(data)], { type: 'application/json' }), 'explorer-xiaoshu.json')
+		saveAs(
+			new Blob([JSON.stringify(data)], { type: 'application/json' }),
+			'explorer-xiaoshu.json',
+		)
 	} catch (error) {
 		console.error(error)
 	}
@@ -102,7 +111,7 @@ function getData() {
 			console.log(setting.value)
 			setValues(setting.value)
 		},
-		(error: any) => console.error(error)
+		(error: any) => console.error(error),
 	)
 }
 
