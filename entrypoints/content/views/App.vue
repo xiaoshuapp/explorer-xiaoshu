@@ -126,12 +126,10 @@ const engineHref = (engine: string): string => {
 	if (engine.includes('%s')) {
 		if (engine.includes('?')) {
 			return `${engine.replace('%s', keyword.value || '')}&exxshu=${keyword.value}`
-		} else {
-			return `${engine.replace('%s', keyword.value || '')}?exxshu=${keyword.value}`
 		}
-	} else {
-		return engine + keyword.value
+		return `${engine.replace('%s', keyword.value || '')}?exxshu=${keyword.value}`
 	}
+	return engine + keyword.value
 }
 
 const openOptionsPage = (): void => {
@@ -140,7 +138,7 @@ const openOptionsPage = (): void => {
 
 const getTarget = (): string => {
 	if (setting.value.function.openNew) return '_blank'
-	else return '_self'
+	return '_self'
 }
 
 browser.storage.sync
@@ -155,7 +153,7 @@ browser.storage.sync
 			listData.value = data.listData
 			listData.value = Object.values(listData.value)
 			for (let i = 0; i < listData.value.length; i++) {
-				if (typeof listData.value[i].list == 'object') {
+				if (typeof listData.value[i].list === 'object') {
 					listData.value[i].list = Object.values(listData.value[i].list)
 				}
 			}
@@ -199,9 +197,9 @@ statef()
 let url_prec = window.location.href
 window.setInterval(() => {
 	console.log('interval', url_prec)
-	if (url_prec != window.location.href) {
+	if (url_prec !== window.location.href) {
 		url_prec = window.location.href
-		window.console.log(`URL changed`)
+		window.console.log('URL changed')
 		getActive()
 		const keyword = getKeyword()
 		searchKeyword.value = keyword
@@ -212,7 +210,7 @@ window.setInterval(() => {
 
 const enable = computed(() => {
 	if (setting.value.function.enableOnly) return active.value && keyword.value
-	else return keyword.value
+	return keyword.value
 })
 </script>
 
