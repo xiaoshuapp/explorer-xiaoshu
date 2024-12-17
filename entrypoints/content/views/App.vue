@@ -70,10 +70,12 @@ window.onclick = (e) => {
 
 // 获取当前搜索关键词
 const getKeyword = (): string => {
+	console.log('getKeyword called')
 	let keywordTemporary = ''
 	const params = new URLSearchParams(
 		document.location.search.substring(1) || document.location.hash,
 	)
+	console.log('URL params:', params.toString())
 	const kw =
 		params.get('exxshu') ||
 		params.get('q') ||
@@ -86,34 +88,47 @@ const getKeyword = (): string => {
 		params.get('keyword') ||
 		params.get('kw')
 
+	console.log('Found keyword from URL:', kw)
+
 	if (kw) {
 		keywordTemporary = kw
 	} else {
+		console.log('No URL keyword, checking input fields')
 		const dom = document.getElementsByTagName('input')
 		for (let i = 0; i < dom.length; i++) {
 			if (
 				dom[i].clientWidth > 80 &&
-				dom[i].clientHeight > 0 &&
-				dom[i].value &&
-				decodeURI(document.location.href).includes(dom[i].value)
-			)
+					dom[i].clientHeight > 0 &&
+					dom[i].value &&
+					decodeURI(document.location.href).includes(dom[i].value)
+			) {
 				keywordTemporary = dom[i].value
+				console.log('Found keyword from input:', keywordTemporary)
+			}
 		}
 	}
 
+	console.log('Final keyword:', keywordTemporary)
 	return keywordTemporary
 }
 
 // 获取当前使用的搜索引擎
 const getActive = (): void => {
+	console.log('getActive called')
+	console.log('Current domain:', document.domain)
 	listData.value.forEach((item: ListGroup, index1: number) => {
 		item.list.forEach((listItem: EngineItem, index2: number) => {
 			if (listItem.engine.includes(document.domain)) {
+				console.log('Found matching engine:', listItem.engine)
 				active.value = listData.value[index1].list[index2].engine
-				if (setting.value.function.automaticAdvance) setFirst(index1)
+				if (setting.value.function.automaticAdvance) {
+					console.log('Setting as first engine')
+					setFirst(index1)
+				}
 			}
 		})
 	})
+	console.log('Active engine:', active.value)
 }
 const DetectIgnore = (): void => {
 	detectOpen.value = false
@@ -202,13 +217,20 @@ const onError = (e: { srcElement: HTMLImageElement }) => {
 }
 
 function statef() {
-	console.log('statef')
+	console.log('statef called')
+	console.log('Current URL:', window.location.href)
 	getActive()
 	const keywordT = getKeyword()
-	console.log('keyword', keywordT)
+	console.log('Retrieved keyword:', keywordT)
 	searchKeyword.value = keywordT
 	keyword.value = keywordT
 	loaded.value = true
+	console.log('Current state:', {
+		active: active.value,
+		keyword: keyword.value,
+		searchKeyword: searchKeyword.value,
+		loaded: loaded.value
+	})
 }
 
 statef()
