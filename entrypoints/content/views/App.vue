@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import 'nexmoe.css'
+import 'App.css'
 import useListData from '@/composables/useListData'
 import draggable from '@xiaoshuapp/draggable'
 import type { Ref } from 'vue'
@@ -54,13 +55,13 @@ const menuXClosed = () => {
 	menuLeft.value = '-100px'
 }
 
-const menu2 = (event: any) => {
+const menu2 = (event: MouseEvent) => {
 	event.preventDefault()
-	event.currentTarget.classList.add('menu-active')
+	;(event.currentTarget as HTMLElement).classList.add('menu-active')
 }
 
-const menu2closed = (e: any) => {
-	e.currentTarget.classList.remove('menu-active')
+const menu2closed = (e: MouseEvent) => {
+	;(e.currentTarget as HTMLElement).classList.remove('menu-active')
 }
 
 window.onclick = (e) => {
@@ -105,8 +106,8 @@ const getKeyword = (): string => {
 
 // 获取当前使用的搜索引擎
 const getActive = (): void => {
-	listData.value.forEach((item: any, index1: number) => {
-		item.list.forEach((listItem: any, index2: number) => {
+	listData.value.forEach((item: ListGroup, index1: number) => {
+		item.list.forEach((listItem: EngineItem, index2: number) => {
 			if (listItem.engine.includes(document.domain)) {
 				active.value = listData.value[index1].list[index2].engine
 				if (setting.value.function.automaticAdvance) setFirst(index1)
@@ -141,15 +142,32 @@ const getTarget = (): string => {
 	return '_self'
 }
 
+// First, let's define interfaces for our data structures
+interface EngineItem {
+	name: string
+	engine: string
+}
+
+interface ListGroup {
+	name: string
+	icon?: string
+	list: EngineItem[]
+}
+
+// Add interface for storage data
+interface StorageData {
+	listData: ListGroup[]
+	setting: typeof settingData
+}
+
 browser.storage.sync
 	.get({
 		listData: originData,
 		setting: settingData,
 	})
 	.then(
-		(data: any) => {
+		(data: StorageData) => {
 			Object.assign(setting.value, data.setting)
-			// 对象转数组
 			listData.value = data.listData
 			listData.value = Object.values(listData.value)
 			for (let i = 0; i < listData.value.length; i++) {
@@ -164,7 +182,7 @@ browser.storage.sync
 				loaded.value = true
 			}
 		},
-		(error: any) => console.error(error),
+		(error: Error) => console.error(error),
 	)
 
 // 划词搜索
@@ -177,7 +195,8 @@ document.onmouseup = () => {
 	}
 }
 
-const onError = (e: { srcElement: any }) => {
+// Update the onError event handler
+const onError = (e: { srcElement: HTMLImageElement }) => {
 	const img = e.srcElement
 	img.style.display = 'none'
 }
@@ -333,7 +352,6 @@ const enable = computed(() => {
 		</draggable>
 	</div>
 </template>
-
 <style scoped>
 #menu {
 	border-radius: 3px;
@@ -549,29 +567,3 @@ ul {
 }
 </style>
 
-<style>
-div {
-	--active-brightness: 0.8;
-	--hover-brightness: 1.2;
-	--border-radius: 6px;
-	--color-primary: rgb(23, 23, 23);
-	--color-link: #df5d64;
-	--color-text: rgb(23, 23, 23);
-	--color-bg: #fff;
-	--color-hover: rgba(23, 23, 23, 0.15);
-	--nexmoe-gap: 1em;
-	--icon-checkbox: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23FFF' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
-	--icon-summary: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(23, 23, 23)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-}
-
-@media (prefers-color-scheme: dark) {
-	div {
-		--color-primary: #fff;
-		--color-text: #f7f7f7;
-		--color-bg: #111;
-		--color-hover: rgba(230, 230, 230, 0.15);
-		--icon-checkbox: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
-		--icon-summary: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23f7f7f7' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-	}
-}
-</style>
