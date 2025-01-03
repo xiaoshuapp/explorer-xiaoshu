@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import 'nexmoe.css'
-import 'App.css'
+import './App.css'
 import useListData from '@/composables/useListData'
 import draggable from '@xiaoshuapp/draggable'
 import type { Ref } from 'vue'

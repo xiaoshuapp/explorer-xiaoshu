@@ -29,7 +29,6 @@ const formSchema = toTypedSchema(
 		right: z.boolean().default(false),
 		function: z.object({
 			openNew: z.boolean().default(false),
-			getSelection: z.boolean().default(false),
 			automaticAdvance: z.boolean().default(true),
 			enableOnly: z.boolean().default(false),
 		}),
@@ -76,20 +75,26 @@ const readFile = (file: File) => {
 	const reader = new FileReader()
 	reader.onload = (e: Event) => {
 		const target = e.target as FileReader
-		const data = JSON.parse(target.result as string)
-		const { setting, listData } = data
-		browser.storage.sync
-			.set({
-				setting,
-				listData,
-			})
-			.then(() => {
-				getData()
-				toast(getI18n('optionsImportSucceeded'))
-			})
-			.catch((error) => {
-				console.error(error)
-			})
+		try {
+			const data = JSON.parse(target.result as string)
+			const { setting, listData } = data
+			browser.storage.sync
+				.set({
+					setting,
+					listData,
+				})
+				.then(() => {
+					getData()
+					toast(getI18n('optionsImportSucceeded'))
+				})
+				.catch((error) => {
+					console.error(error)
+					toast(getI18n('optionsImportFailed'))
+				})
+		} catch (error) {
+			console.error(error)
+			toast(getI18n('optionsImportFailed'))
+		}
 	}
 	reader.readAsText(file)
 }
@@ -212,20 +217,6 @@ onMounted(() => {
 									<div class="space-y-0.5">
 										<FormLabel class="text-base">{{
 											getI18n('optionsFunctionAutomaticAdvance')
-										}}</FormLabel>
-									</div>
-									<FormControl>
-										<Switch :checked="value" @update:checked="handleChange" />
-									</FormControl>
-								</FormItem>
-							</FormField>
-							<FormField v-slot="{ value, handleChange }" name="function.getSelection">
-								<FormItem
-									class="flex flex-row items-center justify-between rounded-lg border p-4"
-								>
-									<div class="space-y-0.5">
-										<FormLabel class="text-base">{{
-											getI18n('optionsFunctionGetSelection')
 										}}</FormLabel>
 									</div>
 									<FormControl>
