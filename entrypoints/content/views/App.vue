@@ -215,12 +215,6 @@ document.onmouseup = () => {
 	}
 }
 
-// Update the onError event handler
-const onError = (e: { srcElement: HTMLImageElement }) => {
-	const img = e.srcElement
-	img.style.display = 'none'
-}
-
 function statef() {
 	console.log('statef called')
 	console.log('Current URL:', window.location.href)
@@ -262,10 +256,6 @@ window.setInterval(() => {
 	}
 }, 1000)
 
-const enable = computed(() => {
-	if (setting.value.function.enableOnly) return active.value && keyword.value
-	return keyword.value
-})
 </script>
 
 <template>
