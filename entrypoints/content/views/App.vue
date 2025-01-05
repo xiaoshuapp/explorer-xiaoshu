@@ -25,6 +25,7 @@ const active: Ref<string | null> = ref(null)
 const keyword: Ref<string | null> = ref(null) // 划词 + getKeyword()
 const searchKeyword: Ref<string> = ref('') // getKeyword()
 const setting = ref(settingData)
+const imgError: Ref<boolean> = ref(false)
 const dragGroups = {
 	group: 'group',
 	animation: 200,
@@ -161,6 +162,7 @@ const getTarget = (): string => {
 interface EngineItem {
 	name: string
 	engine: string
+	imgError?: boolean
 }
 
 interface ListGroup {
@@ -174,6 +176,9 @@ interface StorageData {
 	listData: ListGroup[]
 	setting: typeof settingData
 }
+
+// Add new ref for tracking image errors
+const imageErrors: Ref<Set<string>> = ref(new Set())
 
 browser.storage.sync
 	.get({
@@ -234,6 +239,14 @@ function statef() {
 }
 
 statef()
+
+function getHostName(url: string): string {
+	try {
+		return new URL(url).hostname
+	} catch {
+		return ''
+	}
+}
 
 let url_prec = window.location.href
 window.setInterval(() => {
@@ -349,16 +362,21 @@ const enable = computed(() => {
 								@contextmenu="menu2($event)"
 								@mouseleave="menu2closed"
 							>
-								<img
-									class="item-icon"
-									loading="lazy"
-									:src="`https://icon.102417.xyz/favicon/${element.engine.replace(
-										'%s',
-										''
-									)}`"
-									:alt="element.name"
-									@error="onError"
-								/>
+								<div class="item-icon">
+									<template v-if="!imageErrors.has(element.engine)">
+										<img 
+											loading="lazy"
+											:src="`https://icon.102417.xyz/favicon/${getHostName(element.engine)}`"
+											:alt="element.name"
+											@error="imageErrors.add(element.engine)"
+											class="h-full w-full"
+										/>
+									</template>
+									<span 
+										class="flex h-full w-full items-center justify-center  bg-gray-200 text-[10px] text-gray-600 dark:bg-gray-700 dark:text-gray-200" 
+										v-else
+									>{{ element.name.slice(0, 2) }}</span>
+								</div>
 								<div class="item-title">{{ element.name }}</div>
 								<div class="menu2" @click.prevent>
 									<span @click="changeEngine(index, element)">编辑</span>/<span
@@ -524,14 +542,8 @@ ul {
 }
 
 .item-icon {
-	width: 24px;
-	min-width: 24px;
-	height: 24px;
-	display: flex;
-	align-content: center;
-	justify-content: center;
+	@apply w-[24px] min-w-[24px] h-[24px] rounded-[6px] overflow-hidden flex items-center justify-center transition-[margin-right] duration-200;
 	transition: margin-right 0.2s ease-in-out;
-	border-radius: 100%;
 }
 
 .explorer-xiaoshu:hover .item-icon {
