@@ -242,9 +242,9 @@ window.setInterval(() => {
 		url_prec = window.location.href
 		window.console.log('URL changed')
 		getActive()
-		const keyword = getKeyword()
-		searchKeyword.value = keyword
-		keyword.value = keyword
+		const keyword2 = getKeyword()
+		searchKeyword.value = keyword2
+		keyword.value = keyword2
 		loaded.value = true
 	}
 }, 1000)
