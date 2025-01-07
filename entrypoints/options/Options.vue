@@ -6,7 +6,6 @@ import '@/assets/index.css'
 import { Button } from '@/components/ui/button'
 import {
 	FormControl,
-	FormDescription,
 	FormField,
 	FormItem,
 	FormLabel,
@@ -43,7 +42,7 @@ const onSubmit = handleSubmit((values) => {
 	const data = values
 	browser.storage.sync.set({ setting: data }).then(
 		() => {
-			toast(getI18n('optionsSaved'))
+			toast(browser.i18n.getMessage('optionsSaved'))
 		},
 		(error) => {
 			window.console.log(error)
@@ -51,9 +50,6 @@ const onSubmit = handleSubmit((values) => {
 	)
 })
 
-const getI18n = (name: string): string => {
-	return browser.i18n.getMessage(name)
-}
 
 const exportSettings = () => {
 	try {
@@ -85,15 +81,15 @@ const readFile = (file: File) => {
 				})
 				.then(() => {
 					getData()
-					toast(getI18n('optionsImportSucceeded'))
+					toast(browser.i18n.getMessage('optionsImportSucceeded'))
 				})
 				.catch((error) => {
 					console.error(error)
-					toast(getI18n('optionsImportFailed'))
+					toast(browser.i18n.getMessage('optionsImportFailed'))
 				})
 		} catch (error) {
 			console.error(error)
-			toast(getI18n('optionsImportFailed'))
+			toast(browser.i18n.getMessage('optionsImportFailed'))
 		}
 	}
 	reader.readAsText(file)
@@ -134,20 +130,20 @@ onMounted(() => {
 					<div class="flex items-center space-x-6">
 						<div class="text-base font-medium text-primary">
 							<h1 class="flex flex-row items-center gap-2">
-								<img class="w-8 h-8" src="@/assets/icon.svg" />{{ getI18n('title') }}
+								<img class="w-8 h-8" src="@/assets/icon.svg" />{{ browser.i18n.getMessage('title') }}
 							</h1>
 						</div>
 						<a
 							class="text-base font-medium text-muted-foreground hover:text-foreground"
 							href="https://xiaoshuapp.com/explorer/star.html"
 							target="_blank"
-							>{{ getI18n('optionsNavStars') }}</a
+							>{{ browser.i18n.getMessage('optionsNavStars') }}</a
 						>
 						<a
 							class="text-base font-medium text-muted-foreground hover:text-foreground"
 							href="https://github.com/xiaoshuapp/explorer-xiaoshu/discussions"
 							target="_blank"
-							>{{ getI18n('optionsNavIssues') }}</a
+							>{{ browser.i18n.getMessage('optionsNavIssues') }}</a
 						>
 						<a
 							class="text-base font-medium text-muted-foreground hover:text-foreground"
@@ -161,7 +157,7 @@ onMounted(() => {
 			<main class="flex-1 container max-w-7xl px-4 py-8 md:py-12">
 				<form class="grid gap-8" @submit="onSubmit">
 					<div>
-						<h2 class="text-2xl font-bold mb-4">{{ getI18n('optionsUI') }}</h2>
+						<h2 class="text-2xl font-bold mb-4">{{ browser.i18n.getMessage('optionsUI') }}</h2>
 						<div class="space-y-4">
 							<FormField v-slot="{ value, handleChange }" name="hidden">
 								<FormItem
@@ -169,7 +165,7 @@ onMounted(() => {
 								>
 									<div class="space-y-0.5">
 										<FormLabel class="text-base">{{
-											getI18n('optionsUIHidden')
+											browser.i18n.getMessage('optionsUIHidden')
 										}}</FormLabel>
 									</div>
 									<FormControl>
@@ -183,7 +179,7 @@ onMounted(() => {
 								>
 									<div class="space-y-0.5">
 										<FormLabel class="text-base">{{
-											getI18n('optionsUIRight')
+											browser.i18n.getMessage('optionsUIRight')
 										}}</FormLabel>
 									</div>
 									<FormControl>
@@ -194,7 +190,7 @@ onMounted(() => {
 						</div>
 					</div>
 					<div>
-						<h2 class="text-2xl font-bold mb-4">{{ getI18n('optionsFunction') }}</h2>
+						<h2 class="text-2xl font-bold mb-4">{{ browser.i18n.getMessage('optionsFunction') }}</h2>
 						<div class="space-y-4">
 							<FormField v-slot="{ value, handleChange }" name="function.openNew">
 								<FormItem
@@ -202,7 +198,7 @@ onMounted(() => {
 								>
 									<div class="space-y-0.5">
 										<FormLabel class="text-base">{{
-											getI18n('optionsFunctionOpenNew')
+											browser.i18n.getMessage('optionsFunctionOpenNew')
 										}}</FormLabel>
 									</div>
 									<FormControl>
@@ -216,7 +212,7 @@ onMounted(() => {
 								>
 									<div class="space-y-0.5">
 										<FormLabel class="text-base">{{
-											getI18n('optionsFunctionAutomaticAdvance')
+											browser.i18n.getMessage('optionsFunctionAutomaticAdvance')
 										}}</FormLabel>
 									</div>
 									<FormControl>
@@ -230,7 +226,7 @@ onMounted(() => {
 								>
 									<div class="space-y-0.5">
 										<FormLabel class="text-base">{{
-											getI18n('optionsFunctionEnableOnly')
+											browser.i18n.getMessage('optionsFunctionEnableOnly')
 										}}</FormLabel>
 									</div>
 									<FormControl>
@@ -243,14 +239,14 @@ onMounted(() => {
 
 					<Button type="submit"> 保存 </Button>
 					<div>
-						<h2 class="text-2xl font-bold mb-4">{{ getI18n('optionsData') }}</h2>
+						<h2 class="text-2xl font-bold mb-4">{{ browser.i18n.getMessage('optionsData') }}</h2>
 						<div class="flex flex-row gap-4">
 							<Button @click="exportSettings">
-								{{ getI18n('exportSettings') }}
+								{{ browser.i18n.getMessage('exportSettings') }}
 							</Button>
 							<div class="file-btn">
 								<Button>
-									{{ getI18n('importSettings') }}
+									{{ browser.i18n.getMessage('importSettings') }}
 								</Button>
 								<input
 									ref="inputFileRef"
