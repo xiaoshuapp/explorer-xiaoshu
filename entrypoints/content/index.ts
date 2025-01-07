@@ -31,7 +31,6 @@ export default defineContentScript({
 		// remount
 		let url_prec = window.location.href
 		window.setInterval(() => {
-			console.log('remount interval')
 			if (!document.querySelector('explorer-search')) {
 				if (url_prec !== window.location.href) {
 					url_prec = window.location.href
