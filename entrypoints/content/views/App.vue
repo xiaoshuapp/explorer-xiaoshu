@@ -195,6 +195,7 @@ browser.storage.sync
 					listData.value[i].list = Object.values(listData.value[i].list)
 				}
 			}
+			console.log('🚀 ~ listData.value:', listData.value)
 			getActive()
 			window.onload = () => {
 				searchKeyword.value = getKeyword()
@@ -279,12 +280,12 @@ window.setInterval(() => {
 			<div class="menu" @click="deleteGroup(menuIndex)">删除该分组</div>
 		</div>
 
-		<DetectDialog
+		<!-- <DetectDialog
 			v-if="detectOpen"
 			:keyword="keyword ?? ''"
 			@add-to-list="addToList"
 			@detect-ignore="DetectIgnore"
-		/>
+		/> -->
 		<div class="setting">
 			<div class="group add">
 				<div v-if="searchKeyword && !active" class="list-item active" @click="detectOpen = true">
@@ -329,7 +330,6 @@ window.setInterval(() => {
 							</div>
 						</div>
 					</div>
-					<Teleport to=".explorer-xiaoshu">2333</Teleport>
 					<draggable
 						class="list-group"
 						item-key="name"

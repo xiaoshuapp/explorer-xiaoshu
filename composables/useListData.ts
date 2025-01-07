@@ -79,9 +79,10 @@ export default function useListData() {
 		listData,
 		() => {
 			const data = JSON.parse(JSON.stringify(listData.value))
+			console.log('🚀 ~ data:', data)
 			browser.storage.sync.set({ listData: data }).then(
 				() => {
-					window.console.log('Watching listData Done')
+					window.console.log('✅ Watching listData Done')
 				},
 				(error: Error) => {
 					window.console.log(error)
