@@ -264,7 +264,7 @@ window.setInterval(() => {
 		class="explorer-xiaoshu"
 		:class="{
 			transitionNone: !loaded,
-			hidden: setting.hidden,
+			minimal: setting.hidden,
 			right: setting.right,
 		}"
 		@mouseup.stop
@@ -444,7 +444,7 @@ window.setInterval(() => {
 	box-sizing: border-box;
 }
 
-.explorer-xiaoshu.hidden {
+.explorer-xiaoshu.minimal {
 	left: -50px;
 }
 
@@ -456,7 +456,7 @@ window.setInterval(() => {
 	left: 0;
 }
 
-.explorer-xiaoshu.right.hidden {
+.explorer-xiaoshu.right.minimal {
 	right: -50px;
 	left: unset;
 }
