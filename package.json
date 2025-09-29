@@ -48,7 +48,7 @@
         "@vueuse/core": "10.1.2",
         "body-parser": "1.20.2",
         "chokidar": "3.5.3",
-        "cross-env": "7.0.3",
+        "cross-env": "10.1.0",
         "crx": "5.0.1",
         "download": "8.0.0",
         "eslint": "8.37.0",
