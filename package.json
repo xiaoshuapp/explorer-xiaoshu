@@ -46,7 +46,7 @@
         "@vitejs/plugin-vue": "4.2.3",
         "@vue/compiler-sfc": "3.3.4",
         "@vueuse/core": "10.1.2",
-        "body-parser": "1.20.2",
+        "body-parser": "2.3.0",
         "chokidar": "3.5.3",
         "cross-env": "7.0.3",
         "crx": "5.0.1",
@@ -55,7 +55,7 @@
         "eslint-config-prettier": "8.8.0",
         "eslint-plugin-prettier": "4.2.1",
         "esno": "0.16.3",
-        "express": "4.18.2",
+        "express": "5.2.1",
         "file-saver": "2.0.5",
         "fs-extra": "9.1.0",
         "husky": "8.0.3",
@@ -73,8 +73,8 @@
         "vue": "3.3.4",
         "vue-demi": "0.14.5",
         "vue-eslint-parser": "9.1.0",
-        "web-ext": "7.6.2",
-        "webext-bridge": "5.0.5",
+        "web-ext": "10.6.0",
+        "webext-bridge": "6.0.1",
         "webextension-polyfill": "0.10.0"
     }
 }
